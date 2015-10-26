@@ -5,7 +5,7 @@
     "Shaun Bent <shaun.bent@bbc.co.uk>"
   ],
   "description": "The BBC Grandstand CSS Framework is used by Sport and Live components",
-  "main": "_grandstand.scss"
+  "main": "_grandstand.scss",
   "license": "MIT",
   "ignore": [
     "**/.*",
