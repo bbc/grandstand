@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    #MEDIA OBJECT
+\*------------------------------------*/
+
+/**
+ * Nicole Sullivan's media object is often referred to as the poster child of
+ * OOCSS and a fundamental building block of most websites.
+ */
+
+
+/**
+ * 1. Force block incase `.media` is applied to an inline element
+ */
+.gs-o-media,
+%gs-o-media {
+    @include clearfix;
+    display: block; /* [1] */
+}
+
+.gs-o-media__img,
+%gs-o-media__img {
+    float: left;
+    margin-right: $gel-spacing-unit;
+
+    > img {
+        display: block;
+    }
+}
+
+/**
+ * 1. Remove any rogue margin-bottom of the body or last
+ *    nested element
+ */
+.gs-o-media__body,
+%gs-o-media__body {
+    display: block;
+    overflow: hidden;
+
+    &,
+    > :last-child {
+        margin-bottom: 0; /* [1] */
+    }
+}

@@ -1,0 +1,127 @@
+/*------------------------------------*\
+    #INFO PANEL
+\*------------------------------------*/
+
+/**
+ * Info Panels are overlayed content triggered when a user clicks an item
+ * on a page. They provide additional information, imagery, links or contextual
+ * help about a page element.
+ */
+.gs-o-info-panel {
+    position: relative;
+
+    border: 1px solid #494949;
+
+    background-color: #262626;
+    color: #fff;
+
+    &:after {
+        position: absolute;
+
+        width: 0;
+        height: 0;
+        border-width: $gel-spacing-unit;
+        border-color: transparent;
+        border-style: solid;
+
+        content: '';
+    }
+}
+
+.gs-o-info-panel[data-arrow-position^="top"],
+.gs-o-info-panel[data-arrow-position*=" top"] {
+    &:after {
+        bottom: 100%;
+
+        border-top: 0;
+        border-bottom-color: #262626;
+    }
+}
+
+.gs-o-info-panel[data-arrow-position^="bottom"],
+.gs-o-info-panel[data-arrow-position*=" bottom"] {
+    &:after {
+        top: 100%;
+
+        border-top-color: #262626;
+        border-bottom: 0;
+    }
+}
+
+.gs-o-info-panel[data-arrow-position^="left"],
+.gs-o-info-panel[data-arrow-position*=" left"] {
+    &:after {
+        left: $gel-spacing-unit;
+
+        @include mq($from: gel-bp-m) {
+            left: double($gel-spacing-unit);
+        }
+    }
+}
+
+.gs-o-info-panel[data-arrow-position^="right"],
+.gs-o-info-panel[data-arrow-position*=" right"] {
+    &:after {
+        right: $gel-spacing-unit;
+
+        @include mq($from: gel-bp-m) {
+            right: double($gel-spacing-unit);
+        }
+    }
+}
+
+.gs-o-info-panel__header,
+.gs-o-info-panel__body {
+    padding-top: double($gel-spacing-unit);
+    padding-right: $gel-spacing-unit;
+    padding-bottom: double($gel-spacing-unit);
+    padding-left: $gel-spacing-unit;
+
+    @include mq($from: gel-bp-s) {
+        padding-right: double($gel-spacing-unit);
+        padding-left: double($gel-spacing-unit);
+    }
+}
+
+.gs-o-info-panel__header {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #494949;
+}
+
+.gs-o-info-panel__title {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.gs-o-info-panel__close-button {
+    display: table-cell;
+    width: 16px;
+    border: 0;
+    padding: 0;
+
+    background-color: transparent;
+    color: #fff;
+
+    vertical-align: middle;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    cursor: pointer;
+}
+
+.gs-o-info-panel__close-button-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/**
+ * Remove the default padding from the body component
+ * allowing any elements nested within to bleed to the edge
+ */
+.gs-o-info-panel__body--flush {
+    padding: 0;
+}

@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    #FLAG OBJECT
+\*------------------------------------*/
+
+/**
+ * The flag object is a design pattern similar to the media object, however it
+ * utilises `display: table[-cell];` to give us control over the vertical
+ * alignments of the text and image. csswizardry.com/2013/05/the-flag-object
+ */
+
+
+/**
+ * 1. Allows us to control vertical alignments
+ * 2. Force the object to be the full width of its parent. Combined with [1],
+ *    this makes the object behave in a quasi-`display: block;` manner.
+ */
+.gs-o-flag,
+%gs-o-flag {
+    display: table; /* [1] */
+    width: 100%; /* [2] */
+    table-layout: fixed;
+}
+
+/**
+ * Items within a flag object. There should only ever be one of each.
+ *
+ * 1. Default to aligning content to their middles.
+ */
+.gs-o-flag__img,
+%gs-o-flag__img,
+.gs-o-flag__body,
+%gs-o-flag__body {
+    display: table-cell;
+    vertical-align: middle; /* [1] */
+}
+
+/**
+ * Flag images have a space between them and the body of the object.
+ */
+.gs-o-flag__img,
+%gs-o-flag__img {
+    padding-right: $gel-spacing-unit;
+
+    > img {
+        display: block;
+        max-width: none;
+    }
+
+}
+
+/**
+ * The container for the main content of the flag object.
+ *
+ * 1. Forces the `.flag__body` to take up all remaining space.
+ */
+.gs-o-flag__body,
+%gs-o-flag__body {
+    width: 100%; /* [1] */
+
+    &,
+    > :last-child {
+        margin-bottom: 0;
+    }
+
+}

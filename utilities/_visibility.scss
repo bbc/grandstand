@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    # VISIBILITY
+\*------------------------------------*/
+
+/**
+ * Hide visually and from screen readers: http://bit.ly/1sfdZho
+ */
+.gs-u-hidden,
+%gs-u-hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+
+/**
+ * Make a class and placeholder of the visually hidden helper available
+ */
+.gs-u-vh,
+%gs-u-vh {
+    @include vh;
+}
+
+
+/**
+ * Extends the .gel-vh class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * http://bit.ly/1sfefwH
+ */
+.gs-u-vh--focusable:active,
+%gs-u-vh--focusable:active,
+.gs-u-vh--focusable:focus,
+%gs-u-vh--focusable:focus {
+    @extend %gs-u-vh;
+
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+
+    clip: auto;
+}
+
+
+/**
+ * Hide visually and from screen readers, but maintain layout
+ */
+.gs-u-invisible,
+%gs-u-invisible {
+    visibility: hidden;
+}

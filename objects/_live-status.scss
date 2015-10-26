@@ -1,0 +1,41 @@
+.gs-o-live-status {
+    display: inline-block;
+    color: $sp-c-black;
+
+    @include theme('sport') {
+        color: $sp-c-live-blue;
+    }
+    @include theme('news') {
+        color: $nw-c-red;
+    }
+}
+
+.gs-o-live-status__icon {
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: middle;
+    margin-right: halve($gel-spacing-unit);
+}
+
+.gs-o-live-status__text {
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+@-webkit-keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: .3; }
+    100% { opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: .3; }
+    100% { opacity: 1; }
+}
+
+.gs-o-live-status__icon #pulse {
+  -webkit-animation: pulse 1.7s cubic-bezier(.25, .1, .25, 1) infinite;
+          animation: pulse 1.7s cubic-bezier(.25, .1, .25, 1) infinite;
+}

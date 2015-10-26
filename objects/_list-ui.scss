@@ -1,0 +1,77 @@
+/*------------------------------------*\
+    #LIST-UI
+\*------------------------------------*/
+
+/**
+ * The UI list object creates blocky list items with a keyline separator out of
+ * a `ul` or `ol`.
+ */
+
+.gs-o-list-ui,
+.gs-o-list-ui__item {
+    border: 0 solid $sp-c-silver;
+}
+
+.gs-o-list-ui {
+    margin:  0;
+    margin-bottom: double($gel-spacing-unit);
+    padding: 0;
+    list-style: none;
+    border-top-width: 1px;
+}
+
+/**
+ * A subtle border variant of the list ui
+ */
+.gs-o-list-ui--subtle {
+    border-top-color: $sp-c-cloud;
+    
+    .gs-o-list-ui__item {
+        border-bottom-color: $sp-c-cloud;
+    }
+}
+
+.gs-o-list-ui--top-no-border {
+    border-top-width: 0;
+}
+
+.gs-o-list-ui--bottom-no-border {
+    .gs-o-list-ui__item:last-child {
+        border-bottom-width: 0;
+    }
+}
+
+.gs-o-list-ui__item {
+    padding-top: $gel-spacing-unit;
+    padding-right: $gel-spacing-unit;
+    padding-bottom: $gel-spacing-unit;
+    padding-left: $gel-spacing-unit;
+
+    border-bottom-width: 1px;
+}
+
+.gs-o-list-ui__item--flush {
+    padding: 0;
+}
+
+
+.gs-o-list-ui__link {
+    display: block;
+
+    padding-top: $gel-spacing-unit;
+    padding-bottom: $gel-spacing-unit;
+
+    color: $sp-c-black;
+
+    &:hover .gs-c-media-icon,
+    &:focus .gs-c-media-icon {
+        background-color: $sp-c-yellow;
+        color: $sp-c-black;
+    }
+
+    &:hover .gs-c-media-icon--live,
+    &:focus .gs-c-media-icon--live {
+        background-color: $sp-c-live-blue;
+        color: $sp-c-white;
+    }
+}

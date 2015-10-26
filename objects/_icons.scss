@@ -1,0 +1,138 @@
+/*------------------------------------*\
+    #ICONS
+\*------------------------------------*/
+
+/**
+ * The responsive image pattern automatically reserves the space
+ * needed for an image to be inserted
+ */
+
+
+// We need to check that the GEL settings are available globally
+$gel-settings-available: false !default;
+@if ($gel-settings-available == false) {
+    @warn "Missing Dependency: Have you included the GEL settings?";
+}
+
+
+
+// define some output control variables
+$core: true !default;
+$enhanced: true !default;
+
+
+// Varabiles to allow customisation and condifuration of the component
+$gel-icon-namespace: $gel-namespace !default;
+$gel-icon-enable--svg-fallback: false !default;
+$gel-icon-svg-fallback-location: '../svg/gel-icons-fallback.png' !default;
+
+
+@if $enhanced {
+
+    /**
+     * 1. Inherit the width and height from the parent element, without
+     *    without this the SVG will just scale out to a large size
+     * 2. Inherit from the `color` value of the parent element
+     */
+    .#{$gel-icon-namespace}icon {
+        display: inline-block;
+
+        svg {
+            width: inherit; /* [1] */
+            height: inherit; /* [1] */
+
+            fill: currentColor; /* [2] */
+        }
+    }
+
+    /**
+     * Lets make the loading spinner, spin
+     */
+    .#{$gel-icon-namespace}icon-loading {
+        -webkit-animation-name: #{$gel-icon-namespace}spin;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        -moz-animation-name: #{$gel-icon-namespace}spin;
+        -moz-animation-duration: 1s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-timing-function: linear;
+        animation-name: #{$gel-icon-namespace}spin;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @-moz-keyframes #{$gel-icon-namespace}spin {
+        0% { -moz-transform: rotate(0deg); }
+        100% { -moz-transform: rotate(360deg); }
+    }
+
+    @-webkit-keyframes #{$gel-icon-namespace}spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes #{$gel-icon-namespace}spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+}
+
+@if $gel-icon-enable--svg-fallback {
+
+    /**
+     * Fallback icons for devices that do not support SVGs
+     *
+     * 1. Hide any <svg> elements as they will break the layout
+     */
+    .no-svg {
+        .gel-icon {
+            display: inline-block;
+            background-image: url(#{$gel-icon-svg-fallback-location});
+            background-repeat: no-repeat;
+
+            svg {
+                display: none; /* [1] */
+            }
+        }
+
+        .gel-icon-quote {
+            background-position: 0 0;
+        }
+
+        .gel-icon-sms {
+            background-position: 0 -32px;
+        }
+
+        .gel-icon-email {
+            background-position: 0 -64px;
+        }
+
+        .gel-icon-external-link {
+            background-position: 0 -96px;
+        }
+
+        .gel-icon-loading {
+            background-position: 0 -128px;
+        }
+
+        .gel-icon-to-top {
+            background-position: 0 -160px;
+        }
+
+        .gel-icon-no {
+            background-position: 0 -192px;
+        }
+
+        .gel-icon-twitter {
+            background-position: 0 -224px;
+        }
+
+        .gel-icon-no--white {
+            background-position: -32px -192px;
+        }
+    }
+
+}
