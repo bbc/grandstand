@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    # BOX SIZING
+\*------------------------------------*/
+
+/**
+ * Grandstand assumes you're applying box-sizing: border-box;
+ * globally, because its how box-sizing should work really.
+ *
+ * Not all teams and codebase follow this rule, as such we
+ * might this little helper to allow box-sizing correctly
+ *
+ * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+.gs-u-box-size,
+%gs-u-box-size {
+    &,
+    & * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
