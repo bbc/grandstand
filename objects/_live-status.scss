@@ -12,6 +12,10 @@
     @include theme('news') {
         color: $nw-c-red;
     }
+
+    .#{$gs-svg-feature-class} & {
+        display: none;
+    }
 }
 
 .gs-o-live-status__icon {
