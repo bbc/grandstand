@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    # MEDIA ISLAND
+\*------------------------------------*/
+
+/**
+ * The media island is design to isolate media items from
+ * other elements.
+ *
+ * It also has the ability to position things on top of the images
+ * such as media icons
+ */
+
+.gs-o-media-island {
+    position: relative;
+}
+
+.gs-o-media-island__icon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
