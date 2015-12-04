@@ -40,6 +40,13 @@ $gs-display-switch-breakpoint-names: $gel-breakpoint-names !default;
     .gs-u-display-table-cell#{$breakpoint-suffix} {
         display: table-cell !important;
     }
+
+    .gs-u-display-flex#{$breakpoint-suffix} {
+        display: -moz-box !important;
+        display: -ms-flexbox !important;
+        display: -webkit-flex !important;
+        display: flex !important;
+    }
 }
 
 // Output the unsuffixed version
