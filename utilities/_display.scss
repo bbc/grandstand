@@ -14,7 +14,7 @@
 
 $gs-display-switch-breakpoint-names: $gel-breakpoint-names !default;
 
-@mixin display-switch($suffix: '') {
+@mixin display-switch($suffix: null) {
     $breakpoint-suffix: '';
 
     @if $suffix != null {
