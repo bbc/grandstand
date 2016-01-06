@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    # BULLET
+\*------------------------------------*/
+
+/**
+ * The `bullet` pattern is used to align an icon with some text,
+ * similar to how a bullet point has the icon and the text
+ *
+    <span class="gs-o-bullet">
+        <span class="gs-o-bullet__icon gel-icon">
+            <svg>
+                <use xlink:href="#gel-icon-duration"></use>
+            </svg>
+        </span>
+        <span class="gs-o-bullet__text">18:30 - 18:34</span>
+    </span>
+ *
+ */
+.gs-o-bullet {
+    display: inline-block;
+}
+
+.gs-o-bullet__icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: halve($gel-spacing-unit);
+    vertical-align: middle;
+}
+
+.gs-o-bullet__text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/**
+ * If you need the icon to sit after the text you can reverse
+ * the bullet
+ */
+.gs-o-bullet--reverse {
+    direction: rtl;
+
+    .gs-o-bullet__icon {
+        margin-right: 0;
+        margin-left: halve($gel-spacing-unit);
+    }
+}
