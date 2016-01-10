@@ -1,0 +1,81 @@
+/*------------------------------------*\
+    # PROSE
+\*------------------------------------*/
+
+/**
+ * Some basic styling for continuous prose of text
+ */
+.gs-o-prose {
+    color: $sp-c-charcoal;
+
+    h1 {
+        margin-bottom: double($gel-alt-spacing-unit);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    h2,
+    h3,
+    h4,
+    p,
+    ul,
+    ol,
+    pre {
+        margin-bottom: double($gel-spacing-unit);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    ul,
+    ol {
+        margin-left: 20px;
+        padding-left: halve($gel-spacing-unit);
+    }
+
+    li {
+        margin-bottom: halve($gel-spacing-unit);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        color: $sp-c-black;
+        font-weight: bold;
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+            color: $sp-c-dark-blue;
+        }
+    }
+
+    pre {
+        padding: double($gel-spacing-unit);
+
+        white-space: pre;
+        word-wrap: normal;
+        overflow: auto;
+
+        background-color: $sp-c-charcoal;
+        color: $sp-c-white;
+    }
+
+    code {
+        font-family: Inconsolata, Monaco, Consolas, "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+        font-style: normal;
+
+        p & {
+            padding: quarter($gel-spacing-unit) havle($gel-spacing-unit);
+            border-radius: quarter($gel-spacing-unit);
+
+            background-color: $sp-c-charcoal;
+            color: $sp-c-white;
+        }
+    }
+}

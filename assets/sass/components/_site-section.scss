@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    # SITE SECTION
+\*------------------------------------*/
+
+.gs-c-section {
+    padding: double($gel-spacing-unit) 0;
+
+    @if $enhanced {
+        @include mq($from: gel-bp-m) {
+            padding: quadruple($gel-spacing-unit) 0;
+        }
+
+        @include mq($from: gel-bp-l) {
+            padding: ($gel-spacing-unit * 6) 0;
+        }
+    }
+}
+
+
+.gs-c-section + .gs-c-section {
+    border-top: 1px solid $sp-c-silver;
+}

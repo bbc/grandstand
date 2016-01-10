@@ -1,0 +1,110 @@
+/*------------------------------------*\
+    # SITE HEADER
+\*------------------------------------*/
+
+/**
+ * 1. Reserve some space for the navigation
+ */
+.gs-c-site-header {
+    position: relative;
+
+    margin-top: 54px; /* [1] */
+
+    background: url('../images/wembley.jpg') center bottom no-repeat;
+    background-size: cover;
+
+    &:before {
+        display: block;
+        padding-bottom: 56.25%;
+
+        content: '';
+
+        @if $enhanced {
+            @include mq($from: gel-bp-l) {
+               padding-bottom: 45%;
+            }
+
+            @include mq($from: gel-bp-xxl) {
+               padding-bottom: 40%;
+            }
+        }
+    }
+}
+
+.gs-c-site-header__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    padding-right: $gel-spacing-unit;
+    padding-left: $gel-spacing-unit;
+
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    color: $sp-c-white;
+    text-align: center;
+
+    @if $enhanced {
+        @include mq($from: gel-bp-s) {
+            padding-right: double($gel-spacing-unit);
+            padding-left: double($gel-spacing-unit);
+        }
+    }
+}
+
+.gs-c-site-header__brand {
+    display: block;
+
+    color: inherit;
+    text-decoration: none;
+}
+
+.gs-c-site-header__brand-blocks {
+    width: 60px;
+    height: 17px;
+
+    @if $enhanced {
+        @include mq($from: gel-bp-m) {
+            width: 90px;
+            height: 26px;
+        }
+    }
+}
+
+.gs-c-site-header__summary {
+    margin-top: double($gel-spacing-unit);
+
+    @if $enhanced {
+        @include mq($from: gel-bp-m) {
+            margin-top: quadruple($gel-spacing-unit);
+        }
+    }
+}
+
+.gs-c-site-header__meta {
+    margin-top: $gel-spacing-unit;
+
+    @if $enhanced {
+        @include mq($from: gel-bp-m) {
+            margin-top: double($gel-spacing-unit);
+        }
+    }
+}
+
+.gs-c-site-header__meta-item {
+    color: inherit;
+
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
+
+    & + & {
+        margin-left: $gel-spacing-unit;
+    }
+}

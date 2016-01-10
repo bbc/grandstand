@@ -1,0 +1,22 @@
+{
+  "name": "gs-site",
+  "description": "BBC Grandstand CSS Framework used by Sport and Live components",
+  "main": "index.html",
+  "authors": [
+    "Shaun Bent <shaun.bent@bbc.co.uk>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bbc-grandstand": "git@github.com:bbc/bbc-grandstand.git#^1.0.0"
+  }
+}

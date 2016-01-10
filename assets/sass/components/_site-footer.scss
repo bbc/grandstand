@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    # SITE FOOTER
+\*------------------------------------*/
+
+.gs-c-site-footer {
+    padding: double($gel-spacing-unit) 0;
+
+    background-color: $sp-c-charcoal;
+    color: $sp-c-white;
+
+    text-align: center;
+
+    @if $enhanced {
+        @include mq($from: gel-bp-m) {
+            padding: quadruple($gel-spacing-unit) 0;
+        }
+
+        @include mq($from: gel-bp-l) {
+            padding: ($gel-spacing-unit * 6) 0;
+        }
+    }
+}
