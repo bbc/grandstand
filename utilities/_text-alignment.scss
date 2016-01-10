@@ -1,3 +1,30 @@
+/*------------------------------------*\
+    # TEXT ALIGNMENT
+\*------------------------------------*/
+
+/**
+ * A utility for managing the alignment of text elements
+ */
+
+
+/**
+ * Horizontal alignment
+ */
+.gs-u-align-left {
+    text-align: left;
+}
+
+.gs-u-align-center {
+    text-align: center;
+}
+
+.gs-u-align-right {
+    text-align: right;
+}
+
+/**
+ * Vertical alignment
+ */
 .gs-u-align-top {
     vertical-align: top;
 }
