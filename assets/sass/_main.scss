@@ -8,9 +8,12 @@
 
 @import '../../bower_components/bbc-grandstand/grandstand';
 
+@import 'objects/github-link';
 @import 'objects/prose';
 
 @import 'components/site-header';
 @import 'components/site-nav';
-@import 'components/site-section';
+@import 'components/site-body';
+@import 'components/masthead';
+@import 'components/section';
 @import 'components/site-footer';

@@ -3,18 +3,7 @@
 \*------------------------------------*/
 
 .gs-c-site-nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-
-    height: 54px;
-
-    border-bottom: 1px solid $sp-c-black;
-    padding: double($gel-spacing-unit) 0;
-
-    background-color: $sp-c-charcoal;
-    color: $sp-c-white;
+    text-align: right;
 }
 
 .gs-c-site-nav__toggle {
@@ -40,28 +29,5 @@
     &:focus,
     &:hover {
         color: $sp-c-silver;
-    }
-}
-
-/**
- * 1. Hide the icon if there is no SVG support
- */
-.gs-c-site-nav__link-icon {
-    width: 1em;
-    height: 1em;
-
-    vertical-align: text-top;
-
-    .no-svg & {
-        display: none; /* [1] */
-    }
-}
-
-/**
- * 1. Visually hide the text if the browser supports SVG
- */
-.gs-c-site-nav__link-text {
-    .svg & {
-        @include vh; /* [1] */
     }
 }

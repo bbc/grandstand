@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    # GITHUB LINK
+\*------------------------------------*/
+
+/**
+ * We want to display links to GitHub using the icon
+ */
+.gs-o-github-link {
+    color: inherit;
+}
+
+
+/**
+ * 1. Hide the icon if there is no SVG support
+ */
+.gs-o-github-link__icon {
+    width: 1em;
+    height: 1em;
+
+    vertical-align: text-top;
+
+    .no-svg & {
+        display: none; /* [1] */
+    }
+}
+
+/**
+ * 1. Visually hide the text if the browser supports SVG
+ */
+.gs-o-github-link__text {
+    .svg & {
+        @include vh; /* [1] */
+    }
+}
