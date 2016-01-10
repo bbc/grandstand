@@ -9,13 +9,30 @@
 .gs-c-site-nav__toggle {
     display: none;
 
-    @if $enhanced {
+    /*@if $enhanced {
         display: inline-block;
+        width: 25px;
+        height: 25px;
 
-        @include mq($from: gel-bp-m) {
+        padding: 0;
+        border: 0;
+
+        background-color: transparent;
+
+        &:focus,
+        &:hover {
+            color: $sp-c-silver;
+        }
+
+        @include mq($from: gel-bp-s) {
             display: none;
         }
-    }
+    }*/
+}
+
+.gs-c-site-nav__toggle-icon {
+    width: 20px;
+    height: 20px;
 }
 
 .gs-c-site-nav__list {
