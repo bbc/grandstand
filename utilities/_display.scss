@@ -41,6 +41,10 @@ $gs-display-switch-breakpoint-names: $gel-breakpoint-names !default;
         display: table-cell !important;
     }
 
+    .gs-u-display-table-row#{$breakpoint-suffix} {
+        display: table-row !important;
+    }
+
     .gs-u-display-flex#{$breakpoint-suffix} {
         display: -moz-box !important;
         display: -ms-flexbox !important;
