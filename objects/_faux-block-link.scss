@@ -1,0 +1,110 @@
+/*------------------------------------*\
+    # FAUX BLOCK LINK
+\*------------------------------------*/
+
+/**
+ * The `Faux Block Link` pattern allows you to make an entire block
+ * a link, whilst having nested within in that block also clickable.
+ *
+ * The main link is absolutely positioned across the entire block, any
+ * nested links have a little z-index bump to lift them on top. Nice.
+ *
+    <div class="gs-o-faux-block-link">
+        <div>
+            <h1 class="gs-o-faux-block-link__target">
+                <a href="{{url}}">{{title}}</a>
+            </h1>
+            <a href="{{a-second-url}}">A nested link</a>
+        </div>
+        <a class="gs-o-faux-block-link__overlay" href="{{url}}" aria-hidden="true" tabIndex="-1">
+            Read more on {{title}}
+        </a>
+    </span>
+ *
+ * @link http://codepen.io/BPScott/pen/Erwan
+ *
+ *  1. IE fix to get hand cursor
+ */
+.gs-o-faux-block-link {
+    position: relative;
+
+    &:hover {
+        cursor: pointer; /* [1] */
+    }
+}
+
+/**
+ * Links/Items within the block that we want to sit on top of the overlay link
+ */
+.gs-o-faux-block-link a,
+.gs-o-faux-block-link abbr[title] {
+    position: relative;
+    z-index: 1;
+}
+
+/**
+ * Elements with the `target` class are the elements within the faux link which
+ * would traditionally have the hover state.
+ */
+.gs-o-faux-block-link__target {
+    a {
+        color: inherit;
+    }
+
+    &:hover a,
+    &:focus a,
+    .gs-o-faux-block-link--hover & {
+        text-decoration: underline;
+        color: $sp-c-dark-blue;
+    }
+}
+
+.gs-o-faux-block-link__target--on-dark {
+    &:hover a,
+    &:focus a,
+    .gs-o-faux-block-link--hover & {
+        color: $sp-c-sky-blue;
+    }
+ }
+
+/**
+ * Overlay link
+ *
+ * 1. IE Fix - To make summary text clickable
+ */
+.gs-o-faux-block-link__overlay {
+    display: none;
+    visibility: hidden;
+
+    @if $enhanced {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+        visibility: visible;
+
+        overflow: hidden;
+        text-indent: 200%;
+        white-space: nowrap;
+
+        .lt-ie9 & {
+            background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7); /* [1] */
+        }
+    }
+}
+
+/**
+ * Increased specificity so it trumps ".faux-block-link a"
+ *
+ * 1. IE Fix - Elements have a solid black background in high contrast mode
+ */
+.gs-o-faux-block-link__overlay.gs-o-faux-block-link__overlay {
+    position: absolute;
+    z-index: 0;
+
+    .lt-ie9 & {
+        opacity: 0; /* [1] */
+    }
+}
