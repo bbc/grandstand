@@ -1,0 +1,149 @@
+/*------------------------------------*\
+    $TABLE
+\*------------------------------------*/
+
+/**
+ * The table object allows you to make complex tables,
+ * from football league tables to medals tables.
+ */
+
+.gs-o-table {
+    width: 100%;
+    border-collapse: separate;
+    margin-bottom: double($gel-spacing-unit);
+}
+
+.gs-o-table--fixed {
+    table-layout: fixed;
+}
+
+/**
+ * Add a parent div around a table with this class to allow it
+ * to be scrollable horizontally if the viewport is to small.
+ */
+.gs-o-table-container {
+    width: 100%;
+    overflow-y: auto;
+}
+
+.gs-o-table__head {
+    background: $sp-c-cloud;
+
+    .gs-o-table__cell {
+        border-bottom: 1px solid $c-silver;
+
+        @if $enhanced {
+            padding-top: double($gel-spacing-unit);
+            padding-bottom: halve($gel-spacing-unit);
+
+            vertical-align: bottom;
+        }
+    }
+}
+
+/**
+ * Adds hover state to table row if required.
+ */
+.gs-o-table__row {
+    &:focus,
+    &:hover {
+        background-color: $sp-c-cloud;
+    }
+}
+
+.gs-o-table__row--disabled {
+    &,
+    .gs-o-table__link {
+        color: $sp-c-mortar;
+    }
+}
+
+.gs-o-table__row--highlighted {
+    background-color: $sp-c-solitude-blue;
+
+    &:focus,
+    &:hover {
+        background-color: darken($sp-c-solitude-blue, 5%);
+    }
+
+    .gs-o-table__cell {
+        border-bottom: 1px solid darken($sp-c-solitude-blue, 4%);
+    }
+}
+
+/**
+ * Use to break up tables to show boundaries or breaks.
+ */
+.gs-o-table__row--break {
+    .gs-o-table__cell {
+        border-bottom: 1px dashed $sp-c-charcoal;
+    }
+}
+
+/**
+ * 1. Focus first and last cells to have increased padding
+ */
+.gs-o-table__cell {
+    border-bottom: 1px solid $sp-c-charcoal;
+    padding-top: $gel-spacing-unit;
+    padding-bottom: $gel-spacing-unit;
+    padding-left: halve($gel-spacing-unit);
+    padding-right: halve($gel-spacing-unit);
+    text-align: center;
+
+    &:first-child {
+        padding-left: $gel-spacing-unit; /* [1] */
+    }
+
+    &:last-child {
+        padding-right: $gel-spacing-unit; /* [1] */
+    }
+}
+
+.gs-o-table__cell--flush {
+    padding: 0;
+}
+
+.gs-o-table__cell--no-border {
+    border-bottom: 0;
+}
+
+.gs-o-table__cell--border-right {
+    border-right: 1px solid $sp-c-charcoal;
+}
+
+.gs-o-table__cell--border-left {
+    border-left: 1px solid $sp-c-charcoal;
+}
+
+.gs-o-table__cell--left {
+    text-align: left;
+}
+
+.gs-o-table__cell--center {
+    text-align: center;
+}
+
+.gs-o-table__cell--right {
+    text-align: right;
+}
+
+.gs-o-table__cell--bold {
+    font-weight: bold;
+}
+
+.gs-o-table__cell--break {
+    border-top: 1px dashed $sp-c-charcoal;
+}
+
+.gs-o-table__link {
+    display: block;
+    
+    color: $sp-c-black;
+    font-weight: bold;
+
+    &:focus,
+    &:hover {
+        text-decoration: underline;
+    }
+}
