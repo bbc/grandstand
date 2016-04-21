@@ -30,7 +30,7 @@
     background: $sp-c-cloud;
 
     .gs-o-table__cell {
-        border-bottom: 1px solid $c-silver;
+        border-bottom: 1px solid $sp-c-silver;
 
         @if $enhanced {
             padding-top: double($gel-spacing-unit);
