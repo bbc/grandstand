@@ -79,12 +79,12 @@
 }
 
 .gs-o-button--yellow {
-    background: $sp-c-sport-yellow;
+    background: $sp-c-yellow;
     color: $sp-c-charcoal;
 
     &:hover,
     &:active {
-        background-color: darken($sp-c-sport-yellow, 10%);
+        background-color: darken($sp-c-yellow, 10%);
         color: $sp-c-black;
     }
 }
