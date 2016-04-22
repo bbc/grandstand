@@ -1,0 +1,114 @@
+/*------------------------------------*\
+    # BUTTON
+\*------------------------------------*/
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Normalize some styles.
+ * 4. Fixes odd inner spacing in IE7.
+ */
+
+.gs-o-button {
+    display: inline-block; /* [1] */
+    vertical-align: middle; /* [2] */
+    position: relative;
+
+    overflow: visible; /* [4] */
+
+    margin: 0; /* [3] */
+
+    padding-top: $gel-spacing-unit;
+    padding-right: $gel-spacing-unit;
+    padding-bottom: $gel-spacing-unit;
+    padding-left: $gel-spacing-unit;
+
+    text-align: center; /* [3] */
+
+    border: 0; /* [3] */
+
+    background-color: $sp-c-charcoal;
+    color: $sp-c-white;
+
+    &:hover,
+    &:active {
+        text-decoration: none; /* [3] */
+
+        background-color: $sp-c-black;
+    }
+
+    &:active {
+        top: 1px;
+    }
+}
+
+.gs-o-button--big {
+    padding-top: double($gel-spacing-unit);
+    padding-right: double($gel-spacing-unit);
+    padding-bottom: double($gel-spacing-unit);
+    padding-left: double($gel-spacing-unit);
+}
+
+.gs-o-button--full {
+    display: block;
+    width: 100%;
+}
+
+.gs-o-button--secondary {
+    border: 1px solid $sp-c-silver;
+    background-color: $sp-c-cloud;
+    color: $sp-c-charcoal;
+
+    &:hover,
+    &:active {
+        border-color: $sp-c-mortar;
+        background-color: $sp-c-mortar;
+        color: $sp-c-white;
+    }
+}
+
+.gs-o-button--clear {
+    background-color: transparent;
+    color: $sp-c-charcoal;
+
+    &:hover,
+    &:active {
+        background-color: transparent;
+        color: $sp-c-black;
+    }
+}
+
+.gs-o-button--yellow {
+    background: $sp-c-yellow;
+    color: $sp-c-charcoal;
+
+    &:hover,
+    &:active {
+        background-color: darken($sp-c-yellow, 10%);
+        color: $sp-c-black;
+    }
+}
+
+.gs-o-button--my-bbc {
+    background-color: $mb-c-azure-radiance;
+
+    &:hover {
+         background-color: darken($mb-c-azure-radiance, 10%);
+    }
+}
+
+.gs-o-button--border {
+    border: 1px solid $sp-c-black;
+}
+
+.gs-o-button__icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: halve($gel-spacing-unit);
+}
+
+.gs-o-button__text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
