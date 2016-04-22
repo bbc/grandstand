@@ -17,5 +17,5 @@
   "dependencies": {
     "gs-sass-tools": "git@github.com:bbc/gs-sass-tools.git#^4.0.0"
   },
-  "version": "2.1.0"
+  "version": "2.3.0"
 }
