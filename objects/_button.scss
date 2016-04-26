@@ -27,14 +27,9 @@
 
     border: 0; /* [3] */
 
-    background-color: $sp-c-charcoal;
-    color: $sp-c-white;
-
     &:hover,
     &:active {
         text-decoration: none; /* [3] */
-
-        background-color: $sp-c-black;
     }
 
     &:active {
