@@ -117,6 +117,16 @@
     border: 1px solid $sp-c-black;
 }
 
+.gs-o-button--disabled {
+    opacity: 0.2;
+
+    cursor: auto;
+
+    &:active {
+        top: 0;
+    }
+}
+
 .gs-o-button__icon {
     display: inline-block;
     vertical-align: middle;
