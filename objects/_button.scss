@@ -83,6 +83,17 @@
     }
 }
 
+.gs-o-button--white {
+    background: $sp-c-white;
+    color: $sp-c-charcoal;
+
+    &:hover,
+    &:active {
+        background: $sp-c-white;
+        color: $sp-c-black;
+    }
+}
+
 .gs-o-button--yellow {
     background: $sp-c-yellow;
     color: $sp-c-charcoal;
