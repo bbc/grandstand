@@ -27,14 +27,9 @@
 
     border: 0; /* [3] */
 
-    background-color: $sp-c-charcoal;
-    color: $sp-c-white;
-
     &:hover,
     &:active {
         text-decoration: none; /* [3] */
-
-        background-color: $sp-c-black;
     }
 
     &:active {
@@ -52,6 +47,16 @@
 .gs-o-button--full {
     display: block;
     width: 100%;
+}
+
+.gs-o-button--primary {
+    background-color: $sp-c-charcoal;
+    color: $sp-c-white;
+
+    &:hover,
+    &:active {
+        background-color: $sp-c-black;
+    }
 }
 
 .gs-o-button--secondary {
@@ -78,6 +83,17 @@
     }
 }
 
+.gs-o-button--white {
+    background: $sp-c-white;
+    color: $sp-c-charcoal;
+
+    &:hover,
+    &:active {
+        background: $sp-c-white;
+        color: $sp-c-black;
+    }
+}
+
 .gs-o-button--yellow {
     background: $sp-c-yellow;
     color: $sp-c-charcoal;
@@ -93,7 +109,7 @@
     background-color: $mb-c-azure-radiance;
 
     &:hover {
-         background-color: darken($mb-c-azure-radiance, 10%);
+        background-color: darken($mb-c-azure-radiance, 10%);
     }
 }
 
@@ -101,14 +117,12 @@
     border: 1px solid $sp-c-black;
 }
 
-.gs-o-button__icon {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: halve($gel-spacing-unit);
-}
+.gs-o-button--disabled {
+    opacity: 0.2;
 
-.gs-o-button__text {
-    display: inline-block;
-    vertical-align: middle;
-}
+    cursor: auto;
 
+    &:active {
+        top: 0;
+    }
+}
