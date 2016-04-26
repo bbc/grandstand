@@ -49,6 +49,16 @@
     width: 100%;
 }
 
+.gs-o-button--primary {
+    background-color: $sp-c-charcoal;
+    color: $sp-c-white;
+
+    &:hover,
+    &:active {
+        background-color: $sp-c-black;
+    }
+}
+
 .gs-o-button--secondary {
     border: 1px solid $sp-c-silver;
     background-color: $sp-c-cloud;
