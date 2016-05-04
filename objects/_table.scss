@@ -27,7 +27,7 @@
 }
 
 .gs-o-table__head {
-    background: $sp-c-cloud;
+    background: $sp-c-mist;
 
     .gs-o-table__cell {
         border-bottom: 1px solid $sp-c-silver;
@@ -47,7 +47,7 @@
 .gs-o-table__row {
     &:focus,
     &:hover {
-        background-color: $sp-c-cloud;
+        background-color: $sp-c-mist;
     }
 }
 
@@ -84,7 +84,7 @@
  * 1. Focus first and last cells to have increased padding
  */
 .gs-o-table__cell {
-    border-bottom: 1px solid $sp-c-charcoal;
+    border-bottom: 1px solid $sp-c-cloud;
     padding-top: $gel-spacing-unit;
     padding-bottom: $gel-spacing-unit;
     padding-left: halve($gel-spacing-unit);
@@ -109,11 +109,11 @@
 }
 
 .gs-o-table__cell--border-right {
-    border-right: 1px solid $sp-c-charcoal;
+    border-right: 1px solid $sp-c-cloud;
 }
 
 .gs-o-table__cell--border-left {
-    border-left: 1px solid $sp-c-charcoal;
+    border-left: 1px solid $sp-c-cloud;
 }
 
 .gs-o-table__cell--left {
