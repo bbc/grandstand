@@ -30,6 +30,8 @@
     &:hover,
     &:active {
         text-decoration: none; /* [3] */
+
+        cursor: pointer;
     }
 
     &:active {
@@ -50,25 +52,22 @@
 }
 
 .gs-o-button--primary {
-    background-color: $sp-c-charcoal;
+    background-color: $sp-c-black;
     color: $sp-c-white;
 
     &:hover,
     &:active {
-        background-color: $sp-c-black;
+        background-color: lighten($sp-c-black,10%);
     }
 }
 
 .gs-o-button--secondary {
-    border: 1px solid $sp-c-silver;
     background-color: $sp-c-cloud;
     color: $sp-c-charcoal;
 
     &:hover,
     &:active {
-        border-color: $sp-c-mortar;
-        background-color: $sp-c-mortar;
-        color: $sp-c-white;
+        background-color: lighten($sp-c-cloud,2%);
     }
 }
 
@@ -94,22 +93,21 @@
     }
 }
 
-.gs-o-button--yellow {
-    background: $sp-c-yellow;
-    color: $sp-c-charcoal;
+.gs-o-button--my-bbc {
+    background-color: $mb-c-blue-ribbon;
+    color: $sp-c-white;
 
-    &:hover,
-    &:active {
-        background-color: darken($sp-c-yellow, 10%);
-        color: $sp-c-black;
+    &:hover {
+        background-color: $mb-c-azure-radiance;
     }
 }
 
-.gs-o-button--my-bbc {
-    background-color: $mb-c-azure-radiance;
+.gs-o-button--share {
+    background-color: $c-share-green;
+    color: $sp-c-white;
 
     &:hover {
-        background-color: darken($mb-c-azure-radiance, 10%);
+        background-color: $c-share-green-active;
     }
 }
 
