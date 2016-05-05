@@ -1,10 +1,27 @@
-# BBC Grandstand
+<h1 align="center">Grandstand</h1>
+<p align="center">
+    A collection of common CSS abstractions and utility helper classes.<br />
+    <a href="http://bbc.github.io/bbc-grandstand" target="_blank"><b>BBC Grandstand Website</b></a>
+</p>
 
-[BBC Grandstand](https://www.youtube.com/watch?v=HLHMxFGqhIs) is a collection of common CSS object abstractions and utility helper classes.
+## What is this?
 
-> Grandstand was a British television sport programme. Broadcast between 1958 and 2007, it was one of the BBC's longest running sports shows, alongside BBC Sports Personality of the Year.
+Grandstand a collection of common CSS abstractions and utility helper classes
 
-The library is built and maintained by the BBC Sport team and used by components on the BBC Sport website and within the BBC Live product.
+This library is built and maintained by the BBC Sport team and used by various components on BBC Sport website and within the BBC Live product.
+
+## Installation
+
+Grandstand can be installed using Bower:
+
+```bash
+$ bower install --save bbc-grandstand
+```
+
+```sass
+// your-app/main.scss
+@import 'bower_components/bbc-grandstand/grandstand';
+```
 
 The idea behind setup is very much inspired by the great work of [Harry Roberts](http://www.csswizardry.com) and his Inverted Triangle CSS architecture and [Inuit CSS](github.com/inuitcss).
 
@@ -65,3 +82,30 @@ Here are a few examples of what these namespaces might look like in practice:
 // apply the sport theme to a component
 .gs-t-sport {}
 ```
+
+## Why Grandstand?!?
+
+This framework is named after [Grandstand](https://www.youtube.com/watch?v=HLHMxFGqhIs), a British television sport programme. Broadcast between 1958 and 2007, it was one of the BBC's longest running sports shows, alongside BBC Sports Personality of the Year.
+
+## License
+
+> The MIT License (MIT)
+>
+> Copyright 2016 British Broadcasting Corporation
+>
+> Permission is hereby granted, free of charge, to any person obtaining a copy of
+> this software and associated documentation files (the "Software"), to deal in
+> the Software without restriction, including without limitation the rights to
+> use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+> the Software, and to permit persons to whom the Software is furnished to do so,
+> subject to the following conditions:
+>
+> The above copyright notice and this permission notice shall be included in all
+> copies or substantial portions of the Software.
+>
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+> FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+> COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+> IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+> CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
