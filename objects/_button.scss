@@ -108,7 +108,8 @@
     border: 1px solid $sp-c-black;
 }
 
-.gs-o-button[disabled] {
+.gs-o-button[disabled],
+.gs-o-button--disabled {
     opacity: .2;
 
     cursor: auto;
