@@ -6,7 +6,7 @@
  * The `bullet` pattern is used to align an icon with some text,
  * similar to how a bullet point has the icon and the text
  *
-    <span class="gs-o-bullet">
+    <span class="gs-o-bullet [ gs-o-bullet- | gs-o-bullet+ | gs-o-bullet--reverse ]">
         <span class="gs-o-bullet__icon gel-icon">
             <svg>
                 <use xlink:href="#gel-icon-duration"></use>
@@ -20,13 +20,18 @@
     display: inline-block;
 }
 
+/**
+ * Lets hide the icon from browsers that do not cut the mustard
+ *
+ * 1. Scale the icon proportionally with the text
+ */
 .gs-o-bullet__icon {
     display: none;
 
     @if $enhanced {
         display: inline-block;
-        width: 1em;
-        height: 1em;
+        width: 1em; /* [1] */
+        height: 1em; /* [1] */
         vertical-align: middle;
     }
 }

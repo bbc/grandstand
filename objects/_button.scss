@@ -8,7 +8,6 @@
  * 3. Normalize some styles.
  * 4. Fixes odd inner spacing in IE7.
  */
-
 .gs-o-button {
     display: inline-block; /* [1] */
     vertical-align: middle; /* [2] */
@@ -18,10 +17,7 @@
 
     margin: 0; /* [3] */
 
-    padding-top: $gel-spacing-unit;
-    padding-right: $gel-spacing-unit;
-    padding-bottom: $gel-spacing-unit;
-    padding-left: $gel-spacing-unit;
+    padding: $gel-spacing-unit;
 
     text-align: center; /* [3] */
 
@@ -40,10 +36,7 @@
 }
 
 .gs-o-button--big {
-    padding-top: double($gel-spacing-unit);
-    padding-right: double($gel-spacing-unit);
-    padding-bottom: double($gel-spacing-unit);
-    padding-left: double($gel-spacing-unit);
+    padding: double($gel-spacing-unit);
 }
 
 .gs-o-button--full {
@@ -57,7 +50,7 @@
 
     &:hover,
     &:active {
-        background-color: lighten($sp-c-black,10%);
+        background-color: lighten($sp-c-black, 10%);
     }
 }
 
@@ -67,7 +60,7 @@
 
     &:hover,
     &:active {
-        background-color: lighten($sp-c-cloud,2%);
+        background-color: lighten($sp-c-cloud, 2%);
     }
 }
 
@@ -115,8 +108,8 @@
     border: 1px solid $sp-c-black;
 }
 
-.gs-o-button--disabled {
-    opacity: 0.2;
+.gs-o-button[disabled] {
+    opacity: .2;
 
     cursor: auto;
 

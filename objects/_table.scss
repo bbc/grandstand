@@ -1,12 +1,11 @@
 /*------------------------------------*\
-    $TABLE
+    # TABLE
 \*------------------------------------*/
 
 /**
  * The table object allows you to make complex tables,
  * from football league tables to medals tables.
  */
-
 .gs-o-table {
     width: 100%;
     border-collapse: separate;
@@ -81,14 +80,11 @@
 }
 
 /**
- * 1. Focus first and last cells to have increased padding
+ * 1. Force first and last cells to have increased padding
  */
 .gs-o-table__cell {
     border-bottom: 1px solid $sp-c-cloud;
-    padding-top: $gel-spacing-unit;
-    padding-bottom: $gel-spacing-unit;
-    padding-left: halve($gel-spacing-unit);
-    padding-right: halve($gel-spacing-unit);
+    padding: $gel-spacing-unit halve($gel-spacing-unit);
     text-align: center;
 
     &:first-child {
@@ -138,7 +134,7 @@
 
 .gs-o-table__link {
     display: block;
-    
+
     color: $sp-c-black;
     font-weight: bold;
 

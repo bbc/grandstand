@@ -1,12 +1,11 @@
 /*------------------------------------*\
-    #LIST-UI
+    # LIST-UI
 \*------------------------------------*/
 
 /**
  * The UI list object creates blocky list items with a keyline separator out of
  * a `ul` or `ol`.
  */
-
 .gs-o-list-ui,
 .gs-o-list-ui__item {
     border: 0 solid $sp-c-silver;
@@ -25,7 +24,7 @@
  */
 .gs-o-list-ui--subtle {
     border-top-color: $sp-c-cloud;
-    
+
     .gs-o-list-ui__item {
         border-bottom-color: $sp-c-cloud;
     }
@@ -54,12 +53,10 @@
     padding: 0;
 }
 
-
 .gs-o-list-ui__link {
     display: block;
 
-    padding-top: $gel-spacing-unit;
-    padding-bottom: $gel-spacing-unit;
+    padding: $gel-spacing-unit 0;
 
     color: $sp-c-black;
 

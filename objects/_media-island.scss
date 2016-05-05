@@ -8,8 +8,15 @@
  *
  * It also has the ability to position things on top of the images
  * such as media icons
+ *
+    <div class="gs-o-media-island">
+        <img />
+        <div class="gs-o-media-island__icon">
+            [icon]
+        </div>
+    </div>
+ *
  */
-
 .gs-o-media-island {
     position: relative;
 }
