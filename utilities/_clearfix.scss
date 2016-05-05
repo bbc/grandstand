@@ -1,11 +1,13 @@
 /*------------------------------------*\
-    #CLEARFIX
+    # CLEARFIX
 \*------------------------------------*/
 
 /**
- * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Micro clearfix
+ *
+ * @link http://bit.ly/1XaLd3M
+ * @link http://bit.ly/1NkYJja
  */
-.gs-u-clearfix,
-%gs-u-clearfix {
+.gs-u-clearfix {
     @include clearfix;
 }

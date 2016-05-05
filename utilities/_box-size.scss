@@ -11,8 +11,7 @@
  *
  * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  */
-.gs-u-box-size,
-%gs-u-box-size {
+.gs-u-box-size {
     &,
     & * {
         -webkit-box-sizing: border-box;

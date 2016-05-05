@@ -1,21 +1,21 @@
 /*------------------------------------*\
-    #RESPONSIVE IMAGE
+    # RESPONSIVE IMAGE
 \*------------------------------------*/
 
 /**
  * The responsive image pattern automatically reserves the space
  * needed for an image to be inserted
- */
-
-
-/**
+ *
+    <div class="gs-o-responsive-image [ gs-o-responsive-image--1by1 | gs-o-responsive-image--16by9 ]">
+        <img src="..." />
+    </div>
+ *
  * 1. Setting the height to zero collapses the div so we don't
  *    need to absolutly position the image
  * 2. Stop images 1px difference between the reserved space
  *    and the actual image from showing
  */
-.gs-o-responsive-image,
-%gs-o-responsive-image {
+.gs-o-responsive-image {
     position: relative;
 
     height: 0; /* [1] */
@@ -45,12 +45,10 @@
 /**
  * Aspect radio modifiers
  */
-.gs-o-responsive-image--1by1,
-%gs-o-responsive-image--1by1 {
+.gs-o-responsive-image--1by1 {
     padding-bottom: 100%;
 }
 
-.gs-o-responsive-image--16by9,
-%gs-o-responsive-image--16by9 {
+.gs-o-responsive-image--16by9 {
     padding-bottom: 9 / 16 * 100%;
 }
