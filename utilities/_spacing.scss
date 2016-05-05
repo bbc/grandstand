@@ -10,9 +10,45 @@
     <p class="gel-pica gs-u-mb gs-u-mb+@m">Some content</p>
  *
  * Applying spacing should not and does not have to be done exclusively with the classes, apply a bit of
- * common sense thinking as to when and where you use these
- */
+ * common sense thinking as to when and where you use these.
+ *
+ * These classes use the following naming structure:
 
+    .gs-u-(margin/padding)(spacing type)(spacing size)(optional breakpoint) { ... }
+
+ *
+ * Available spacing types:
+ *
+ * mt -> margin-top
+ * mr -> margin-right
+ * mb -> margin-bottom
+ * ml -> margin-left
+ * mv -> margin-top & margin-bottom
+ * mh -> margin-right & margin-left
+ * pt -> padding-top
+ * pr -> padding-right
+ * pb -> padding-bottom
+ * pl -> padding-left
+ * pv -> padding-top & padding-bottom
+ * ph -> padding-right & padding-left
+ *
+ * Available spacing sizes:
+ *
+ * 0       - 0px
+ * `--`    - 2px
+ * `-`     - 4px
+ * Default - 8px
+ * `+`     - 16px
+ * `++`    - 32px
+ *
+ * Optional breakpoint suffix:
+ *
+ * @s - GEL Small Breakpoint (400px)
+ * @m - GEL Medium Breakpoint (600px)
+ * @l - GEL Large Breakpoint (900px)
+ *
+ */
+ 
 
 // Which breakpoints do we want spacing classes generated for?
 //
@@ -170,10 +206,9 @@ $gs-spacing-breakpoints: (s, m, l) !default;
 
 }
 
-/**
- * Output the spacing classes and loop through the array of
- * breakpoints output the breakpoint namespaced classes
- */
+// Output the spacing classes and loop through the array of
+// breakpoints output the breakpoint namespaced classes
+//
 @include _output-spacing-classes();
 
 @each $breakpoint in $gs-spacing-breakpoints {
