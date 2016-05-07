@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/bbc/bbc-grandstand/issues"
   },
-  "homepage": "https://github.com/bbc/bbc-grandstand#readme",
+  "homepage": "http://bbc.github.io/bbc-grandstand/",
   "devDependencies": {
     "bower": "^1.7.9",
     "node-sass": "^3.7.0"
