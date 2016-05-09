@@ -43,7 +43,7 @@ Grandstand includes the following abstractions:
 
 - [Bullet](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_bullet.scss) - aligns an icon with an piece of descriptive text. The icon will automatically scale to match the size of the text
 - [Button](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_button.scss) - a basic pattern for creating consistent buttons
-- [Faux Block Link](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_faux-block-link.scss) - make an entire block a link, whilst having nested links also clickable, see: [http://bit.ly/1q8E3Q3](http://bit.ly/1q8E3Q3)
+- [Faux Block Link](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_faux-block-link.scss) - make an entire block a link, whilst having nested links also clickable, see: [http://bit.ly/1q8E3Q3xw](http://bit.ly/1q8E3Q3xw)
 - [Flag](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_flag.scss) - similar to the media object in design pattern but control over the vertical alignments of the text and image
 - [Icon](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_icons.scss) - standardise the use of icons, inherit size from parent and cascades the `color` property to `fill`  
 - [List Inline](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_list-inline.scss) - simply displays a list of items in line, items can be optional spaced, comma seperated or divided with a line
@@ -105,6 +105,14 @@ Grandstand includes the following helper utilities:
 - [Spacing](https://github.com/bbc/bbc-grandstand/blob/master/lib/utilities/_spacing.scss) - a suite of `margin` and `padding` utility classes to control the spacing of elements
 - [Text Alignment](https://github.com/bbc/bbc-grandstand/blob/master/lib/utilities/_text-alignment.scss) - a set of classes to control the alignment of text both horizontally or vertically
 - [Visibility](https://github.com/bbc/bbc-grandstand/blob/master/lib/utilities/_visibility.scss) - various ways to control the visibility of an element. e.g. making an element only visible to screen-readers
+
+#### !important
+
+All utility classes carry the `!important` tag on every property to ensure our utility classes always work.
+
+Utility classes are very specific in their intentions. For example if you applied a utility class to add 8px margin on the bottom of an element you never want to override this. If you didn't want this behaviour, you should not have used the class in the first place.
+
+The [pro-active use of `!important`](http://cssguidelin.es/#important) guarantees this way of thinking.
 
 ## Why Grandstand?!?
 
