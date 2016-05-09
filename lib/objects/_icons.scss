@@ -1,0 +1,56 @@
+/*------------------------------------*\
+    # ICONS
+\*------------------------------------*/
+
+@if $enhanced {
+
+    /**
+     * 1. Inherit the width and height from the parent element, without
+     *    without this the SVG will just scale out to a large size
+     * 2. Inherit from the `color` value of the parent element
+     */
+    .gel-icon {
+        display: inline-block;
+
+        svg {
+            width: inherit; /* [1] */
+            height: inherit; /* [1] */
+
+            fill: currentColor; /* [2] */
+        }
+    }
+
+    /**
+     * Lets make the loading spinner, spin
+     */
+    .gel-icon--loading {
+        -webkit-animation-name: gel-spin;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        -moz-animation-name: gel-spin;
+        -moz-animation-duration: 1s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-timing-function: linear;
+        animation-name: gel-spin;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @-moz-keyframes gel-spin {
+        0% { -moz-transform: rotate(0deg); }
+        100% { -moz-transform: rotate(360deg); }
+    }
+
+    @-webkit-keyframes gel-spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes gel-spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+}

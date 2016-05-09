@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    # CLEARFIX
+\*------------------------------------*/
+
+/**
+ * Micro clearfix
+ *
+ * @link http://bit.ly/1XaLd3M
+ * @link http://bit.ly/1NkYJja
+ */
+.gs-u-clearfix {
+    @include clearfix;
+}

@@ -1,6 +1,6 @@
 {
   "name": "BBC Grandstand",
-  "homepage": "https://github.com/bbc-sport/morph-renderer",
+  "homepage": "http://bbc.github.io/bbc-grandstand/",
   "authors": [
     "Shaun Bent <shaun.bent@bbc.co.uk>"
   ],
@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "gs-sass-tools": "git@github.com:bbc/gs-sass-tools.git#^4.0.1"
+    "gs-sass-tools": "git@github.com:bbc/gs-sass-tools.git#^4.0.0"
   },
-  "version": "2.3.4"
+  "version": "3.0.0"
 }
