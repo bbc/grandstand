@@ -43,9 +43,9 @@ Grandstand includes the following abstractions:
 
 - [Bullet](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_bullet.scss) - aligns an icon with an piece of descriptive text. The icon will automatically scale to match the size of the text
 - [Button](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_button.scss) - a basic pattern for creating consistent buttons
-- [Faux Block Link](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_faux-block-link.scss) - make an entire block a link, whilst having nested links also clickable, see: [http://codepen.io/BPScott/pen/Erwan](http://codepen.io/BPScott/pen/Erwan)
+- [Faux Block Link](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_faux-block-link.scss) - make an entire block a link, whilst having nested links also clickable, see: [http://bit.ly/1q8E3Q3](http://bit.ly/1q8E3Q3)
 - [Flag](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_flag.scss) - similar to the media object in design pattern but control over the vertical alignments of the text and image
-- [Icon](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_icons.scss) - standardise the use of icons across the codebase, inherit size from parent and cascades the `color` property to `fill`  
+- [Icon](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_icons.scss) - standardise the use of icons, inherit size from parent and cascades the `color` property to `fill`  
 - [List Inline](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_list-inline.scss) - simply displays a list of items in line, items can be optional spaced, comma seperated or divided with a line
 - [List UI](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_list-ui.scss) - creates blocky list items with a keyline separator between items
 - [Media Island](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_media-island.scss) - creates an island around media, allowing content to be positioned on top of media
