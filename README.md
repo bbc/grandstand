@@ -1,7 +1,7 @@
 <h1 align="center">Grandstand</h1>
 <p align="center">
     A collection of common CSS abstractions and utility helper classes.<br />
-    <a href="http://bbc.github.io/bbc-grandstand" target="_blank"><b>BBC Grandstand Website</b></a>
+    <a href="http://bbc.github.io/bbc-grandstand" target="_blank"><b>BBC Grandstand</b></a>
 </p>
 
 ## What is this?
