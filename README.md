@@ -43,9 +43,9 @@ Grandstand includes the following abstractions:
 
 - [Bullet](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_bullet.scss) - aligns an icon with an piece of descriptive text. The icon will automatically scale to match the size of the text
 - [Button](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_button.scss) - a basic pattern for creating consistent buttons
-- [Faux Block Link](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_faux-block-link.scss) - allows you to make an entire block a link, whilst having nested within in that block also clickable, see: [http://codepen.io/BPScott/pen/Erwan](http://codepen.io/BPScott/pen/Erwan)
+- [Faux Block Link](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_faux-block-link.scss) - make an entire block a link, whilst having nested links also clickable, see: [http://codepen.io/BPScott/pen/Erwan](http://codepen.io/BPScott/pen/Erwan)
 - [Flag](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_flag.scss) - similar to the media object in design pattern but control over the vertical alignments of the text and image
-- [Icon](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_icons.scss) - standardise the use of icons across the codebase, forces size to be inherited from parent and cascades the `color` property to `fill`  
+- [Icon](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_icons.scss) - standardise the use of icons across the codebase, inherit size from parent and cascades the `color` property to `fill`  
 - [List Inline](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_list-inline.scss) - simply displays a list of items in line, items can be optional spaced, comma seperated or divided with a line
 - [List UI](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_list-ui.scss) - creates blocky list items with a keyline separator between items
 - [Media Island](https://github.com/bbc/bbc-grandstand/blob/master/lib/objects/_media-island.scss) - creates an island around media, allowing content to be positioned on top of media
@@ -102,7 +102,7 @@ Grandstand includes the following helper utilities:
 - [Box Size](https://github.com/bbc/bbc-grandstand/blob/master/lib/utilities/_box-size.scss) - a simple utility to apply `box-sizing: border-box;` to an element
 - [Clearfix](https://github.com/bbc/bbc-grandstand/blob/master/lib/utilities/_clearfix.scss) - a lightweight clearfix utility
 - [Display](https://github.com/bbc/bbc-grandstand/blob/master/lib/utilities/_display.scss) - a collection of classes to vary the `display` property at different breakpoints
-- [Spacing](https://github.com/bbc/bbc-grandstand/blob/master/lib/utilities/_spacing.scss) - a suite of `margin` and `padding` utility classes allowing spacing to be added without adding a whole load of classes and bespoke CSS
+- [Spacing](https://github.com/bbc/bbc-grandstand/blob/master/lib/utilities/_spacing.scss) - a suite of `margin` and `padding` utility classes to control the spacing of elements
 - [Text Alignment](https://github.com/bbc/bbc-grandstand/blob/master/lib/utilities/_text-alignment.scss) - a set of classes to control the alignment of text both horizontally or vertically
 - [Visibility](https://github.com/bbc/bbc-grandstand/blob/master/lib/utilities/_visibility.scss) - various ways to control the visibility of an element. e.g. making an element only visible to screen-readers
 
