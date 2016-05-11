@@ -10,6 +10,17 @@ Grandstand a collection of common CSS abstractions and utility helper classes
 
 This library is built and maintained by the BBC Sport team and used by various components on BBC Sport website and within the BBC Live product.
 
+
+## Contents
+
+- [Installation](#installation)
+- [Grandstand](#grandstand)
+    - [GS Sass Tools](#gs-sass-tools)
+    - [GEL Foundations](#gel-foundations)
+    - [Objects](#objects)
+    - [Utilities](#utilities)
+    - [Why Grandstand?](#why-grandstand)
+
 ## Installation
 
 Grandstand can be installed using Bower:
@@ -22,6 +33,10 @@ $ bower install --save bbc-grandstand
 // your-app/main.scss
 @import 'bower_components/bbc-grandstand/grandstand';
 ```
+
+## Grandstand
+
+Grandstand is a scalable front end architecture and a lightweight Sass framework. Consisting of a collection of common CSS abstractions and utility helper classes, Grandstand allows you to quickly development components in a reusable, performant manner.
 
 ### GS Sass Tools
 
