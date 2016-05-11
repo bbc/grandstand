@@ -6,10 +6,9 @@
 
 ## What is this?
 
-Grandstand a collection of common CSS abstractions and utility helper classes
+Grandstand is a scalable front end architecture and a lightweight Sass framework. Consisting of a collection of common CSS abstractions and utility helper classes, Grandstand allows you to quickly development components in a reusable, performant manner.
 
 This library is built and maintained by the BBC Sport team and used by various components on BBC Sport website and within the BBC Live product.
-
 
 ## Contents
 
@@ -21,6 +20,8 @@ This library is built and maintained by the BBC Sport team and used by various c
     - [Objects](#objects)
     - [Utilities](#utilities)
 - [Why Grandstand?](#why-grandstand)
+- [Credits](#credits)
+- [License](#license)
 
 ## Installation
 
@@ -37,7 +38,10 @@ $ bower install --save bbc-grandstand
 
 ## Architecture
 
-Grandstand is a scalable front end architecture and a lightweight Sass framework. Consisting of a collection of common CSS abstractions and utility helper classes, Grandstand allows you to quickly development components in a reusable, performant manner.
+- Intro (BEM, OOCSS, ITCSS)
+- Single Responsibility Principle
+- Open/Closed Principle
+- Separation of Concerns
 
 ## Code
 
@@ -135,6 +139,11 @@ The [pro-active use of `!important`](http://cssguidelin.es/#important) guarantee
 ## Why Grandstand?!?
 
 This framework is named after [Grandstand](https://www.youtube.com/watch?v=HLHMxFGqhIs), a British television sport programme. Broadcast between 1958 and 2007, it was one of the BBC's longest running sports shows, alongside BBC Sports Personality of the Year.
+
+## Credits
+
+- [inuitcss](https://github.com/inuitcss)
+- [Scally](https://github.com/chris-pearce/scally)
 
 ## License
 
