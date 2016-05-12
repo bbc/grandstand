@@ -66,9 +66,7 @@ Our approach to writing and applying CSS very much promotes adding classes in th
 
 There is loads more information about this in Harry Roberts post about: [More Transparent UI Code with Namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)
 
-We add specific namespaces to our classes to help alleviate the problems details above and in Harry’s article:
-
-### Our Namespaces
+We add specific namespaces to our classes to help alleviate the problems of working with multiple classes:
 
 - `o-`: [Object](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/#object-namespaces-o-) -  may be used in any number of unrelated contexts to the one you can currently see it in. Making modifications to these types of class could potentially have knock-on effects in a lot of other unrelated places. Tread carefully.
 - `c-`: [Component](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/#component-namespaces-c-) -  This is a concrete, implementation-specific piece of UI. All of the changes you make to its styles should be detectable in the context you’re currently looking at. Modifying these styles should be safe and have no side effects.
