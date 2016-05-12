@@ -48,7 +48,7 @@ The overarching architecture of Grandstand is very much inspired by the great wo
 
 [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4) (Inverted Triangle CSS) is specifically designed for managing CSS is scale and is a diagrammatical representations of an entire projects CSS. The ITCSS structure is not rigid and can be adapted to suit different projects, with that in mind Grandstand uses the following architecture:
 
-<img width="860" alt="Grandstand ITCSS Architecture" src="https://cloud.githubusercontent.com/assets/608566/15208651/96e39288-1824-11e6-8c2a-8ebf56d4d2dd.png">
+<img width="860" alt="Grandstand ITCSS Architecture" src="https://cloud.githubusercontent.com/assets/608566/15209283/28f87582-1828-11e6-8c16-b5ecabd6b5f3.png">
 
 Following the approach a component should be primarily constructed using common objects and abstractions, the GEL Foundations and utility classes. The purpose of the code this library is to manage these common styles. A component should then only require a small amount of bespoke styling.
 
