@@ -77,7 +77,7 @@ We add specific namespaces to our classes to help alleviate the problems of work
 
 Here are a few examples of what these namespaces might look like in practice:
 
-```css
+```sass
 // our media object pattern
 .gs-o-media {}
 .gs-o-media__img {}
