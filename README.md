@@ -38,12 +38,30 @@ $ bower install --save bbc-grandstand
 
 ## Architecture
 
-- Intro (BEM, OOCSS, ITCSS)
+Grandstand has a number of key architectural points which when combined work together to produce CSS which is fast to develop, scalable, performant, DIY and reusable.
+
+The architectural principles behind Grandstand are arguably more important than the code provided in this library. Without knowing and adhering to these architectural principles you will not get the full benefits of working with Grandstand. The code alone is not enough.
+
+### ITCSS
+
+The overarching architecture of Grandstand is very much inspired by the great work of [Harry Roberts](http://www.csswizardry.com), his ITCSS architecture and [Inuit CSS](http://github.com/inuitcss).
+
+[ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4) (Inverted Triangle CSS) is specifically designed for managing CSS is scale and is a diagrammatical representations of an entire projects CSS. The ITCSS structure is not rigid and can be adapted to suit different projects, with that in mind Grandstand uses the following architecture:
+
+<img width="900" alt="Grandstand ITCSS Architecture" src="https://cloud.githubusercontent.com/assets/608566/15207912/f0ce751e-1820-11e6-8632-680c9bbccba1.png">
+
+Following the approach a component should be primarily constructed using common objects and abstractions, the GEL Foundations and utility classes. The purpose of the code this library is to manage these common styles. A component should then only require a small amount of bespoke styling.
+
+- BEM
+- OOCSS
+- Namespaces
 - Single Responsibility Principle
 - Open/Closed Principle
 - Separation of Concerns
 
 ## Code
+
+With sharing of code in mind, all classes and output within this library is prefixed with `gs-` prefix. This will help us mitigate any potential clash of classname within other products.
 
 ### GS Sass Tools
 
