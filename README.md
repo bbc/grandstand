@@ -14,6 +14,8 @@ This library is built and maintained by the BBC Sport team and used by various c
 
 - [Installation](#installation)
 - [Architecture](#architecture)
+    - [ITCSS](#itcss)
+    - [Namespaces](#namespaces)
 - [Code](#code)
     - [GS Sass Tools](#gs-sass-tools)
     - [GEL Foundations](#gel-foundations)
@@ -54,7 +56,47 @@ Following the approach a component should be primarily constructed using common 
 
 - BEM
 - OOCSS
-- Namespaces
+
+### Namespaces
+
+Our approach to writing and applying CSS very much promotes adding classes in the DOM. This creates two distinct problems for other developers working with this code:
+
+- **Clarity** - which classes do what? which classes are related to each other (if at all)? which classes are optional? which classes can be reused? which classes can you delete? etc?
+- **Confidence** - which class do I modify for my desired change? are there any side-effects to change this class? am I safe to remove this class?
+
+There is loads more information about this in Harry Roberts post about: [More Transparent UI Code with Namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)
+
+We add specific namespaces to our classes to help alleviate the problems details above and in Harry’s article:
+
+### Our Namespaces
+
+- `o-`: [Object](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/#object-namespaces-o-) -  may be used in any number of unrelated contexts to the one you can currently see it in. Making modifications to these types of class could potentially have knock-on effects in a lot of other unrelated places. Tread carefully.
+- `c-`: [Component](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/#component-namespaces-c-) -  This is a concrete, implementation-specific piece of UI. All of the changes you make to its styles should be detectable in the context you’re currently looking at. Modifying these styles should be safe and have no side effects.
+- `u-`: [Utility](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/#utility-namespaces-u-) - It has a very specific role (often providing only one declaration) and should not be bound onto or changed. It can be reused and is not tied to any specific piece of UI.
+- `t-`: [Theme](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/#theme-namespaces-t-) - This class is responsible for adding theming to a view. It lets us know that UI Components’ current cosmetic appearance may be due to the presence of a theme.
+
+#### Namespace Examples
+
+Here are a few examples of what these namespaces might look like in practice:
+
+```css
+// our media object pattern
+.gs-o-media {}
+.gs-o-media__img {}
+.gs-o-media__body {}
+
+// a sample component
+.gs-c-my-component {}
+.gs-c-my-component--large {}
+.gs-c-my-component__title {}
+
+// visually hidden utility
+.gs-u-vh {}
+
+// apply the sport theme to a component
+.gs-t-sport {}
+```
+
 - Single Responsibility Principle
 - Open/Closed Principle
 - Separation of Concerns
