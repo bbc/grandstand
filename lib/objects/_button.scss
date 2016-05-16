@@ -45,12 +45,12 @@
 }
 
 .gs-o-button--primary {
-    background-color: $sp-c-black;
+    background-color: $sp-c-charcoal;
     color: $sp-c-white;
 
     &:hover,
     &:active {
-        background-color: lighten($sp-c-black, 10%);
+        background-color: $sp-c-black;
     }
 }
 
@@ -60,7 +60,7 @@
 
     &:hover,
     &:active {
-        background-color: lighten($sp-c-cloud, 2%);
+        background-color: darken($c-cloud,5%);
     }
 }
 
@@ -91,7 +91,7 @@
     color: $sp-c-white;
 
     &:hover {
-        background-color: $mb-c-azure-radiance;
+        background-color: $mb-c-science-blue;
     }
 }
 
@@ -100,7 +100,7 @@
     color: $sp-c-white;
 
     &:hover {
-        background-color: $c-share-green-active;
+        background-color: darken($c-share-green, 5%);
     }
 }
 
