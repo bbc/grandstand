@@ -43,6 +43,16 @@
 }
 
 /**
+ * Removes the default placeholder styles
+ * for background-color and background-image
+ */
+
+.gs-o-responsive-image--no-placeholder {
+    background-color: transparent;
+    background-image: none;
+}
+
+/**
  * Aspect radio modifiers
  */
 .gs-o-responsive-image--1by1 {
