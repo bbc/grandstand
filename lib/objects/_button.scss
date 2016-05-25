@@ -51,6 +51,11 @@
     &:hover,
     &:active {
         background-color: $sp-c-black;
+
+        &.gs-o-button[disabled],
+        &.gs-o-button--disabled {
+            background-color: $sp-c-charcoal;
+        }
     }
 }
 
@@ -61,6 +66,11 @@
     &:hover,
     &:active {
         background-color: darken($sp-c-cloud,5%);
+
+        &.gs-o-button[disabled],
+        &.gs-o-button--disabled {
+            background-color: $sp-c-cloud;
+        }
     }
 }
 
@@ -92,6 +102,12 @@
 
     &:hover {
         background-color: $mb-c-science-blue;
+
+        &.gs-o-button[disabled],
+        &.gs-o-button--disabled {
+            background-color: $mb-c-blue-ribbon;
+        }
+
     }
 }
 
@@ -101,6 +117,11 @@
 
     &:hover {
         background-color: darken($c-share-green, 5%);
+
+        &.gs-o-button[disabled],
+        &.gs-o-button--disabled {
+            background-color: $c-share-green;
+        }
     }
 }
 
