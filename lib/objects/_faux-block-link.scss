@@ -55,7 +55,10 @@
     &:focus a,
     .gs-o-faux-block-link--hover & {
         text-decoration: underline;
-        color: $sp-c-dark-blue;
+
+        @include theme('sport') {
+            color: $sp-c-dark-blue;
+        }
     }
 }
 
@@ -63,7 +66,9 @@
     &:hover a,
     &:focus a,
     .gs-o-faux-block-link--hover & {
-        color: $sp-c-sky-blue;
+        @include theme('sport') {
+            color: $sp-c-sky-blue;
+        }
     }
  }
 
