@@ -1,5 +1,5 @@
 {
-  "name": "BBC Grandstand",
+  "name": "bbc-grandstand",
   "homepage": "http://bbc.github.io/bbc-grandstand/",
   "authors": [
     "Shaun Bent <shaun.bent@bbc.co.uk>"
@@ -17,5 +17,5 @@
   "dependencies": {
     "gs-sass-tools": "git@github.com:bbc/gs-sass-tools.git#^4.1.2"
   },
-  "version": "3.1.4"
+  "version": "3.1.5"
 }
