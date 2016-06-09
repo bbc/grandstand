@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bbc/bbc-grandstand.git"
+    "url": "git+https://github.com/bbc/grandstand.git"
   },
   "author": "Shaun Bent <shaun.bent@bbc.co.uk>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bbc/bbc-grandstand/issues"
+    "url": "https://github.com/bbc/grandstand/issues"
   },
-  "homepage": "http://bbc.github.io/bbc-grandstand/",
+  "homepage": "http://bbc.github.io/grandstand/",
   "devDependencies": {
     "bower": "^1.7.9",
     "node-sass": "^3.7.0"
