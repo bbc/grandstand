@@ -1,6 +1,6 @@
 {
   "name": "bbc-grandstand",
-  "version": "3.1.7",
+  "version": "3.1.8",
   "description": "The BBC Grandstand CSS Framework is used by Sport and Live components",
   "main": "_grandstand.scss",
   "scripts": {
