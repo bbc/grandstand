@@ -213,8 +213,10 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
 //
 @include _output-spacing-classes();
 
-@each $breakpoint in $gs-spacing-breakpoints {
-    @include mq($from: '#{$gel-grid-breakpoint-namespace}#{$breakpoint}') {
-        @include _output-spacing-classes($breakpoint);
+@if $enhanced {
+    @each $breakpoint in $gs-spacing-breakpoints {
+        @include mq($from: '#{$gel-grid-breakpoint-namespace}#{$breakpoint}') {
+            @include _output-spacing-classes($breakpoint);
+        }
     }
 }
