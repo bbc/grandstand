@@ -20,17 +20,17 @@
  * Available spacing types:
  *
  * mt -> margin-top
- * mr -> margin-right
+ * mr -> margin-right (margin-left if $rtl is true)
  * mb -> margin-bottom
- * ml -> margin-left
+ * ml -> margin-left (margin-right if $rtl is true)
  * mv -> margin-top & margin-bottom
- * mh -> margin-right & margin-left
+ * mh -> margin-right & margin-left (flipped if $rtl is true)
  * pt -> padding-top
- * pr -> padding-right
+ * pr -> padding-right (padding-left if $rtl is true)
  * pb -> padding-bottom
- * pl -> padding-left
+ * pl -> padding-left (padding-right if $rtl is true)
  * pv -> padding-top & padding-bottom
- * ph -> padding-right & padding-left
+ * ph -> padding-right & padding-left (flipped if $rtl is true)
  *
  * Available spacing sizes:
  *
@@ -79,10 +79,10 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
      */
     .gs-u-m#{$breakpoint-suffix}       { margin:           $gel-spacing-unit !important; }
     .gs-u-mt#{$breakpoint-suffix}      { margin-top:       $gel-spacing-unit !important; }
-    .gs-u-mr#{$breakpoint-suffix}      { margin-right:     $gel-spacing-unit !important; }
+    .gs-u-mr#{$breakpoint-suffix}      { #{$margin-right}: $gel-spacing-unit !important; }
     .gs-u-mb#{$breakpoint-suffix}      { margin-bottom:    $gel-spacing-unit !important; }
-    .gs-u-ml#{$breakpoint-suffix}      { margin-left:      $gel-spacing-unit !important; }
-    .gs-u-mh#{$breakpoint-suffix}      { margin-right:     $gel-spacing-unit !important; margin-left:      $gel-spacing-unit !important; }
+    .gs-u-ml#{$breakpoint-suffix}      { #{$margin-left}:  $gel-spacing-unit !important; }
+    .gs-u-mh#{$breakpoint-suffix}      { #{$margin-right}: $gel-spacing-unit !important; #{$margin-left}:  $gel-spacing-unit !important; }
     .gs-u-mv#{$breakpoint-suffix}      { margin-top:       $gel-spacing-unit !important; margin-bottom:    $gel-spacing-unit !important; }
 
     /**
@@ -90,10 +90,10 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
      */
     .gs-u-m--#{$breakpoint-suffix}     { margin:           quarter($gel-spacing-unit) !important; }
     .gs-u-mt--#{$breakpoint-suffix}    { margin-top:       quarter($gel-spacing-unit) !important; }
-    .gs-u-mr--#{$breakpoint-suffix}    { margin-right:     quarter($gel-spacing-unit) !important; }
+    .gs-u-mr--#{$breakpoint-suffix}    { #{$margin-right}: quarter($gel-spacing-unit) !important; }
     .gs-u-mb--#{$breakpoint-suffix}    { margin-bottom:    quarter($gel-spacing-unit) !important; }
-    .gs-u-ml--#{$breakpoint-suffix}    { margin-left:      quarter($gel-spacing-unit) !important; }
-    .gs-u-mh--#{$breakpoint-suffix}    { margin-right:     quarter($gel-spacing-unit) !important; margin-left:      quarter($gel-spacing-unit) !important; }
+    .gs-u-ml--#{$breakpoint-suffix}    { #{$margin-left}:  quarter($gel-spacing-unit) !important; }
+    .gs-u-mh--#{$breakpoint-suffix}    { #{$margin-right}: quarter($gel-spacing-unit) !important; #{$margin-left}:  quarter($gel-spacing-unit) !important; }
     .gs-u-mv--#{$breakpoint-suffix}    { margin-top:       quarter($gel-spacing-unit) !important; margin-bottom:    quarter($gel-spacing-unit) !important; }
 
     /**
@@ -101,10 +101,10 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
      */
     .gs-u-m-#{$breakpoint-suffix}      { margin:           halve($gel-spacing-unit) !important; }
     .gs-u-mt-#{$breakpoint-suffix}     { margin-top:       halve($gel-spacing-unit) !important; }
-    .gs-u-mr-#{$breakpoint-suffix}     { margin-right:     halve($gel-spacing-unit) !important; }
+    .gs-u-mr-#{$breakpoint-suffix}     { #{$margin-right}: halve($gel-spacing-unit) !important; }
     .gs-u-mb-#{$breakpoint-suffix}     { margin-bottom:    halve($gel-spacing-unit) !important; }
-    .gs-u-ml-#{$breakpoint-suffix}     { margin-left:      halve($gel-spacing-unit) !important; }
-    .gs-u-mh-#{$breakpoint-suffix}     { margin-right:     halve($gel-spacing-unit) !important; margin-left:      halve($gel-spacing-unit) !important; }
+    .gs-u-ml-#{$breakpoint-suffix}     { #{$margin-left}:  halve($gel-spacing-unit) !important; }
+    .gs-u-mh-#{$breakpoint-suffix}     { #{$margin-right}: halve($gel-spacing-unit) !important; #{$margin-left}:  halve($gel-spacing-unit) !important; }
     .gs-u-mv-#{$breakpoint-suffix}     { margin-top:       halve($gel-spacing-unit) !important; margin-bottom:    halve($gel-spacing-unit) !important; }
 
     /**
@@ -112,10 +112,10 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
      */
     .gs-u-m\+#{$breakpoint-suffix}     { margin:           double($gel-spacing-unit) !important; }
     .gs-u-mt\+#{$breakpoint-suffix}    { margin-top:       double($gel-spacing-unit) !important; }
-    .gs-u-mr\+#{$breakpoint-suffix}    { margin-right:     double($gel-spacing-unit) !important; }
+    .gs-u-mr\+#{$breakpoint-suffix}    { #{$margin-right}: double($gel-spacing-unit) !important; }
     .gs-u-mb\+#{$breakpoint-suffix}    { margin-bottom:    double($gel-spacing-unit) !important; }
-    .gs-u-ml\+#{$breakpoint-suffix}    { margin-left:      double($gel-spacing-unit) !important; }
-    .gs-u-mh\+#{$breakpoint-suffix}    { margin-right:     double($gel-spacing-unit) !important; margin-left:      double($gel-spacing-unit) !important; }
+    .gs-u-ml\+#{$breakpoint-suffix}    { #{$margin-left}:  double($gel-spacing-unit) !important; }
+    .gs-u-mh\+#{$breakpoint-suffix}    { #{$margin-right}: double($gel-spacing-unit) !important; #{$margin-left}:  double($gel-spacing-unit) !important; }
     .gs-u-mv\+#{$breakpoint-suffix}    { margin-top:       double($gel-spacing-unit) !important; margin-bottom:    double($gel-spacing-unit) !important; }
 
     /**
@@ -123,10 +123,10 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
      */
     .gs-u-m\+\+#{$breakpoint-suffix}   { margin:           quadruple($gel-spacing-unit) !important; }
     .gs-u-mt\+\+#{$breakpoint-suffix}  { margin-top:       quadruple($gel-spacing-unit) !important; }
-    .gs-u-mr\+\+#{$breakpoint-suffix}  { margin-right:     quadruple($gel-spacing-unit) !important; }
+    .gs-u-mr\+\+#{$breakpoint-suffix}  { #{$margin-right}: quadruple($gel-spacing-unit) !important; }
     .gs-u-mb\+\+#{$breakpoint-suffix}  { margin-bottom:    quadruple($gel-spacing-unit) !important; }
-    .gs-u-ml\+\+#{$breakpoint-suffix}  { margin-left:      quadruple($gel-spacing-unit) !important; }
-    .gs-u-mh\+\+#{$breakpoint-suffix}  { margin-right:     quadruple($gel-spacing-unit) !important; margin-left:      quadruple($gel-spacing-unit) !important; }
+    .gs-u-ml\+\+#{$breakpoint-suffix}  { #{$margin-left}:  quadruple($gel-spacing-unit) !important; }
+    .gs-u-mh\+\+#{$breakpoint-suffix}  { #{$margin-right}: quadruple($gel-spacing-unit) !important; #{$margin-left}:  quadruple($gel-spacing-unit) !important; }
     .gs-u-mv\+\+#{$breakpoint-suffix}  { margin-top:       quadruple($gel-spacing-unit) !important; margin-bottom:    quadruple($gel-spacing-unit) !important; }
 
     /**
@@ -134,10 +134,10 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
      */
     .gs-u-m0#{$breakpoint-suffix}      { margin:           0 !important; }
     .gs-u-mt0#{$breakpoint-suffix}     { margin-top:       0 !important; }
-    .gs-u-mr0#{$breakpoint-suffix}     { margin-right:     0 !important; }
+    .gs-u-mr0#{$breakpoint-suffix}     { #{$margin-right}: 0 !important; }
     .gs-u-mb0#{$breakpoint-suffix}     { margin-bottom:    0 !important; }
-    .gs-u-ml0#{$breakpoint-suffix}     { margin-left:      0 !important; }
-    .gs-u-mh0#{$breakpoint-suffix}     { margin-right:     0 !important; margin-left:      0 !important; }
+    .gs-u-ml0#{$breakpoint-suffix}     { #{$margin-left}:  0 !important; }
+    .gs-u-mh0#{$breakpoint-suffix}     { #{$margin-right}: 0 !important; #{$margin-left}:  0 !important; }
     .gs-u-mv0#{$breakpoint-suffix}     { margin-top:       0 !important; margin-bottom:    0 !important; }
 
     /**
@@ -145,10 +145,10 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
      */
     .gs-u-p#{$breakpoint-suffix}       { padding:           $gel-spacing-unit !important; }
     .gs-u-pt#{$breakpoint-suffix}      { padding-top:       $gel-spacing-unit !important; }
-    .gs-u-pr#{$breakpoint-suffix}      { padding-right:     $gel-spacing-unit !important; }
+    .gs-u-pr#{$breakpoint-suffix}      { #{$padding-right}: $gel-spacing-unit !important; }
     .gs-u-pb#{$breakpoint-suffix}      { padding-bottom:    $gel-spacing-unit !important; }
-    .gs-u-pl#{$breakpoint-suffix}      { padding-left:      $gel-spacing-unit !important; }
-    .gs-u-ph#{$breakpoint-suffix}      { padding-right:     $gel-spacing-unit !important; padding-left:      $gel-spacing-unit !important; }
+    .gs-u-pl#{$breakpoint-suffix}      { #{$padding-left}:  $gel-spacing-unit !important; }
+    .gs-u-ph#{$breakpoint-suffix}      { #{$padding-right}: $gel-spacing-unit !important; #{$padding-left}:  $gel-spacing-unit !important; }
     .gs-u-pv#{$breakpoint-suffix}      { padding-top:       $gel-spacing-unit !important; padding-bottom:    $gel-spacing-unit !important; }
 
     /**
@@ -156,10 +156,10 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
      */
     .gs-u-p--#{$breakpoint-suffix}     { padding:           quarter($gel-spacing-unit) !important; }
     .gs-u-pt--#{$breakpoint-suffix}    { padding-top:       quarter($gel-spacing-unit) !important; }
-    .gs-u-pr--#{$breakpoint-suffix}    { padding-right:     quarter($gel-spacing-unit) !important; }
+    .gs-u-pr--#{$breakpoint-suffix}    { #{$padding-right}: quarter($gel-spacing-unit) !important; }
     .gs-u-pb--#{$breakpoint-suffix}    { padding-bottom:    quarter($gel-spacing-unit) !important; }
-    .gs-u-pl--#{$breakpoint-suffix}    { padding-left:      quarter($gel-spacing-unit) !important; }
-    .gs-u-ph--#{$breakpoint-suffix}    { padding-right:     quarter($gel-spacing-unit) !important; padding-left:      quarter($gel-spacing-unit) !important; }
+    .gs-u-pl--#{$breakpoint-suffix}    { #{$padding-left}:  quarter($gel-spacing-unit) !important; }
+    .gs-u-ph--#{$breakpoint-suffix}    { #{$padding-right}: quarter($gel-spacing-unit) !important; #{$padding-left}:  quarter($gel-spacing-unit) !important; }
     .gs-u-pv--#{$breakpoint-suffix}    { padding-top:       quarter($gel-spacing-unit) !important; padding-bottom:    quarter($gel-spacing-unit) !important; }
 
     /**
@@ -167,10 +167,10 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
      */
     .gs-u-p-#{$breakpoint-suffix}      { padding:           halve($gel-spacing-unit) !important; }
     .gs-u-pt-#{$breakpoint-suffix}     { padding-top:       halve($gel-spacing-unit) !important; }
-    .gs-u-pr-#{$breakpoint-suffix}     { padding-right:     halve($gel-spacing-unit) !important; }
+    .gs-u-pr-#{$breakpoint-suffix}     { #{$padding-right}: halve($gel-spacing-unit) !important; }
     .gs-u-pb-#{$breakpoint-suffix}     { padding-bottom:    halve($gel-spacing-unit) !important; }
-    .gs-u-pl-#{$breakpoint-suffix}     { padding-left:      halve($gel-spacing-unit) !important; }
-    .gs-u-ph-#{$breakpoint-suffix}     { padding-right:     halve($gel-spacing-unit) !important; padding-left:      halve($gel-spacing-unit) !important; }
+    .gs-u-pl-#{$breakpoint-suffix}     { #{$padding-left}:  halve($gel-spacing-unit) !important; }
+    .gs-u-ph-#{$breakpoint-suffix}     { #{$padding-right}: halve($gel-spacing-unit) !important; #{$padding-left}:  halve($gel-spacing-unit) !important; }
     .gs-u-pv-#{$breakpoint-suffix}     { padding-top:       halve($gel-spacing-unit) !important; padding-bottom:    halve($gel-spacing-unit) !important; }
 
     /**
@@ -178,10 +178,10 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
      */
     .gs-u-p\+#{$breakpoint-suffix}     { padding:           double($gel-spacing-unit) !important; }
     .gs-u-pt\+#{$breakpoint-suffix}    { padding-top:       double($gel-spacing-unit) !important; }
-    .gs-u-pr\+#{$breakpoint-suffix}    { padding-right:     double($gel-spacing-unit) !important; }
+    .gs-u-pr\+#{$breakpoint-suffix}    { #{$padding-right}: double($gel-spacing-unit) !important; }
     .gs-u-pb\+#{$breakpoint-suffix}    { padding-bottom:    double($gel-spacing-unit) !important; }
-    .gs-u-pl\+#{$breakpoint-suffix}    { padding-left:      double($gel-spacing-unit) !important; }
-    .gs-u-ph\+#{$breakpoint-suffix}    { padding-right:     double($gel-spacing-unit) !important; padding-left:      double($gel-spacing-unit) !important; }
+    .gs-u-pl\+#{$breakpoint-suffix}    { #{$padding-left}:  double($gel-spacing-unit) !important; }
+    .gs-u-ph\+#{$breakpoint-suffix}    { #{$padding-right}: double($gel-spacing-unit) !important; #{$padding-left}:  double($gel-spacing-unit) !important; }
     .gs-u-pv\+#{$breakpoint-suffix}    { padding-top:       double($gel-spacing-unit) !important; padding-bottom:    double($gel-spacing-unit) !important; }
 
     /**
@@ -189,10 +189,10 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
      */
     .gs-u-p\+\+#{$breakpoint-suffix}   { padding:           quadruple($gel-spacing-unit) !important; }
     .gs-u-pt\+\+#{$breakpoint-suffix}  { padding-top:       quadruple($gel-spacing-unit) !important; }
-    .gs-u-pr\+\+#{$breakpoint-suffix}  { padding-right:     quadruple($gel-spacing-unit) !important; }
+    .gs-u-pr\+\+#{$breakpoint-suffix}  { #{$padding-right}: quadruple($gel-spacing-unit) !important; }
     .gs-u-pb\+\+#{$breakpoint-suffix}  { padding-bottom:    quadruple($gel-spacing-unit) !important; }
-    .gs-u-pl\+\+#{$breakpoint-suffix}  { padding-left:      quadruple($gel-spacing-unit) !important; }
-    .gs-u-ph\+\+#{$breakpoint-suffix}  { padding-right:     quadruple($gel-spacing-unit) !important; padding-left:      quadruple($gel-spacing-unit) !important; }
+    .gs-u-pl\+\+#{$breakpoint-suffix}  { #{$padding-left}:  quadruple($gel-spacing-unit) !important; }
+    .gs-u-ph\+\+#{$breakpoint-suffix}  { #{$padding-right}: quadruple($gel-spacing-unit) !important; #{$padding-left}:  quadruple($gel-spacing-unit) !important; }
     .gs-u-pv\+\+#{$breakpoint-suffix}  { padding-top:       quadruple($gel-spacing-unit) !important; padding-bottom:    quadruple($gel-spacing-unit) !important; }
 
     /**
@@ -200,10 +200,10 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
      */
     .gs-u-p0#{$breakpoint-suffix}      { padding:           0 !important; }
     .gs-u-pt0#{$breakpoint-suffix}     { padding-top:       0 !important; }
-    .gs-u-pr0#{$breakpoint-suffix}     { padding-right:     0 !important; }
+    .gs-u-pr0#{$breakpoint-suffix}     { #{$padding-right}: 0 !important; }
     .gs-u-pb0#{$breakpoint-suffix}     { padding-bottom:    0 !important; }
-    .gs-u-pl0#{$breakpoint-suffix}     { padding-left:      0 !important; }
-    .gs-u-ph0#{$breakpoint-suffix}     { padding-right:     0 !important; padding-left:      0 !important; }
+    .gs-u-pl0#{$breakpoint-suffix}     { #{$padding-left}:  0 !important; }
+    .gs-u-ph0#{$breakpoint-suffix}     { #{$padding-right}: 0 !important; #{$padding-left}:  0 !important; }
     .gs-u-pv0#{$breakpoint-suffix}     { padding-top:       0 !important; padding-bottom:    0 !important; }
 
 }

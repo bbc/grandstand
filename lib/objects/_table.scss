@@ -88,11 +88,11 @@
     text-align: center;
 
     &:first-child {
-        padding-left: $gel-spacing-unit; /* [1] */
+        #{$padding-left}: $gel-spacing-unit; /* [1] */
     }
 
     &:last-child {
-        padding-right: $gel-spacing-unit; /* [1] */
+        #{$padding-right}: $gel-spacing-unit; /* [1] */
     }
 }
 
@@ -113,7 +113,7 @@
 }
 
 .gs-o-table__cell--left {
-    text-align: left;
+    text-align: #{$left};
 }
 
 .gs-o-table__cell--center {
@@ -121,7 +121,7 @@
 }
 
 .gs-o-table__cell--right {
-    text-align: right;
+    text-align: #{$right};
 }
 
 .gs-o-table__cell--bold {
