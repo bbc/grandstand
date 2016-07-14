@@ -9,14 +9,16 @@
 * The main link (i.e. the faux block link) is absolutely positioned across the entire
 * block, any nested links have a little z-index bump to lift them on top. Nice.
 *
+* This implementation is not compatible with IE8 and below. On these browsers
+* this falls back to being two standard anchors.
 *
 * EXAMPLE IMPLEMENTATION - http://codepen.io/anon/pen/NAwZpd
 
 <div class="gs-o-faux-block-link">
-    <a href="https://en.wikipedia.org/wiki/Tea" class="gs-o-faux-block-link__overlay-link">
-      <h3>Daniel likes tea</h3>
+    <a href="http://www.bbc.co.uk/news" class="gs-o-faux-block-link__overlay-link">
+      <h3>Heading</h3>
     </a>
-    <p> Tea tea tea tea tea tea tea tea tea tea <a href="https://en.wikipedia.org/wiki/Coffee">coffee</a> tea tea tea.</p>
+    <p>This is some summary <a href="http://www.bbc.co.uk/sport">text</a>/p>
 </div>
 
 Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
@@ -36,14 +38,14 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
     position: static;
 
     &:before {
-      bottom: 0;
-      content: "";
-      left: 0;
-      overflow: hidden;
-      position: absolute;
-      right: 0;
-      top: 0;
-      white-space: nowrap;
-      z-index: 0;
+        bottom: 0;
+        content: "";
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        white-space: nowrap;
+        z-index: 0;
     }
 }
