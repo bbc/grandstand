@@ -2,6 +2,8 @@
     # SCRIPT-SPECIFIC OVERRIDES
 \*------------------------------------*/
 
+$script: 'latin' !default;
+
 @import 'scripts/arabic/config';
 @import 'scripts/bengali/config';
 @import 'scripts/burmese/config';
