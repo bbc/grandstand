@@ -242,7 +242,7 @@ $gs-spacing-breakpoints: (xs, s, m, l, xl, xxl) !default;
     .gs-u-pr-alt\+#{$breakpoint-suffix}  { #{$padding-right}: double($gel-alt-spacing-unit) !important; }
     .gs-u-pb-alt\+#{$breakpoint-suffix}  { padding-bottom:    double($gel-alt-spacing-unit) !important; }
     .gs-u-pl-alt\+#{$breakpoint-suffix}  { #{$padding-left}:  double($gel-alt-spacing-unit) !important; }
-    .gs-u-ph-alt\+#{$breakpoint-suffix}  { #{$padding-right}  double($gel-alt-spacing-unit) !important; #{$padding-left}:  double($gel-alt-spacing-unit) !important; }
+    .gs-u-ph-alt\+#{$breakpoint-suffix}  { #{$padding-right}: double($gel-alt-spacing-unit) !important; #{$padding-left}:  double($gel-alt-spacing-unit) !important; }
     .gs-u-pv-alt\+#{$breakpoint-suffix}  { padding-top:       double($gel-alt-spacing-unit) !important; padding-bottom:    double($gel-alt-spacing-unit) !important; }
 
     /**
