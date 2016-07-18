@@ -32,7 +32,7 @@
  * pv -> padding-top & padding-bottom
  * ph -> padding-right & padding-left (flipped if $rtl is true)
  *
- * Available spacing sizes:
+ * Available gel spacing unit sizes:
  *
  * 0       - 0px
  * `--`    - 2px
@@ -41,8 +41,14 @@
  * `+`     - 16px
  * `++`    - 32px
  *
+ * Available gel alt spacing unit sizes:
+ *
+ * 'alt'   - 12px
+ * 'alt+'  - 24px
+ *
  * Optional breakpoint suffix:
  *
+ * @xs - GEL Extra Small Breakpoint (240px)
  * @s - GEL Small Breakpoint (400px)
  * @m - GEL Medium Breakpoint (600px)
  * @l - GEL Large Breakpoint (900px)
@@ -56,7 +62,7 @@
 //
 // @type List
 //
-$gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
+$gs-spacing-breakpoints: (xs, s, m, l, xl, xxl) !default;
 
 
 // Output the spacing classes, adding a breakpoint namespace if required
@@ -75,7 +81,7 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
     }
 
     /**
-     * Margin spacing classes
+     * Margin spacing classes (gel spacing unit)
      */
     .gs-u-m#{$breakpoint-suffix}       { margin:           $gel-spacing-unit !important; }
     .gs-u-mt#{$breakpoint-suffix}      { margin-top:       $gel-spacing-unit !important; }
@@ -86,7 +92,7 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
     .gs-u-mv#{$breakpoint-suffix}      { margin-top:       $gel-spacing-unit !important; margin-bottom:    $gel-spacing-unit !important; }
 
     /**
-     * Tiny margin spacing classes
+     * Tiny margin spacing classes (gel spacing unit)
      */
     .gs-u-m--#{$breakpoint-suffix}     { margin:           quarter($gel-spacing-unit) !important; }
     .gs-u-mt--#{$breakpoint-suffix}    { margin-top:       quarter($gel-spacing-unit) !important; }
@@ -97,7 +103,7 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
     .gs-u-mv--#{$breakpoint-suffix}    { margin-top:       quarter($gel-spacing-unit) !important; margin-bottom:    quarter($gel-spacing-unit) !important; }
 
     /**
-     * Small margin spacing classes
+     * Small margin spacing classes (gel spacing unit)
      */
     .gs-u-m-#{$breakpoint-suffix}      { margin:           halve($gel-spacing-unit) !important; }
     .gs-u-mt-#{$breakpoint-suffix}     { margin-top:       halve($gel-spacing-unit) !important; }
@@ -108,7 +114,7 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
     .gs-u-mv-#{$breakpoint-suffix}     { margin-top:       halve($gel-spacing-unit) !important; margin-bottom:    halve($gel-spacing-unit) !important; }
 
     /**
-     * Large margin spacing classes
+     * Large margin spacing classes (gel spacing unit)
      */
     .gs-u-m\+#{$breakpoint-suffix}     { margin:           double($gel-spacing-unit) !important; }
     .gs-u-mt\+#{$breakpoint-suffix}    { margin-top:       double($gel-spacing-unit) !important; }
@@ -119,7 +125,7 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
     .gs-u-mv\+#{$breakpoint-suffix}    { margin-top:       double($gel-spacing-unit) !important; margin-bottom:    double($gel-spacing-unit) !important; }
 
     /**
-     * Huge margin spacing classes
+     * Huge margin spacing classes (gel spacing unit)
      */
     .gs-u-m\+\+#{$breakpoint-suffix}   { margin:           quadruple($gel-spacing-unit) !important; }
     .gs-u-mt\+\+#{$breakpoint-suffix}  { margin-top:       quadruple($gel-spacing-unit) !important; }
@@ -128,6 +134,28 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
     .gs-u-ml\+\+#{$breakpoint-suffix}  { #{$margin-left}:  quadruple($gel-spacing-unit) !important; }
     .gs-u-mh\+\+#{$breakpoint-suffix}  { #{$margin-right}: quadruple($gel-spacing-unit) !important; #{$margin-left}:  quadruple($gel-spacing-unit) !important; }
     .gs-u-mv\+\+#{$breakpoint-suffix}  { margin-top:       quadruple($gel-spacing-unit) !important; margin-bottom:    quadruple($gel-spacing-unit) !important; }
+
+    /**
+     * Alt margin spacing classes
+     */
+    .gs-u-m-alt#{$breakpoint-suffix}       { margin:           $gel-alt-spacing-unit !important; }
+    .gs-u-mt-alt#{$breakpoint-suffix}      { margin-top:       $gel-alt-spacing-unit !important; }
+    .gs-u-mr-alt#{$breakpoint-suffix}      { margin-right:     $gel-alt-spacing-unit !important; }
+    .gs-u-mb-alt#{$breakpoint-suffix}      { margin-bottom:    $gel-alt-spacing-unit !important; }
+    .gs-u-ml-alt#{$breakpoint-suffix}      { margin-left:      $gel-alt-spacing-unit !important; }
+    .gs-u-mh-alt#{$breakpoint-suffix}      { margin-right:     $gel-alt-spacing-unit !important; margin-left:      $gel-alt-spacing-unit !important; }
+    .gs-u-mv-alt#{$breakpoint-suffix}      { margin-top:       $gel-alt-spacing-unit !important; margin-bottom:    $gel-alt-spacing-unit !important; }
+
+    /**
+     * Alt double margin spacing classes
+     */
+    .gs-u-m-alt\+#{$breakpoint-suffix}       { margin:           double($gel-alt-spacing-unit) !important; }
+    .gs-u-mt-alt\+#{$breakpoint-suffix}      { margin-top:       double($gel-alt-spacing-unit) !important; }
+    .gs-u-mr-alt\+#{$breakpoint-suffix}      { margin-right:     double($gel-alt-spacing-unit) !important; }
+    .gs-u-mb-alt\+#{$breakpoint-suffix}      { margin-bottom:    double($gel-alt-spacing-unit) !important; }
+    .gs-u-ml-alt\+#{$breakpoint-suffix}      { margin-left:      double($gel-alt-spacing-unit) !important; }
+    .gs-u-mh-alt\+#{$breakpoint-suffix}      { margin-right:     double($gel-alt-spacing-unit) !important; margin-left:      double($gel-alt-spacing-unit) !important; }
+    .gs-u-mv-alt\+#{$breakpoint-suffix}      { margin-top:       double($gel-alt-spacing-unit) !important; margin-bottom:    double($gel-alt-spacing-unit) !important; }
 
     /**
      * Zero margin spacing classes
@@ -141,7 +169,7 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
     .gs-u-mv0#{$breakpoint-suffix}     { margin-top:       0 !important; margin-bottom:    0 !important; }
 
     /**
-     * Padding spacing classes
+     * Padding spacing classes (gel spacing unit)
      */
     .gs-u-p#{$breakpoint-suffix}       { padding:           $gel-spacing-unit !important; }
     .gs-u-pt#{$breakpoint-suffix}      { padding-top:       $gel-spacing-unit !important; }
@@ -152,7 +180,7 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
     .gs-u-pv#{$breakpoint-suffix}      { padding-top:       $gel-spacing-unit !important; padding-bottom:    $gel-spacing-unit !important; }
 
     /**
-     * Tiny padding spacing classes
+     * Tiny padding spacing classes (gel spacing unit)
      */
     .gs-u-p--#{$breakpoint-suffix}     { padding:           quarter($gel-spacing-unit) !important; }
     .gs-u-pt--#{$breakpoint-suffix}    { padding-top:       quarter($gel-spacing-unit) !important; }
@@ -163,7 +191,7 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
     .gs-u-pv--#{$breakpoint-suffix}    { padding-top:       quarter($gel-spacing-unit) !important; padding-bottom:    quarter($gel-spacing-unit) !important; }
 
     /**
-     * Small padding spacing classes
+     * Small padding spacing classes (gel spacing unit)
      */
     .gs-u-p-#{$breakpoint-suffix}      { padding:           halve($gel-spacing-unit) !important; }
     .gs-u-pt-#{$breakpoint-suffix}     { padding-top:       halve($gel-spacing-unit) !important; }
@@ -174,7 +202,7 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
     .gs-u-pv-#{$breakpoint-suffix}     { padding-top:       halve($gel-spacing-unit) !important; padding-bottom:    halve($gel-spacing-unit) !important; }
 
     /**
-     * Large padding spacing classes
+     * Large padding spacing classes (gel spacing unit)
      */
     .gs-u-p\+#{$breakpoint-suffix}     { padding:           double($gel-spacing-unit) !important; }
     .gs-u-pt\+#{$breakpoint-suffix}    { padding-top:       double($gel-spacing-unit) !important; }
@@ -185,7 +213,7 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
     .gs-u-pv\+#{$breakpoint-suffix}    { padding-top:       double($gel-spacing-unit) !important; padding-bottom:    double($gel-spacing-unit) !important; }
 
     /**
-     * Huge padding spacing classes
+     * Huge padding spacing classes (gel spacing unit)
      */
     .gs-u-p\+\+#{$breakpoint-suffix}   { padding:           quadruple($gel-spacing-unit) !important; }
     .gs-u-pt\+\+#{$breakpoint-suffix}  { padding-top:       quadruple($gel-spacing-unit) !important; }
@@ -194,6 +222,28 @@ $gs-spacing-breakpoints: (s, m, l, xl, xxl) !default;
     .gs-u-pl\+\+#{$breakpoint-suffix}  { #{$padding-left}:  quadruple($gel-spacing-unit) !important; }
     .gs-u-ph\+\+#{$breakpoint-suffix}  { #{$padding-right}: quadruple($gel-spacing-unit) !important; #{$padding-left}:  quadruple($gel-spacing-unit) !important; }
     .gs-u-pv\+\+#{$breakpoint-suffix}  { padding-top:       quadruple($gel-spacing-unit) !important; padding-bottom:    quadruple($gel-spacing-unit) !important; }
+
+    /**
+     * Alt padding spacing classes (gel-alt-spacing-unit)
+     */
+    .gs-u-p-alt#{$breakpoint-suffix}    { padding:           $gel-alt-spacing-unit !important; }
+    .gs-u-pt-alt#{$breakpoint-suffix}   { padding-top:       $gel-alt-spacing-unit !important; }
+    .gs-u-pr-alt#{$breakpoint-suffix}   { padding-right:     $gel-alt-spacing-unit !important; }
+    .gs-u-pb-alt#{$breakpoint-suffix}   { padding-bottom:    $gel-alt-spacing-unit !important; }
+    .gs-u-pl-alt#{$breakpoint-suffix}   { padding-left:      $gel-alt-spacing-unit !important; }
+    .gs-u-ph-alt#{$breakpoint-suffix}   { padding-right:     $gel-alt-spacing-unit !important; padding-left:      $gel-alt-spacing-unit !important; }
+    .gs-u-pv-alt#{$breakpoint-suffix}   { padding-top:       $gel-alt-spacing-unit !important; padding-bottom:    $gel-alt-spacing-unit !important; }
+
+    /**
+     * Alt double padding spacing classes (gel-alt-spacing-unit)
+     */
+    .gs-u-p-alt\+#{$breakpoint-suffix}   { padding:           double($gel-alt-spacing-unit) !important; }
+    .gs-u-pt-alt\+#{$breakpoint-suffix}  { padding-top:       double($gel-alt-spacing-unit) !important; }
+    .gs-u-pr-alt\+#{$breakpoint-suffix}  { padding-right:     double($gel-alt-spacing-unit) !important; }
+    .gs-u-pb-alt\+#{$breakpoint-suffix}  { padding-bottom:    double($gel-alt-spacing-unit) !important; }
+    .gs-u-pl-alt\+#{$breakpoint-suffix}  { padding-left:      double($gel-alt-spacing-unit) !important; }
+    .gs-u-ph-alt\+#{$breakpoint-suffix}  { padding-right:     double($gel-alt-spacing-unit) !important; padding-left:      double($gel-alt-spacing-unit) !important; }
+    .gs-u-pv-alt\+#{$breakpoint-suffix}  { padding-top:       double($gel-alt-spacing-unit) !important; padding-bottom:    double($gel-alt-spacing-unit) !important; }
 
     /**
      * Zero padding spacing classes
