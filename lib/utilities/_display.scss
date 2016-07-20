@@ -23,26 +23,32 @@ $gs-display-switch-breakpoint-names: $gel-breakpoint-names !default;
 
     .gs-u-display-none#{$breakpoint-suffix} {
         display: none !important;
+        visibility: hidden !important;
     }
 
     .gs-u-display-inline#{$breakpoint-suffix} {
         display: inline !important;
+        visibility: visible !important;
     }
 
     .gs-u-display-inline-block#{$breakpoint-suffix} {
         display: inline-block !important;
+        visibility: visible !important;
     }
 
     .gs-u-display-block#{$breakpoint-suffix} {
         display: block !important;
+        visibility: visible !important;
     }
 
     .gs-u-display-table-cell#{$breakpoint-suffix} {
         display: table-cell !important;
+        visibility: visible !important;
     }
 
     .gs-u-display-table-row#{$breakpoint-suffix} {
         display: table-row !important;
+        visibility: visible !important;
     }
 
     .gs-u-display-flex#{$breakpoint-suffix} {
@@ -50,6 +56,7 @@ $gs-display-switch-breakpoint-names: $gel-breakpoint-names !default;
         display: -ms-flexbox !important;
         display: -webkit-flex !important;
         display: flex !important;
+        visibility: visible !important;
     }
 }
 
