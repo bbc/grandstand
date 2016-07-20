@@ -194,6 +194,7 @@ Grandstand includes the following helper utilities:
 - [Box Size](https://github.com/bbc/bbc-grandstand/blob/master/lib/utilities/_box-size.scss) - a simple utility to apply `box-sizing: border-box;` to an element
 - [Clearfix](https://github.com/bbc/bbc-grandstand/blob/master/lib/utilities/_clearfix.scss) - a lightweight clearfix utility
 - [Display](https://github.com/bbc/bbc-grandstand/blob/master/lib/utilities/_display.scss) - a collection of classes to vary the `display` property at different breakpoints
+- [Floats](https://github.com/bbc/bbc-grandstand/blob/master/lib/utilities/_floats.scss) - classes to apply floats
 - [Spacing](https://github.com/bbc/bbc-grandstand/blob/master/lib/utilities/_spacing.scss) - a suite of `margin` and `padding` utility classes to control the spacing of elements
 - [Text Alignment](https://github.com/bbc/bbc-grandstand/blob/master/lib/utilities/_text-alignment.scss) - a set of classes to control the alignment of text both horizontally or vertically
 - [Visibility](https://github.com/bbc/bbc-grandstand/blob/master/lib/utilities/_visibility.scss) - various ways to control the visibility of an element. e.g. making an element only visible to screen-readers
