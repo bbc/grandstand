@@ -48,13 +48,25 @@ The architectural principles behind Grandstand are arguably more important than 
 
 The overarching architecture of Grandstand is very much inspired by the great work of [Harry Roberts](http://www.csswizardry.com), his ITCSS architecture and [Inuit CSS](http://github.com/inuitcss).
 
-[ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4) (Inverted Triangle CSS) is specifically designed for managing CSS is scale and is a diagrammatical representations of an entire projects CSS. The ITCSS structure is not rigid and can be adapted to suit different projects, with that in mind Grandstand uses the following architecture:
+[ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4) (Inverted Triangle CSS) is specifically designed for managing CSS at scale and is a diagrammatical representation of an entire projects CSS. The ITCSS structure is not rigid and can be adapted to suit different projects, with that in mind Grandstand uses the following architecture:
 
 <img width="860" alt="Grandstand ITCSS Architecture" src="https://cloud.githubusercontent.com/assets/608566/15209283/28f87582-1828-11e6-8c16-b5ecabd6b5f3.png">
 
-Following the approach a component should be primarily constructed using common objects and abstractions, the GEL Foundations and utility classes. The purpose of the code this library is to manage these common styles. A component should then only require a small amount of bespoke styling.
+Following this approach a component should be primarily constructed using common objects and abstractions, the GEL Foundations and utility classes. The purpose of the code this library is to manage these common styles. A component should then only require a small amount of bespoke styling.
 
-- BEM
+**Resources**
+
+- Managing CSS Projects with ITCSS: [Slides](https://speakerdeck.com/dafed/managing-css-projects-with-itcss)/[Video](https://www.youtube.com/watch?v=1OKZOV-iLj4)
+- [Manage large-scale web projects with new CSS architecture ITCSS](http://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731)
+
+### BEM
+
+We apply the **B**lock, **E**lement, **M**odifier naming convention when creating components with Grandstand.
+
+**Resources**
+
+-
+
 - OOCSS
 
 ### Namespaces
