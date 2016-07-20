@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    # FLOATS
+\*------------------------------------*/
+
+/**
+ * A utility for applying floats
+ *
+ * Can also be used using responsive prefixes
+ *
+    .gs-u-fl
+    .gs-u-fl@m
+ *
+ */
+
+ $gs-display-switch-breakpoint-names: $gel-breakpoint-names !default;
+
+ @mixin floats($suffix: null) {
+     $breakpoint-suffix: '';
+
+     @if $suffix != null {
+         $breakpoint-suffix: \@#{$suffix};
+     }
+
+     .gs-u-float-left#{$breakpoint-suffix} {
+         float: left !important;
+     }
+
+     .gs-u-float-right#{$breakpoint-suffix} {
+         float: right !important;
+     }
+
+     .gs-u-float-none#{$breakpoint-suffix} {
+         flot: none !important;
+     }
+ }
+
+ // Output the unsuffixed version
+ @include floats();
+
+ @if $enhanced {
+     @each $breakpoint in $gs-display-switch-breakpoint-names {
+         $breakpoint-name: nth($breakpoint, 1);
+
+         @include mq($from: '#{$gel-grid-breakpoint-namespace}#{$breakpoint}') {
+             @include floats($breakpoint-name);
+         }
+     }
+ }
