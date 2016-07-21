@@ -13,6 +13,7 @@ This library is built and maintained by the BBC Sport team and used by various c
 ## Contents
 
 - [Installation](#installation)
+    - [Script support](#script-support)
 - [Architecture](#architecture)
     - [ITCSS](#itcss)
     - [Namespaces](#namespaces)
@@ -37,6 +38,12 @@ $ bower install --save bbc-grandstand
 // your-app/main.scss
 @import 'bower_components/bbc-grandstand/grandstand';
 ```
+
+### Script support
+
+In addition to the Latin script defaults, Grandstand includes typographic and text direction overrides for a number of other scripts, including Arabic and Chinese.
+
+The value of the `$script` SASS variable, if set, is used to determine whether any script-specific overrides are applied when Grandstand is imported. See the file [_l10n.scss](https://github.com/bbc/grandstand/blob/master/lib/settings/_l10n.scss) for allowed values.
 
 ## Architecture
 
