@@ -12,7 +12,8 @@
  *
  */
 
-$gs-display-switch-breakpoint-names: $gel-breakpoint-names !default;
+$gs-display-switch-breakpoint-names: $gel-grid-breakpoints !default;
+$gs-display-switch-breakpoint-names--1280: $gel-grid-breakpoints--1280 !default;
 
 @mixin display-switch($suffix: null) {
     $breakpoint-suffix: '';
@@ -65,10 +66,16 @@ $gs-display-switch-breakpoint-names: $gel-breakpoint-names !default;
 
 @if $enhanced {
     @each $breakpoint in $gs-display-switch-breakpoint-names {
-        $breakpoint-name: nth($breakpoint, 1);
-
         @include mq($from: '#{$gel-grid-breakpoint-namespace}#{$breakpoint}') {
-            @include display-switch($breakpoint-name);
+            @include display-switch($breakpoint);
+        }
+    }
+
+    .#{$gel-grid-1280-toggle-class} {
+        @each $breakpoint in $gs-display-switch-breakpoint-names--1280 {
+            @include mq($from: '#{$gel-grid-breakpoint-namespace}#{$breakpoint}') {
+                @include display-switch($breakpoint);
+            }
         }
     }
 }

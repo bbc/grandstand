@@ -12,7 +12,8 @@
  *
  */
 
- $gs-display-switch-breakpoint-names: $gel-breakpoint-names !default;
+$gs-float-breakpoints: $gel-grid-breakpoints !default;
+$gs-float-breakpoints--1280: $gel-grid-breakpoints--1280 !default;
 
  @mixin floats($suffix: null) {
      $breakpoint-suffix: '';
@@ -35,14 +36,20 @@
  }
 
  // Output the unsuffixed version
- @include floats();
+@include floats();
 
- @if $enhanced {
-     @each $breakpoint in $gs-display-switch-breakpoint-names {
-         $breakpoint-name: nth($breakpoint, 1);
+@if $enhanced {
+    @each $breakpoint in $gs-float-breakpoints {
+        @include mq($from: '#{$gel-grid-breakpoint-namespace}#{$breakpoint}') {
+            @include floats($breakpoint);
+        }
+    }
 
-         @include mq($from: '#{$gel-grid-breakpoint-namespace}#{$breakpoint}') {
-             @include floats($breakpoint-name);
-         }
-     }
- }
+    .#{$gel-grid-1280-toggle-class} {
+        @each $breakpoint in $gs-float-breakpoints--1280 {
+            @include mq($from: '#{$gel-grid-breakpoint-namespace}#{$breakpoint}') {
+                @include floats($breakpoint);
+            }
+        }
+    }
+}

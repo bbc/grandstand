@@ -56,13 +56,14 @@
  * @xxl - GEL Extra Extra Large Breakpoint (1280px)
  *
  */
- 
+
 
 // Which breakpoints do we want spacing classes generated for?
 //
 // @type List
 //
-$gs-spacing-breakpoints: (xs, s, m, l, xl, xxl) !default;
+$gs-spacing-breakpoints: $gel-grid-breakpoints !default;
+$gs-spacing-breakpoints--1280: $gel-grid-breakpoints--1280 !default;
 
 
 // Output the spacing classes, adding a breakpoint namespace if required
@@ -267,6 +268,14 @@ $gs-spacing-breakpoints: (xs, s, m, l, xl, xxl) !default;
     @each $breakpoint in $gs-spacing-breakpoints {
         @include mq($from: '#{$gel-grid-breakpoint-namespace}#{$breakpoint}') {
             @include _output-spacing-classes($breakpoint);
+        }
+    }
+
+    .#{$gel-grid-1280-toggle-class} {
+        @each $breakpoint in $gs-spacing-breakpoints--1280 {
+            @include mq($from: '#{$gel-grid-breakpoint-namespace}#{$breakpoint}') {
+                @include _output-spacing-classes($breakpoint);
+            }
         }
     }
 }
