@@ -21,7 +21,7 @@ For example...
     $border-bottom: 0 !default;
 
     @if $border == true {
-        $border-bottom: 1px solid $nw-c-keyline;
+        $border-bottom: 1px solid $gs-c-keyline;
     }
 
     &:after {
@@ -33,7 +33,7 @@ For example...
 }
 
 // Align the keyline to the bottom of an element
-.nw-o-keyline--bottom {
+.gs-o-keyline--bottom {
     position: relative;
 
     &:after {
@@ -50,28 +50,28 @@ For example...
         $breakpoint-suffix: \@#{$breakpoint};
     }
 
-    .nw-o-keyline0#{$breakpoint-suffix} {
+    .gs-o-keyline0#{$breakpoint-suffix} {
         @include keyline(0);
     }
 
-    .nw-o-keyline#{$breakpoint-suffix} {
+    .gs-o-keyline#{$breakpoint-suffix} {
         @include keyline($gel-spacing-unit);
     }
 
-    .nw-o-keyline\+#{$breakpoint-suffix} {
+    .gs-o-keyline\+#{$breakpoint-suffix} {
         @include keyline(double($gel-spacing-unit));
     }
 
-    .nw-o-no-keyline#{$breakpoint-suffix} {
+    .gs-o-no-keyline#{$breakpoint-suffix} {
         @include keyline(0, false);
     }
 
-    .nw-o-keyline-vertical#{$breakpoint-suffix} {
-        border-right: 1px solid $nw-c-keyline;
+    .gs-o-keyline-vertical#{$breakpoint-suffix} {
+        border-right: 1px solid $gs-c-keyline;
         padding-right: $gel-spacing-unit;
     }
 
-    .nw-o-no-keyline-vertical#{$breakpoint-suffix} {
+    .gs-o-no-keyline-vertical#{$breakpoint-suffix} {
         border-right: 0;
         padding-right: 0;
     }
