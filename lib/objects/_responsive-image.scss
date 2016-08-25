@@ -43,6 +43,31 @@
 }
 
 /**
+ * Will show an image only on enhanced
+ */
+.gs-o-responsive-image--enhanced-only {
+    display: none;
+    visibility: hidden;
+     }
+ }
+
+@if $enhanced {
+    .gs-o-responsive-image--enhanced-only {
+        display: block;
+        visibility: visible;
+    }
+}
+
+/**
+ * Will show a lead image on core and enhanced
+ */
+
+.gs-o-responsive-image--lead {
+    display: block;
+    visibility: visible;
+}
+
+/**
  * Removes the default placeholder styles
  * for background-color and background-image
  */
