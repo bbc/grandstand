@@ -1,0 +1,96 @@
+/*------------------------------------*\
+    # KEYLINES e.g. Borders and associated Padding-Top between items
+\*------------------------------------*/
+
+/*
+Note you may also need to add margin-top classes to the mark up, such as 'gs-u-mt' to achieve the desired layout.
+https://github.com/bbc/morph-modules/pull/4542/files#diff-b171a1b4eb9edab30f754e5b22e2fd95R65
+*/
+
+/*
+This naming of these mixins follows the conventions of
+https://github.com/bbc/grandstand/blob/master/lib/utilities/_spacing.scss
+
+For example...
+'keyline0'  Uses 0 gel spacing,
+'keyline'   Uses default gel-spacing e.g 8px,
+'keyline+'  Uses a double gel spacing unit e.g. 16px
+*/
+
+@mixin keyline($padding, $border: true) {
+    $border-bottom: 0 !default;
+
+    @if $border == true {
+        $border-bottom: 1px solid $nw-c-keyline;
+    }
+
+    &:after {
+        border-bottom: $border-bottom;
+        content: "";
+        display: block;
+        margin-bottom: $padding;
+    }
+}
+
+// Align the keyline to the bottom of an element
+.nw-o-keyline--bottom {
+    position: relative;
+
+    &:after {
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+    }
+}
+
+@mixin _output-keyline-classes($breakpoint: null) {
+    $breakpoint-suffix: '';
+
+    @if $breakpoint != null {
+        $breakpoint-suffix: \@#{$breakpoint};
+    }
+
+    .nw-o-keyline0#{$breakpoint-suffix} {
+        @include keyline(0);
+    }
+
+    .nw-o-keyline#{$breakpoint-suffix} {
+        @include keyline($gel-spacing-unit);
+    }
+
+    .nw-o-keyline\+#{$breakpoint-suffix} {
+        @include keyline(double($gel-spacing-unit));
+    }
+
+    .nw-o-no-keyline#{$breakpoint-suffix} {
+        @include keyline(0, false);
+    }
+
+    .nw-o-keyline-vertical#{$breakpoint-suffix} {
+        border-right: 1px solid $nw-c-keyline;
+        padding-right: $gel-spacing-unit;
+    }
+
+    .nw-o-no-keyline-vertical#{$breakpoint-suffix} {
+        border-right: 0;
+        padding-right: 0;
+    }
+}
+
+@include _output-keyline-classes();
+
+@if $enhanced {
+    @each $breakpoint in $gel-grid-breakpoints {
+        @include mq($from: '#{$gel-grid-breakpoint-namespace}#{$breakpoint}') {
+            @include _output-keyline-classes($breakpoint);
+        }
+    }
+
+    .#{$gel-grid-1280-toggle-class} {
+        @each $breakpoint in $gel-grid-breakpoints--1280 {
+            @include mq($from: '#{$gel-grid-breakpoint-namespace}#{$breakpoint}') {
+                @include _output-keyline-classes($breakpoint);
+            }
+        }
+    }
+}
