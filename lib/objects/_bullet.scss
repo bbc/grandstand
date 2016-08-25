@@ -25,15 +25,12 @@
  *
  * 1. Scale the icon proportionally with the text
  */
-.gs-o-bullet__icon {
-    display: none;
 
-    @if $enhanced {
-        display: inline-block;
-        width: 1em; /* [1] */
-        height: 1em; /* [1] */
-        vertical-align: middle;
-    }
+.gs-o-bullet__icon {
+    position: absolute;
+    height: 1em; /* [1] */
+    width: 1em; /* [1] */
+    vertical-align: middle;
 }
 
 .gs-o-bullet__text {
