@@ -60,9 +60,9 @@
     }
 
     > li:last-child {
-        #{margin-right}: 0;
-        #{padding-right}: 0;
-        #{border-right}: 0;
+        #{$margin-right}: 0;
+        #{$padding-right}: 0;
+        #{$border-right}: 0;
     }
  }
 
@@ -79,11 +79,11 @@
     margin-top: halve(-$gel-spacing-unit); /* [1] */
 
     > li {
-        #{margin-right}: $gel-spacing-unit;
+        #{$margin-right}: $gel-spacing-unit;
         margin-top: halve($gel-spacing-unit);
     }
 
     > li:last-child {
-        #{margin-right}: 0;
+        #{$margin-right}: 0;
     }
  }
