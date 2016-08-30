@@ -5,43 +5,20 @@
 /*
 Note you may also need to add margin-top classes to the mark up, such as 'gs-u-mt' to achieve the desired layout.
 https://github.com/bbc/morph-modules/pull/4542/files#diff-b171a1b4eb9edab30f754e5b22e2fd95R65
+
+
+ We have keylines that are horizontal: 'gs-o-keyline'
+ We have keylines that are vertical: 'gs-o-keyline-vertical'
+
+ We recommend gs-o-keyline to be used with spacing classes gs-u-mb-after
+ We recommend gs-o-keyline-vertical to be used with spacing classes gs-u-pr
+
+ Q: Why is one a padding and the other a margin?
+
+ There is another type of class, that aligns to the bottom:
+ gs-o-keyline-bottom - we need this for????
+
 */
-
-/*
-This naming of these mixins follows the conventions of
-https://github.com/bbc/grandstand/blob/master/lib/utilities/_spacing.scss
-
-For example...
-'keyline0'  Uses 0 gel spacing,
-'keyline'   Uses default gel-spacing e.g 8px,
-'keyline+'  Uses a double gel spacing unit e.g. 16px
-*/
-
-@mixin keyline($padding, $border: true) {
-    $border-bottom: 0 !default;
-
-    @if $border == true {
-        $border-bottom: 1px solid $gs-c-keyline;
-    }
-
-    &:after {
-        border-bottom: $border-bottom;
-        content: "";
-        display: block;
-        margin-bottom: $padding;
-    }
-}
-
-// Align the keyline to the bottom of an element
-.gs-o-keyline--bottom {
-    position: relative;
-
-    &:after {
-        bottom: 0;
-        position: absolute;
-        width: 100%;
-    }
-}
 
 @mixin _output-keyline-classes($breakpoint: null) {
     $breakpoint-suffix: '';
@@ -50,30 +27,61 @@ For example...
         $breakpoint-suffix: \@#{$breakpoint};
     }
 
-    .gs-o-keyline0#{$breakpoint-suffix} {
-        @include keyline(0);
-    }
-
-    .gs-o-keyline#{$breakpoint-suffix} {
-        @include keyline($gel-spacing-unit);
-    }
-
-    .gs-o-keyline\+#{$breakpoint-suffix} {
-        @include keyline(double($gel-spacing-unit));
-    }
-
-    .gs-o-no-keyline#{$breakpoint-suffix} {
-        @include keyline(0, false);
-    }
-
     .gs-o-keyline-vertical#{$breakpoint-suffix} {
-        border-right: 1px solid $gs-c-keyline;
-        padding-right: $gel-spacing-unit;
+        #{$border-right}: 1px solid $gs-c-keyline;
+        #{$padding-right}: $gel-spacing-unit;
     }
 
     .gs-o-no-keyline-vertical#{$breakpoint-suffix} {
-        border-right: 0;
-        padding-right: 0;
+        #{$border-right}: 0;
+        #{$padding-right}: 0;
+    }
+
+    .gs-o-keyline#{$breakpoint-suffix} {
+        &:after {
+            border-bottom: 1px solid $gs-c-keyline !important;
+            content: "";
+            display: block;
+            margin-bottom: 0 !important;
+        }
+    }
+
+    .gs-o-keyline\+#{$breakpoint-suffix} {
+        &:after {
+            border-bottom: 1px solid $gs-c-keyline !important;
+            content: "";
+            display: block;
+            margin-bottom: $gel-spacing-unit !important;
+        }
+    }
+
+    .gs-o-keyline\+#{$breakpoint-suffix} {
+        &:after {
+            border-bottom: 1px solid $gs-c-keyline !important;
+            content: "";
+            display: block;
+            margin-bottom: double($gel-spacing-unit) !important;
+        }
+    }
+
+    .gs-o-no-keyline#{$breakpoint-suffix} {
+        &:after {
+            border-bottom: 0 !important;
+            content: "";
+            display: block;
+            margin-bottom: 0 !important;
+        }
+    }
+
+    // Align the keyline to the bottom of an element
+    .gs-o-keyline--bottom#{$breakpoint-suffix} {
+        position: relative;
+
+        &:after {
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+        }
     }
 }
 
