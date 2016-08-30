@@ -11,7 +11,7 @@
  * Horizontal alignment
  */
 .gs-u-align-left {
-    text-align: left;
+    text-align: flip(left, right);
 }
 
 .gs-u-align-center {
@@ -19,7 +19,7 @@
 }
 
 .gs-u-align-right {
-    text-align: right;
+    text-align: flip(right, left);
 }
 
 /**

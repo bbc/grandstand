@@ -23,11 +23,11 @@ $gs-float-breakpoints--1280: $gel-grid-breakpoints--1280 !default;
      }
 
      .gs-u-float-left#{$breakpoint-suffix} {
-         float: left !important;
+         float: flip(left, right) !important;
      }
 
      .gs-u-float-right#{$breakpoint-suffix} {
-         float: right !important;
+         float: flip(right, left) !important;
      }
 
      .gs-u-float-none#{$breakpoint-suffix} {

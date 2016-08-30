@@ -41,10 +41,10 @@
 }
 
 .gs-o-list-ui__item {
-    padding-top: $gel-spacing-unit;
-    padding-right: $gel-spacing-unit;
     padding-bottom: $gel-spacing-unit;
-    padding-left: $gel-spacing-unit;
+    padding-top: $gel-spacing-unit;
+    #{padding-left}: $gel-spacing-unit;
+    #{padding-right}: $gel-spacing-unit;
 
     border-bottom-width: 1px;
 }
