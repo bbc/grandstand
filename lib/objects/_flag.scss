@@ -45,7 +45,7 @@
  * Flag images have a space between them and the body of the object.
  */
 .gs-o-flag__img {
-    padding-right: $gel-spacing-unit;
+    #{$padding-right}: $gel-spacing-unit;
 
     > img {
         display: block;

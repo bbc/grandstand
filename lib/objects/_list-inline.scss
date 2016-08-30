@@ -53,16 +53,16 @@
     margin-top: halve(-$gel-spacing-unit); /* [1] */
 
     > li {
-        margin-right: halve($gel-alt-spacing-unit);
+        #{$margin-right}: halve($gel-alt-spacing-unit);
         margin-top: halve($gel-spacing-unit);
-        padding-right: halve($gel-alt-spacing-unit);
-        border-right: 1px solid $sp-c-silver;
+        #{$padding-right}: halve($gel-alt-spacing-unit);
+        #{$border-right}: 1px solid $sp-c-silver;
     }
 
     > li:last-child {
-        margin-right: 0;
-        padding-right: 0;
-        border-right: 0;
+        #{$margin-right}: 0;
+        #{$padding-right}: 0;
+        #{$border-right}: 0;
     }
  }
 
@@ -79,11 +79,11 @@
     margin-top: halve(-$gel-spacing-unit); /* [1] */
 
     > li {
-        margin-right: $gel-spacing-unit;
+        #{$margin-right}: $gel-spacing-unit;
         margin-top: halve($gel-spacing-unit);
     }
 
     > li:last-child {
-        margin-right: 0;
+        #{$margin-right}: 0;
     }
  }

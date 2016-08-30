@@ -47,7 +47,7 @@
      * If both icon and text are present we need to space them out
      */
     .gs-o-bullet__icon + .gs-o-bullet__text {
-        margin-left: $gel-spacing-unit;
+        #{$margin-left}: $gel-spacing-unit;
     }
 
     /**
@@ -55,7 +55,7 @@
      */
     .gs-o-bullet\- {
         .gs-o-bullet__icon + .gs-o-bullet__text {
-            margin-left: halve($gel-spacing-unit);
+            #{$margin-left}: halve($gel-spacing-unit);
         }
     }
 
@@ -64,7 +64,7 @@
      */
     .gs-o-bullet\+ {
         .gs-o-bullet__icon + .gs-o-bullet__text {
-            margin-left: double($gel-spacing-unit);
+            #{$margin-left}: double($gel-spacing-unit);
         }
     }
 
@@ -76,8 +76,8 @@
         direction: rtl;
 
         .gs-o-bullet__icon {
-            margin-right: 0;
-            margin-left: halve($gel-spacing-unit);
+            #{$margin-right}: 0;
+            #{$margin-left}: halve($gel-spacing-unit);
         }
     }
 

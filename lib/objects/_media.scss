@@ -23,8 +23,8 @@
 }
 
 .gs-o-media__img {
-    float: left;
-    margin-right: $gel-spacing-unit;
+    float: flip(left, right);
+    #{$margin-right}: $gel-spacing-unit;
 
     > img {
         display: block;

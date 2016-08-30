@@ -105,11 +105,11 @@
 }
 
 .gs-o-table__cell--border-right {
-    border-right: 1px solid $sp-c-cloud;
+    #{$border-right}: 1px solid $sp-c-cloud;
 }
 
 .gs-o-table__cell--border-left {
-    border-left: 1px solid $sp-c-cloud;
+    #{$border-left}: 1px solid $sp-c-cloud;
 }
 
 .gs-o-table__cell--left {
