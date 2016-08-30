@@ -1,0 +1,62 @@
+/*------------------------------------*\
+    # LINK
+\*------------------------------------*/
+
+/**
+ * [1] 'gs-o-link'
+ * When the text is the only element inside a link,
+ * use this class on the anchor
+
+ * <a class="gs-o-link">
+ *     Index Also title
+ * </a>
+
+ * [2] 'gs-o-link-split'
+ * When the text is one of several elements inside a link, use
+ * 'gs-o-link-split__anchor' on the anchor, and
+ * 'gs-o-link-split__text' on the text element within the anchor.
+
+ * <a class="gs-o-link-split__anchor">
+ *     <span class="special-sytle">
+ *         Live
+ *     </span>
+ *     <h3 class="gs-o-link-split__text">
+ *         Heading
+ *     </h3>
+ * </a>
+ *  */
+ *
+/*[1]*/
+.gs-o-link {
+    color: $nw-c-link;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: $nw-c-hover-and-focus;
+        text-decoration: underline;
+    }
+
+    &:visited {
+        color: $nw-c-visited;
+    }
+}
+
+/*[2]*/
+.gs-o-link-split__anchor {
+    text-decoration: none;
+}
+
+.gs-o-link-split__text {
+    color: $nw-c-link;
+
+    .gs-o-link-split__anchor:hover &,
+    .gs-o-link-split__anchor:focus & {
+        color: $nw-c-hover-and-focus;
+        text-decoration: underline;
+    }
+
+    .gs-o-link-split__anchor:visited & {
+        color: $nw-c-visited;
+    }
+}

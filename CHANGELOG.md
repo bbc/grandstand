@@ -1,5 +1,6 @@
 | Version | Description |
 |---------|-------------|
+| 3.5.0   | Add Keyline & Link. Update Bullet, Faux Block Link & Responsive Image. Interpolate all `left` & `right` properties & values, to allow easy use of Grandstand on rtl pages. |
 | 3.4.3   | Add breakpoints to visually hidden class. |
 | 3.4.2   | Add additional vertical align classes. |
 | 3.4.1   | Using interpolated left & right properties and flipping left & right values. |
