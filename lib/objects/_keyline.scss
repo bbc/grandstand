@@ -55,7 +55,7 @@ https://github.com/bbc/morph-modules/pull/4542/files#diff-b171a1b4eb9edab30f754e
         }
     }
 
-    .gs-o-keyline\+#{$breakpoint-suffix} {
+    .gs-o-keyline\+\+#{$breakpoint-suffix} {
         &:after {
             border-bottom: 1px solid $gs-c-keyline !important;
             content: "";
