@@ -12,10 +12,41 @@
 
 
 /**
- * Make a class and placeholder of the visually hidden helper available
+ * Make a class and placeholder of the visually hidden helper available at all breakpoints
  */
-.gs-u-vh {
-    @include vh;
+@mixin visibility-hidden($suffix: null) {
+    $breakpoint-suffix: '';
+
+    @if $suffix != null {
+        $breakpoint-suffix: \@#{$suffix};
+    }
+
+    .gs-u-vh#{$breakpoint-suffix} {
+        @include vh;
+    }
+}
+
+// Output the unsuffixed version
+@include visibility-hidden();
+
+// Output the suffixed version
+$gs-visibility-hidden-breakpoint-names: $gel-grid-breakpoints !default;
+$gs-visibility-hidden-breakpoint-names--1280: $gel-grid-breakpoints--1280 !default;
+
+@if $enhanced {
+    @each $breakpoint in $gs-visibility-hidden-breakpoint-names {
+        @include mq($from: '#{$gel-grid-breakpoint-namespace}#{$breakpoint}') {
+            @include visibility-hidden($breakpoint);
+        }
+    }
+
+    .#{$gel-grid-1280-toggle-class} {
+        @each $breakpoint in $gs-visibility-hidden-breakpoint-names--1280 {
+            @include mq($from: '#{$gel-grid-breakpoint-namespace}#{$breakpoint}') {
+                @include visibility-hidden($breakpoint);
+            }
+        }
+    }
 }
 
 
