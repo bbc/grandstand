@@ -1,24 +1,21 @@
 /*------------------------------------*\
-    # KEYLINES e.g. Borders and associated Padding-Top between items
+    # KEYLINES e.g. Borders and associated spacing
 \*------------------------------------*/
 
-/*
-Note you may also need to add margin-top classes to the mark up, such as 'gs-u-mt' to achieve the desired layout.
-https://github.com/bbc/morph-modules/pull/4542/files#diff-b171a1b4eb9edab30f754e5b22e2fd95R65
-
-
- We have keylines that are horizontal: 'gs-o-keyline'
- We have keylines that are vertical: 'gs-o-keyline-vertical'
-
- We recommend gs-o-keyline to be used with spacing classes gs-u-mb-after
- We recommend gs-o-keyline-vertical to be used with spacing classes gs-u-pr
-
- Q: Why is one a padding and the other a margin?
-
- There is another type of class, that aligns to the bottom:
- gs-o-keyline-bottom - we need this for????
-
-*/
+/**
+ * The keyline object adds a border-bottom with associated margin bottom for spacing.
+ * The keyline-vertical object adds a border-right with associated padding right for spacing.
+ *
+ *  Here's an example of using vertical keyline to separate two spans
+    <span class="gs-o-keyline-vertical">First</span>
+    <span>Second</span>
+ *
+ *  Here's an example of using the keyline object to separate list items
+    <ul>
+        <li class="gs-o-keyline">First</li>
+        <li class="gs-o-keyline">Second</li>
+    </ul>
+ */
 
 @mixin _output-keyline-classes($breakpoint: null) {
     $breakpoint-suffix: '';
@@ -39,7 +36,7 @@ https://github.com/bbc/morph-modules/pull/4542/files#diff-b171a1b4eb9edab30f754e
 
     .gs-o-keyline#{$breakpoint-suffix} {
         &:after {
-            border-bottom: 1px solid $gs-c-keyline !important;
+            border-bottom: 1px solid $gs-c-keyline;
             content: "";
             display: block;
             margin-bottom: 0 !important;
@@ -48,7 +45,7 @@ https://github.com/bbc/morph-modules/pull/4542/files#diff-b171a1b4eb9edab30f754e
 
     .gs-o-keyline\+#{$breakpoint-suffix} {
         &:after {
-            border-bottom: 1px solid $gs-c-keyline !important;
+            border-bottom: 1px solid $gs-c-keyline;
             content: "";
             display: block;
             margin-bottom: $gel-spacing-unit !important;
@@ -57,7 +54,7 @@ https://github.com/bbc/morph-modules/pull/4542/files#diff-b171a1b4eb9edab30f754e
 
     .gs-o-keyline\+\+#{$breakpoint-suffix} {
         &:after {
-            border-bottom: 1px solid $gs-c-keyline !important;
+            border-bottom: 1px solid $gs-c-keyline;
             content: "";
             display: block;
             margin-bottom: double($gel-spacing-unit) !important;
@@ -66,21 +63,10 @@ https://github.com/bbc/morph-modules/pull/4542/files#diff-b171a1b4eb9edab30f754e
 
     .gs-o-no-keyline#{$breakpoint-suffix} {
         &:after {
-            border-bottom: 0 !important;
+            border-bottom: 0;
             content: "";
             display: block;
             margin-bottom: 0 !important;
-        }
-    }
-
-    // Align the keyline to the bottom of an element
-    .gs-o-keyline--bottom#{$breakpoint-suffix} {
-        position: relative;
-
-        &:after {
-            bottom: 0;
-            position: absolute;
-            width: 100%;
         }
     }
 }
