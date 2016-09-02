@@ -34,7 +34,7 @@
         #{$padding-right}: 0;
     }
 
-    .gs-o-keyline#{$breakpoint-suffix} {
+    .gs-o-keyline0#{$breakpoint-suffix} {
         &:after {
             border-bottom: 1px solid $gs-c-keyline;
             content: "";
@@ -43,7 +43,7 @@
         }
     }
 
-    .gs-o-keyline\+#{$breakpoint-suffix} {
+    .gs-o-keyline#{$breakpoint-suffix} {
         &:after {
             border-bottom: 1px solid $gs-c-keyline;
             content: "";
@@ -52,7 +52,7 @@
         }
     }
 
-    .gs-o-keyline\+\+#{$breakpoint-suffix} {
+    .gs-o-keyline\+#{$breakpoint-suffix} {
         &:after {
             border-bottom: 1px solid $gs-c-keyline;
             content: "";
