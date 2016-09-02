@@ -43,8 +43,8 @@
  *  for it to have sufficient spacing
  *
  *  Example usage:
-    <span class="gs-o-bullet gs-o-bullet+">
-        <span class="gs-o-bullet__icon gs-o-bullet__icon--block gel-icon">
+    <span class="gs-o-bullet gs-o-bullet+ gs-o-bullet--block">
+        <span class="gs-o-bullet__icon gel-icon">
             <svg>
                 <use xlink:href="#gel-icon-duration"></use>
             </svg>
@@ -52,7 +52,7 @@
         <span class="gs-o-bullet__text">18:30 - 18:34</span>
     </span>
  */
-.gs-o-bullet__icon--block {
+.gs-o-bullet--block .gs-o-bullet__icon {
     #{$left}: 0;
     position: absolute;
     top: 0;
