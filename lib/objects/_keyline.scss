@@ -6,15 +6,32 @@
  * The keyline object adds a border-bottom with associated margin bottom for spacing.
  * The keyline-vertical object adds a border-right with associated padding right for spacing.
  *
- *  Here's an example of using vertical keyline to separate two spans
-    <span class="gs-o-keyline-vertical">First</span>
-    <span>Second</span>
+ * Here's an example of using vertical keyline to separate two spans
+ *     <span class="gs-o-keyline-vertical">First</span>
+ *     <span>Second</span>
  *
- *  Here's an example of using the keyline object to separate list items
-    <ul>
-        <li class="gs-o-keyline">First</li>
-        <li class="gs-o-keyline">Second</li>
-    </ul>
+ * Here's an example of using the keyline object to separate list items
+ *    <ul>
+ *        <li class="gs-o-keyline">First</li>
+ *        <li class="gs-o-keyline">Second</li>
+ *    </ul>
+ 
+ * Note: to ensure that the keyline does not clash with the gel-layout__item, add the keyline class on a separate element
+ *    <div class="gel-layout gel-layout--equal">
+ *        <div class="gel-layout__item gel-1/2">
+ *            <div class="nw-o-keyline nw-o-no-keyline@m">
+ *                ...
+ *            </div>
+ *        </div>
+ *    </div>
+ */
+/*
+ * These class names follow the convention used in
+ * https://github.com/bbc/grandstand/blob/master/lib/utilities/_spacing.scss
+ * For example...
+ * 'gs-o-keyline0'  Uses 0 gel spacing,
+ * 'gs-o-keyline'   Uses default gel-spacing e.g 8px,
+ * 'gs-o-keyline+'  Uses a double gel spacing unit e.g. 16px
  */
 
 @mixin _output-keyline-classes($breakpoint: null) {
@@ -35,39 +52,31 @@
     }
 
     .gs-o-keyline0#{$breakpoint-suffix} {
-        &:after {
-            border-bottom: 1px solid $gs-c-keyline;
-            content: "";
-            display: block;
-            margin-bottom: 0 !important;
-        }
+        border-bottom: 1px solid $gs-c-keyline;
+        display: block;
+        margin-bottom: 0 !important;
+        width: 100%;
     }
 
     .gs-o-keyline#{$breakpoint-suffix} {
-        &:after {
-            border-bottom: 1px solid $gs-c-keyline;
-            content: "";
-            display: block;
-            margin-bottom: $gel-spacing-unit !important;
-        }
+        border-bottom: 1px solid $gs-c-keyline;
+        display: block;
+        margin-bottom: $gel-spacing-unit !important;
+        width: 100%;
     }
 
     .gs-o-keyline\+#{$breakpoint-suffix} {
-        &:after {
-            border-bottom: 1px solid $gs-c-keyline;
-            content: "";
-            display: block;
-            margin-bottom: double($gel-spacing-unit) !important;
-        }
+        border-bottom: 1px solid $gs-c-keyline;
+        display: block;
+        margin-bottom: double($gel-spacing-unit) !important;
+        width: 100%;
     }
 
     .gs-o-no-keyline#{$breakpoint-suffix} {
-        &:after {
-            border-bottom: 0;
-            content: "";
-            display: block;
-            margin-bottom: 0 !important;
-        }
+        border-bottom: 0;
+        display: block;
+        margin-bottom: 0 !important;
+        width: 100%;
     }
 }
 
