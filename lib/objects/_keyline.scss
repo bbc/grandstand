@@ -53,29 +53,25 @@
 
     .gs-o-keyline0#{$breakpoint-suffix} {
         border-bottom: 1px solid $gs-c-keyline;
-        display: block;
-        margin-bottom: 0 !important;
+        margin-bottom: 0;
         width: 100%;
     }
 
     .gs-o-keyline#{$breakpoint-suffix} {
         border-bottom: 1px solid $gs-c-keyline;
-        display: block;
-        margin-bottom: $gel-spacing-unit !important;
+        margin-bottom: $gel-spacing-unit;
         width: 100%;
     }
 
     .gs-o-keyline\+#{$breakpoint-suffix} {
         border-bottom: 1px solid $gs-c-keyline;
-        display: block;
-        margin-bottom: double($gel-spacing-unit) !important;
+        margin-bottom: double($gel-spacing-unit);
         width: 100%;
     }
 
     .gs-o-no-keyline#{$breakpoint-suffix} {
         border-bottom: 0;
-        display: block;
-        margin-bottom: 0 !important;
+        margin-bottom: 0;
         width: 100%;
     }
 }
