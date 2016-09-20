@@ -21,20 +21,34 @@
 }
 
 /**
+<<<<<<< HEAD
+=======
+ * 1.
+>>>>>>> master
  *  |[icon] Text here |
  *  |wraps around     |
  *  |below the icon   |
  *
- * 1. Scale the icon proportionally with the text
+ * 2. Scale the icon proportionally with the text
  */
+<<<<<<< HEAD
 
 .gs-o-bullet__icon {
     height: 1em; /* [1] */
     width: 1em; /* [1] */
+=======
+.gs-o-bullet__icon { /* [1] */
+    height: 1em; /* [2] */
+    width: 1em; /* [2] */
+>>>>>>> master
     vertical-align: middle;
 }
 
 /**
+<<<<<<< HEAD
+=======
+ * 3.
+>>>>>>> master
  *  |[icon] Text here does |
  *  |       not wrap around|
  *  |       below icon     |
@@ -52,7 +66,11 @@
         <span class="gs-o-bullet__text">18:30 - 18:34</span>
     </span>
  */
+<<<<<<< HEAD
 .gs-o-bullet--block .gs-o-bullet__icon {
+=======
+.gs-o-bullet--block .gs-o-bullet__icon { /* [3] */
+>>>>>>> master
     #{$left}: 0;
     position: absolute;
     top: 0;
