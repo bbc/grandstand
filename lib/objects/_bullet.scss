@@ -21,19 +21,42 @@
 }
 
 /**
- * Lets hide the icon from browsers that do not cut the mustard
+ * 1.
+ *  |[icon] Text here |
+ *  |wraps around     |
+ *  |below the icon   |
  *
- * 1. Scale the icon proportionally with the text
+ * 2. Scale the icon proportionally with the text
  */
-.gs-o-bullet__icon {
-    display: none;
+.gs-o-bullet__icon { /* [1] */
+    height: 1em; /* [2] */
+    width: 1em; /* [2] */
+    vertical-align: middle;
+}
 
-    @if $enhanced {
-        display: inline-block;
-        width: 1em; /* [1] */
-        height: 1em; /* [1] */
-        vertical-align: middle;
-    }
+/**
+ * 3.
+ *  |[icon] Text here does |
+ *  |       not wrap around|
+ *  |       below icon     |
+ *  This is styled to look like a traditional list, but with custom icons
+ *  The icon sits on top of the text's left margin, so it's recommended to use .gs-u-bullet+
+ *  for it to have sufficient spacing
+ *
+ *  Example usage:
+    <span class="gs-o-bullet gs-o-bullet+ gs-o-bullet--block">
+        <span class="gs-o-bullet__icon gel-icon">
+            <svg>
+                <use xlink:href="#gel-icon-duration"></use>
+            </svg>
+        </span>
+        <span class="gs-o-bullet__text">18:30 - 18:34</span>
+    </span>
+ */
+.gs-o-bullet--block .gs-o-bullet__icon { /* [3] */
+    #{$left}: 0;
+    position: absolute;
+    top: 0;
 }
 
 .gs-o-bullet__text {
@@ -41,44 +64,40 @@
     vertical-align: middle;
 }
 
-@if $enhanced {
+/**
+ * If both icon and text are present we need to space them out
+ */
+.gs-o-bullet__icon + .gs-o-bullet__text {
+    #{$margin-left}: $gel-spacing-unit;
+}
 
-    /**
-     * If both icon and text are present we need to space them out
-     */
+/**
+ * Reduced spacing between icon and text
+ */
+.gs-o-bullet\- {
     .gs-o-bullet__icon + .gs-o-bullet__text {
-        #{$margin-left}: $gel-spacing-unit;
+        #{$margin-left}: halve($gel-spacing-unit);
     }
+}
 
-    /**
-     * Reduced spacing between icon and text
-     */
-    .gs-o-bullet\- {
-        .gs-o-bullet__icon + .gs-o-bullet__text {
-            #{$margin-left}: halve($gel-spacing-unit);
-        }
+/**
+ * Increased spacing between icon and text
+ */
+.gs-o-bullet\+ {
+    .gs-o-bullet__icon + .gs-o-bullet__text {
+        #{$margin-left}: double($gel-spacing-unit);
     }
+}
 
-    /**
-     * Increased spacing between icon and text
-     */
-    .gs-o-bullet\+ {
-        .gs-o-bullet__icon + .gs-o-bullet__text {
-            #{$margin-left}: double($gel-spacing-unit);
-        }
+/**
+ * If you need the icon to sit after the text you can reverse
+ * the bullet
+ */
+.gs-o-bullet--reverse {
+    direction: rtl;
+
+    .gs-o-bullet__icon {
+        #{$margin-right}: 0;
+        #{$margin-left}: halve($gel-spacing-unit);
     }
-
-    /**
-     * If you need the icon to sit after the text you can reverse
-     * the bullet
-     */
-    .gs-o-bullet--reverse {
-        direction: rtl;
-
-        .gs-o-bullet__icon {
-            #{$margin-right}: 0;
-            #{$margin-left}: halve($gel-spacing-unit);
-        }
-    }
-
 }
