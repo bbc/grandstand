@@ -28,10 +28,18 @@
  *
  * 2. Scale the icon proportionally with the text
  */
+
 .gs-o-bullet__icon { /* [1] */
-    height: 1em; /* [2] */
-    width: 1em; /* [2] */
-    vertical-align: middle;
+    display: none;
+    visibility: hidden;
+
+    @if $enhanced {
+        display: inline-block;
+        visibility: visible;
+        height: 1em; /* [2] */
+        width: 1em; /* [2] */
+        vertical-align: middle;
+    }
 }
 
 /**
