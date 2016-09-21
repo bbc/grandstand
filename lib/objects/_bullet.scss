@@ -16,10 +16,33 @@
     </span>
  *
  */
+
 .gs-o-bullet {
     display: inline-block;
 }
 
+
+/* BULLET - Icon
+------------------------------------*/
+/* Only essential icons are shown on core */
+.gs-o-bullet--essential {
+    .gs-o-bullet__icon {
+        display: inline-block;
+        visibility: visible;
+    }
+}
+
+.gs-o-bullet__icon {
+    display: none;
+
+    @if $enhanced {
+        display: inline-block;
+        visibility: visible;
+    }
+}
+
+/* BULLET - Layout
+------------------------------------*/
 /**
  * 1.
  *  |[icon] Text here |
@@ -30,16 +53,9 @@
  */
 
 .gs-o-bullet__icon { /* [1] */
-    display: none;
-    visibility: hidden;
-
-    @if $enhanced {
-        display: inline-block;
-        visibility: visible;
-        height: 1em; /* [2] */
-        width: 1em; /* [2] */
-        vertical-align: middle;
-    }
+    height: 1em; /* [2] */
+    width: 1em; /* [2] */
+    vertical-align: middle;
 }
 
 /**
@@ -61,17 +77,50 @@
         <span class="gs-o-bullet__text">18:30 - 18:34</span>
     </span>
  */
+
 .gs-o-bullet--block .gs-o-bullet__icon { /* [3] */
     #{$left}: 0;
     position: absolute;
     top: 0;
 }
 
+
+/* BULLET - Text
+------------------------------------*/
 .gs-o-bullet__text {
     display: inline-block;
     vertical-align: middle;
 }
 
+/* If it's an essential icon then we want spacing between the icon and text on core */
+.gs-o-bullet--essential {
+    /**
+     * If both icon and text are present we need to space them out
+    */
+    .gs-o-bullet__icon + .gs-o-bullet__text {
+        #{$margin-left}: $gel-spacing-unit;
+    }
+
+    /**
+    * Reduced spacing between icon and text
+    */
+    .gs-o-bullet\- {
+        .gs-o-bullet__icon + .gs-o-bullet__text {
+            #{$margin-left}: halve($gel-spacing-unit);
+        }
+    }
+
+    /**
+    * Increased spacing between icon and text
+    */
+    .gs-o-bullet\+ {
+        .gs-o-bullet__icon + .gs-o-bullet__text {
+            #{$margin-left}: double($gel-spacing-unit);
+        }
+    }
+}
+
+/* If it's not an essential icon then we don't want space before the text on core as we don't show the icon */
 @if $enhanced {
     /**
      * If both icon and text are present we need to space them out
