@@ -72,28 +72,30 @@
     vertical-align: middle;
 }
 
-/**
- * If both icon and text are present we need to space them out
- */
-.gs-o-bullet__icon + .gs-o-bullet__text {
-    #{$margin-left}: $gel-spacing-unit;
-}
-
-/**
- * Reduced spacing between icon and text
- */
-.gs-o-bullet\- {
+@if $enhanced {
+    /**
+     * If both icon and text are present we need to space them out
+    */
     .gs-o-bullet__icon + .gs-o-bullet__text {
-        #{$margin-left}: halve($gel-spacing-unit);
+        #{$margin-left}: $gel-spacing-unit;
     }
-}
 
-/**
- * Increased spacing between icon and text
- */
-.gs-o-bullet\+ {
-    .gs-o-bullet__icon + .gs-o-bullet__text {
-        #{$margin-left}: double($gel-spacing-unit);
+    /**
+    * Reduced spacing between icon and text
+    */
+    .gs-o-bullet\- {
+        .gs-o-bullet__icon + .gs-o-bullet__text {
+            #{$margin-left}: halve($gel-spacing-unit);
+        }
+    }
+
+    /**
+    * Increased spacing between icon and text
+    */
+    .gs-o-bullet\+ {
+        .gs-o-bullet__icon + .gs-o-bullet__text {
+            #{$margin-left}: double($gel-spacing-unit);
+        }
     }
 }
 
