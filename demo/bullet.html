@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grandstand | Bullet</title>
+
+    <script>
+        var cutsTheMustard = 'addEventListener' in window && 'querySelector' in document && 'localStorage' in window;
+        var forceCore = window.location.search.indexOf('core=true') > -1;
+        var enhanced = !forceCore && cutsTheMustard;
+
+        var stylesheet = document.createElement('link');
+            stylesheet.href = enhanced ? 'bbc-grandstand-enhanced.css' : 'bbc-grandstand-core.css';
+
+        document.head.appendChild(stylesheet);
+    </script>
+
+    <noscript>
+        <link href="bbc-grandstand-core.css">
+    </noscript>
+</head>
+<body>
+    <div class="gel-wrap">
+        <h1>Bullet Pattern</h1>
+
+        <div class="gel-layout">
+            <div class="gel-layout__item">
+                <h2>Variation 1</h2>
+
+                <span class="gs-o-bullet gs-o-bullet+ gs-o-bullet--block">
+                    <span class="gs-o-bullet__icon gel-icon">
+                        <svg>
+                        </svg>
+                    </span>
+                    <span class="gs-o-bullet__text">18:30 - 18:34</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -5,7 +5,9 @@
   "main": "_grandstand.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dist": "bower install && node-sass src/bbc-grandstand.scss dist/bbc-grandstand.min.css --output-style=compressed --sourcemap=none && node-sass src/bbc-grandstand.scss dist/bbc-grandstand.css --output-style=expanded --sourcemap=none"
+    "dist": "bower install && node-sass src/bbc-grandstand.scss dist/bbc-grandstand.min.css --output-style=compressed --sourcemap=none && node-sass src/bbc-grandstand.scss dist/bbc-grandstand.css --output-style=expanded --sourcemap=none",
+    "demo-core-scss": "node-sass demo/bbc-grandstand-core.scss demo/bbc-grandstand-core.css --output-style=expanded --sourcemap=none",
+    "demo": "npm run dist && npm run demo-core-scss && cp dist/bbc-grandstand.css demo/bbc-grandstand-enhanced.css"
   },
   "repository": {
     "type": "git",
