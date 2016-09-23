@@ -6,7 +6,7 @@
  * The `bullet` pattern is used to align an icon with some text,
  * similar to how a bullet point has the icon and the text
  *
-    <span class="gs-o-bullet [ gs-o-bullet- | gs-o-bullet+ | gs-o-bullet--reverse ]">
+    <span class="gs-o-bullet [ gs-o-bullet- | gs-o-bullet+ | gs-o-bullet--essential  | gs-o-bullet--block | gs-o-bullet--reverse ]">
         <span class="gs-o-bullet__icon gel-icon">
             <svg>
                 <use xlink:href="#gel-icon-duration"></use>
@@ -14,7 +14,7 @@
         </span>
         <span class="gs-o-bullet__text">18:30 - 18:34</span>
     </span>
- *
+ * 
  */
 
 .gs-o-bullet {
@@ -28,6 +28,8 @@
  *  |below the icon   |
  *
  * 2. Scale the icon proportionally with the text
+ *
+ * 3. Essential Modifier - only essential icons are shown on core 
  */
 
 .gs-o-bullet__icon { /* [1] */
@@ -40,19 +42,22 @@
         display: inline-block;
         visibility: visible;
     }
+
+    .gs-o-bullet--essential & { /* [3] */
+        display: inline-block;
+        visibility: visible;
+    }
 }
 
 /** 
- * Essential Modifier
- * Only essential icons are shown on core 
+ * 
  */
 .gs-o-bullet--essential .gs-o-bullet__icon {
-    display: inline-block;
-    visibility: visible;
+
 }
 
 /**
- *  Block Modifier
+ *  4. Block Modifier
  *  |[icon] Text here does |
  *  |       not wrap around|
  *  |       below icon     |
@@ -71,11 +76,11 @@
     </span>
  */
 
-.gs-o-bullet--block.gs-o-bullet {
+.gs-o-bullet--block.gs-o-bullet { /* [4] */
     position: relative;
 }
 
-.gs-o-bullet--block .gs-o-bullet__icon {
+.gs-o-bullet--block .gs-o-bullet__icon { /* [4] */
     #{$left}: 0;
     position: absolute;
     top: 0;
