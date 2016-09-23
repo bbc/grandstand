@@ -71,6 +71,10 @@
     </span>
  */
 
+.gs-o-bullet--block .gs-o-bullet {
+    position: relative;
+}
+
 .gs-o-bullet--block .gs-o-bullet__icon {
     #{$left}: 0;
     position: absolute;
