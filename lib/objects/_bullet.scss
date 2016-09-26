@@ -34,6 +34,7 @@
 
 .gs-o-bullet__icon { /* [1] */
     display: none;
+    visibility: hidden;
     height: 1em; /* [2] */
     width: 1em; /* [2] */
     vertical-align: middle;
