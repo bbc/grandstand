@@ -6,7 +6,7 @@
  * The `bullet` pattern is used to align an icon with some text,
  * similar to how a bullet point has the icon and the text
  *
-    <span class="gs-o-bullet [ gs-o-bullet- | gs-o-bullet+ | gs-o-bullet--reverse ]">
+    <span class="gs-o-bullet [ gs-o-bullet- | gs-o-bullet+ | gs-o-bullet--essential  | gs-o-bullet--block | gs-o-bullet--reverse ]">
         <span class="gs-o-bullet__icon gel-icon">
             <svg>
                 <use xlink:href="#gel-icon-duration"></use>
@@ -14,8 +14,9 @@
         </span>
         <span class="gs-o-bullet__text">18:30 - 18:34</span>
     </span>
- *
+ * 
  */
+
 .gs-o-bullet {
     display: inline-block;
 }
@@ -27,15 +28,30 @@
  *  |below the icon   |
  *
  * 2. Scale the icon proportionally with the text
+ *
+ * 3. Essential Modifier - only essential icons are shown on core 
  */
+
 .gs-o-bullet__icon { /* [1] */
+    display: none;
+    visibility: hidden;
     height: 1em; /* [2] */
     width: 1em; /* [2] */
     vertical-align: middle;
+
+    @if $enhanced {
+        display: inline-block;
+        visibility: visible;
+    }
+
+    .gs-o-bullet--essential & { /* [3] */
+        display: inline-block;
+        visibility: visible;
+    }
 }
 
 /**
- * 3.
+ *  4. Block Modifier
  *  |[icon] Text here does |
  *  |       not wrap around|
  *  |       below icon     |
@@ -53,7 +69,12 @@
         <span class="gs-o-bullet__text">18:30 - 18:34</span>
     </span>
  */
-.gs-o-bullet--block .gs-o-bullet__icon { /* [3] */
+
+.gs-o-bullet--block { /* [4] */
+    position: relative;
+}
+
+.gs-o-bullet--block .gs-o-bullet__icon { /* [4] */
     #{$left}: 0;
     position: absolute;
     top: 0;
@@ -64,28 +85,58 @@
     vertical-align: middle;
 }
 
-/**
- * If both icon and text are present we need to space them out
- */
-.gs-o-bullet__icon + .gs-o-bullet__text {
-    #{$margin-left}: $gel-spacing-unit;
-}
+/* SPACING */
 
 /**
- * Reduced spacing between icon and text
+ * For non-essential icons, we only want the space before text
+ * on enhanced, since the icon isn't shown on core 
  */
-.gs-o-bullet\- {
+@if $enhanced {
+    /**
+     * If both icon and text are present we need to space them out
+     */
     .gs-o-bullet__icon + .gs-o-bullet__text {
-        #{$margin-left}: halve($gel-spacing-unit);
+        #{$margin-left}: $gel-spacing-unit;
+    }
+
+    /**
+     * Reduced spacing between icon and text
+     */
+    .gs-o-bullet\- {
+        .gs-o-bullet__icon + .gs-o-bullet__text {
+            #{$margin-left}: halve($gel-spacing-unit);
+        }
+    }
+
+    /**
+     * Increased spacing between icon and text
+     */
+    .gs-o-bullet\+ {
+        .gs-o-bullet__icon + .gs-o-bullet__text {
+            #{$margin-left}: double($gel-spacing-unit);
+        }
     }
 }
 
-/**
- * Increased spacing between icon and text
+/* 
+ * For essential icons, we want spacing between the icon and text 
+ * on both core and enhanced
  */
-.gs-o-bullet\+ {
+.gs-o-bullet--essential {
     .gs-o-bullet__icon + .gs-o-bullet__text {
-        #{$margin-left}: double($gel-spacing-unit);
+        #{$margin-left}: $gel-spacing-unit;
+    }
+
+    .gs-o-bullet\- {
+        .gs-o-bullet__icon + .gs-o-bullet__text {
+            #{$margin-left}: halve($gel-spacing-unit);
+        }
+    }
+
+    .gs-o-bullet\+ {
+        .gs-o-bullet__icon + .gs-o-bullet__text {
+            #{$margin-left}: double($gel-spacing-unit);
+        }
     }
 }
 
