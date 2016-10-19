@@ -1,5 +1,6 @@
 | Version | Description |
 |---------|-------------|
+| 4.1.1   | Bump z-index on faux block links to make them more robust. |
 | 4.1.0   | Updating Bullet pattern with the Essential modifier. |
 | 4.0.0   | Updating Bullet to show icon on core. Updating Faux Block Link for IE compatibility. |
 | 3.4.4   | Bump to bring in [gs-sass-tools#20](https://github.com/bbc/gs-sass-tools/pull/20). |

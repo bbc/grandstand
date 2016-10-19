@@ -42,7 +42,7 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
 .gs-o-faux-block-link a,
 .gs-o-faux-block-link abbr[title] {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .gs-o-faux-block-link .gs-o-faux-block-link__overlay-link {
@@ -57,7 +57,7 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
         right: 0;
         top: 0;
         white-space: nowrap;
-        z-index: 0;
+        z-index: 1;
 
         // only applies to IE 9
         .ie9 & {
