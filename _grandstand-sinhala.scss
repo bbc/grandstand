@@ -1,11 +1,14 @@
 /*------------------------------------*\
-    # GRANDSTAND UTILITIES
+    # GRANDSTAND SINHALA
 \*------------------------------------*/
 
-@import 'lib/utilities/box-size';
-@import 'lib/utilities/clearfix';
-@import 'lib/utilities/display';
-@import 'lib/utilities/floats';
-@import 'lib/utilities/text-alignment';
-@import 'lib/utilities/spacing';
-@import 'lib/utilities/visibility';
+// settings and tools
+@import 'lib/settings/global';
+@import 'lib/settings/scripts/sinhala/config';
+@import '../gs-sass-tools/sass-tools';
+
+// objects
+@import 'objects';
+
+// utilities
+@import 'utilities';

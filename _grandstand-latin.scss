@@ -8,23 +8,7 @@
 @import '../gs-sass-tools/sass-tools';
 
 // objects
-@import 'lib/objects/bullet';
-@import 'lib/objects/button';
-@import 'lib/objects/faux-block-link';
-@import 'lib/objects/flag';
-@import 'lib/objects/icons';
-@import 'lib/objects/list-inline';
-@import 'lib/objects/list-ui';
-@import 'lib/objects/media';
-@import 'lib/objects/media-island';
-@import 'lib/objects/responsive-image';
-@import 'lib/objects/table';
+@import 'objects';
 
 // utilities
-@import 'lib/utilities/box-size';
-@import 'lib/utilities/clearfix';
-@import 'lib/utilities/display';
-@import 'lib/utilities/floats';
-@import 'lib/utilities/text-alignment';
-@import 'lib/utilities/spacing';
-@import 'lib/utilities/visibility';
+@import 'utilities';
