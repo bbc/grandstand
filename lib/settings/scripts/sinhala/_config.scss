@@ -1,4 +1,22 @@
 @if $script == 'sinhala' {
+    $pica: (
+        'group-a': (
+            'font-size': 15px,
+            'line-height': 20px
+        ),
+        'group-b': (
+            'font-size': 16px,
+            'line-height': 22px
+        ),
+        'group-c': (
+            'font-size': 18px,
+            'line-height': 24px
+        ),
+        'group-d': (
+            'font-size': 20px,
+            'line-height': 22px
+        )
+    );
     $gel-type-settings: (
         'canon': (
             'group-a': (
@@ -85,24 +103,7 @@
                 'letter-spacing': -1px
             )
         ),
-        'pica': (
-            'group-a': (
-                'font-size': 15px,
-                'line-height': 20px
-            ),
-            'group-b': (
-                'font-size': 16px,
-                'line-height': 22px
-            ),
-            'group-c': (
-                'font-size': 18px,
-                'line-height': 24px
-            ),
-            'group-d': (
-                'font-size': 20px,
-                'line-height': 22px
-            )
-        ),
+        'pica': $pica,
         'pica-bold': (
             'group-a': (
                 'font-weight': bold
@@ -161,23 +162,6 @@
                 'font-weight': bold
             )
         ),
-        'body-copy': (
-            'group-a': (
-                'font-size': 15px,
-                'line-height': 20px
-            ),
-            'group-b': (
-                'font-size': 16px,
-                'line-height': 22px
-            ),
-            'group-c': (
-                'font-size': 18px,
-                'line-height': 24px
-            ),
-            'group-d': (
-                'font-size': 16px,
-                'line-height': 22px
-            )
-        )
+        'body-copy': $pica
     ) !global;
 }
