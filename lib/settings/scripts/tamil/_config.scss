@@ -1,5 +1,5 @@
 @if $script == 'tamil' {
-    // the gel-body-copy used on live pages was undefined for world-service sites (non-latin script)
+    // the gel-body-copy class used on live pages was undefined for world-service sites (non-latin script)
     // so after talking to UX the same settings as pica were used for the new class
     $pica: (
         'group-a': (
