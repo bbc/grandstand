@@ -1,4 +1,23 @@
 @if $script == 'chinese' {
+    // the gel-body-copy class used on live pages was undefined for world-service sites (non-latin script)
+    // so after talking to UX the same settings as pica were used for the new class
+    $pica: (
+        'group-a': (
+            'font-size': 16px,
+            'line-height': 22px
+        ),
+        'group-b': (
+            'line-height': 25px
+        ),
+        'group-c': (
+            'font-size': 18px,
+            'line-height': 26px
+        ),
+        'group-d': (
+            'font-size': 16px,
+            'line-height': 24px
+        )
+    );
     $gel-type-settings: (
         'canon': (
             'group-a': (
@@ -87,23 +106,7 @@
                 'letter-spacing': -1px
             )
         ),
-        'pica': (
-            'group-a': (
-                'font-size': 16px,
-                'line-height': 22px
-            ),
-            'group-b': (
-                'line-height': 25px
-            ),
-            'group-c': (
-                'font-size': 18px,
-                'line-height': 26px
-            ),
-            'group-d': (
-                'font-size': 16px,
-                'line-height': 24px
-            )
-        ),
+        'pica': $pica,
         'pica-bold': (
             'group-a': (
                 'font-weight': bold
@@ -163,6 +166,7 @@
             'group-a': (
                 'font-weight': bold
             )
-        )
+        ),
+        'body-copy': $pica
     ) !global;
 }
