@@ -42,41 +42,38 @@ Align an icon with some text. Similar to how a bullet point has an icon with som
 
 ```html
 <span class="gs-o-bullet">
-    <span class="gs-o-bullet">
-        <span class="gs-o-bullet__icon gel-icon">
-            <svg><use xlink:href="#gel-icon-duration"></use></svg>
-        </span>
-        <span class="gs-o-bullet__text">2:31</span>
+    <span class="gs-o-bullet__icon gel-icon">
+        <svg><use xlink:href="#gel-icon-duration"></use></svg>
     </span>
+    <span class="gs-o-bullet__text">2:31</span>
+</span>
 
-    <span class="gs-o-bullet gs-o-bullet-">
-        <span class="gs-o-bullet__icon gel-icon">
-            <svg><use xlink:href="#gel-icon-duration"></use></svg>
-        </span>
-        <span class="gs-o-bullet__text">2:31</span>
+<span class="gs-o-bullet gs-o-bullet-">
+    <span class="gs-o-bullet__icon gel-icon">
+        <svg><use xlink:href="#gel-icon-duration"></use></svg>
     </span>
+    <span class="gs-o-bullet__text">2:31</span>
+</span>
 
-    <span class="gs-o-bullet gs-o-bullet+">
-        <span class="gs-o-bullet__icon gel-icon">
-            <svg><use xlink:href="#gel-icon-duration"></use></svg>
-        </span>
-        <span class="gs-o-bullet__text">2:31</span>
+<span class="gs-o-bullet gs-o-bullet+">
+    <span class="gs-o-bullet__icon gel-icon">
+        <svg><use xlink:href="#gel-icon-duration"></use></svg>
     </span>
+    <span class="gs-o-bullet__text">2:31</span>
+</span>
 
-    <span class="gs-o-bullet gs-o-bullet--reverse">
-        <span class="gs-o-bullet__icon gel-icon">
-            <svg><use xlink:href="#gel-icon-duration"></use></svg>
-        </span>
-        <span class="gs-o-bullet__text">2:31</span>
+<span class="gs-o-bullet gs-o-bullet--reverse">
+    <span class="gs-o-bullet__icon gel-icon">
+        <svg><use xlink:href="#gel-icon-duration"></use></svg>
     </span>
+    <span class="gs-o-bullet__text">2:31</span>
+</span>
 
-    <span class="gs-o-bullet gs-o-bullet+ gs-o-bullet--block">
-        <span class="gs-o-bullet__icon gel-icon">
-            <svg><use xlink:href="#gel-icon-duration"></use></svg>
-        </span>
-        <span class="gs-o-bullet__text">The `--block` modifier wraps the text around below the icon.</span>
+<span class="gs-o-bullet gs-o-bullet+ gs-o-bullet--block">
+    <span class="gs-o-bullet__icon gel-icon">
+        <svg><use xlink:href="#gel-icon-duration"></use></svg>
     </span>
-
+    <span class="gs-o-bullet__text">The `--block` modifier wraps the text around below the icon.</span>
 </span>
 ```
 
