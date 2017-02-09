@@ -1,5 +1,10 @@
 /*------------------------------------*    # GRANDSTAND
 \*------------------------------------*/
+/*------------------------------------*    # SCRIPT-SPECIFIC OVERRIDES
+\*------------------------------------*/
+/* Lines */
+/* Links */
+/* Text */
 .gel-canon {
   font-size: 28px;
   font-size: 1.75rem;
@@ -450,6 +455,7 @@ body {
   font-family: Helvetica, Arial, freesans, sans-serif;
 }
 
+/* autoprefixer: off */
 /**
      * Grid containing element
      */
@@ -477,12 +483,19 @@ body {
      * A grid row
      */
 .gel-layout {
+  list-style: none;
+  direction: ltr;
+  text-align: left;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
   margin-right: 0;
   margin-left: -8px;
   padding-right: 0;
   padding-left: 0;
-  list-style: none;
-  text-align: left;
 }
 
 @media (min-width: 37.5em) {
@@ -495,10 +508,10 @@ body {
      * A single grid item
      */
 .gel-layout__item {
+  width: 100%;
   display: inline-block;
   padding-left: 8px;
   text-align: left;
-  width: 100%;
   vertical-align: top;
 }
 
@@ -524,11 +537,17 @@ body {
      * markup will display in order 4, 3, 2, 1 on your page
      */
 .gel-layout--rev {
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.no-flexbox .gel-layout--rev {
   direction: rtl;
   text-align: left;
 }
 
-.gel-layout--rev > .gel-layout__item {
+.no-flexbox .gel-layout--rev > .gel-layout__item {
   direction: ltr;
   text-align: left;
 }
@@ -536,6 +555,13 @@ body {
 /**
      * Align layout items to the vertical centers of each other
      */
+.gel-layout--middle {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+}
+
 .gel-layout--middle > .gel-layout__item {
   vertical-align: middle;
 }
@@ -543,6 +569,13 @@ body {
 /**
      * Align layout items to the vertical bottoms of each other
      */
+.gel-layout--bottom {
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  -ms-grid-row-align: flex-end;
+  align-items: flex-end;
+}
+
 .gel-layout--bottom > .gel-layout__item {
   vertical-align: bottom;
 }
@@ -552,6 +585,9 @@ body {
      */
 .gel-layout--right {
   text-align: right;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .gel-layout--right > .gel-layout__item {
@@ -563,6 +599,9 @@ body {
      */
 .gel-layout--center {
   text-align: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .gel-layout--center > .gel-layout__item {
@@ -574,6 +613,60 @@ body {
      */
 .gel-layout--auto > .gel-layout__item {
   width: auto;
+}
+
+/**
+     * Disable the flexbox grid
+     */
+.gel-layout--no-flex,
+.gel-layout--no-flex > .gel-layout__item {
+  display: inline-block;
+}
+
+/**
+         * Force items to be of equal height
+         */
+.gel-layout--equal > .gel-layout__item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/**
+         * Allow items to devide the space equally between the number of items
+         */
+.gel-layout--fit > .gel-layout__item {
+  width: auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+/**
+         * Align a single grid item to the top
+         */
+.gel-layout__item--top {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+/**
+         * Align a single grid item to the center
+         */
+.gel-layout__item--center {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+/**
+         * Align a single grid item to the bottom
+         */
+.gel-layout__item--bottom {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
 }
 
 .gel-1\/1 {
@@ -1565,187 +1658,187 @@ body {
 }
 
 @media (min-width: 63em) {
-  .b-pw-1280 .gel-1\/1\@xl {
+  .gel-1\/1\@xl {
     width: 100% !important;
   }
-  .b-pw-1280 .gel-1\/2\@xl {
+  .gel-1\/2\@xl {
     width: 50% !important;
   }
-  .b-pw-1280 .gel-1\/3\@xl {
+  .gel-1\/3\@xl {
     width: 33.33333% !important;
   }
-  .b-pw-1280 .gel-2\/3\@xl {
+  .gel-2\/3\@xl {
     width: 66.66667% !important;
   }
-  .b-pw-1280 .gel-1\/4\@xl {
+  .gel-1\/4\@xl {
     width: 25% !important;
   }
-  .b-pw-1280 .gel-2\/4\@xl {
+  .gel-2\/4\@xl {
     width: 50% !important;
   }
-  .b-pw-1280 .gel-3\/4\@xl {
+  .gel-3\/4\@xl {
     width: 75% !important;
   }
-  .b-pw-1280 .gel-1\/5\@xl {
+  .gel-1\/5\@xl {
     width: 20% !important;
   }
-  .b-pw-1280 .gel-2\/5\@xl {
+  .gel-2\/5\@xl {
     width: 40% !important;
   }
-  .b-pw-1280 .gel-3\/5\@xl {
+  .gel-3\/5\@xl {
     width: 60% !important;
   }
-  .b-pw-1280 .gel-4\/5\@xl {
+  .gel-4\/5\@xl {
     width: 80% !important;
   }
-  .b-pw-1280 .gel-1\/8\@xl {
+  .gel-1\/8\@xl {
     width: 12.5% !important;
   }
-  .b-pw-1280 .gel-2\/8\@xl {
+  .gel-2\/8\@xl {
     width: 25% !important;
   }
-  .b-pw-1280 .gel-3\/8\@xl {
+  .gel-3\/8\@xl {
     width: 37.5% !important;
   }
-  .b-pw-1280 .gel-4\/8\@xl {
+  .gel-4\/8\@xl {
     width: 50% !important;
   }
-  .b-pw-1280 .gel-5\/8\@xl {
+  .gel-5\/8\@xl {
     width: 62.5% !important;
   }
-  .b-pw-1280 .gel-6\/8\@xl {
+  .gel-6\/8\@xl {
     width: 75% !important;
   }
-  .b-pw-1280 .gel-7\/8\@xl {
+  .gel-7\/8\@xl {
     width: 87.5% !important;
   }
-  .b-pw-1280 .gel-1\/10\@xl {
+  .gel-1\/10\@xl {
     width: 10% !important;
   }
-  .b-pw-1280 .gel-2\/10\@xl {
+  .gel-2\/10\@xl {
     width: 20% !important;
   }
-  .b-pw-1280 .gel-3\/10\@xl {
+  .gel-3\/10\@xl {
     width: 30% !important;
   }
-  .b-pw-1280 .gel-4\/10\@xl {
+  .gel-4\/10\@xl {
     width: 40% !important;
   }
-  .b-pw-1280 .gel-5\/10\@xl {
+  .gel-5\/10\@xl {
     width: 50% !important;
   }
-  .b-pw-1280 .gel-6\/10\@xl {
+  .gel-6\/10\@xl {
     width: 60% !important;
   }
-  .b-pw-1280 .gel-7\/10\@xl {
+  .gel-7\/10\@xl {
     width: 70% !important;
   }
-  .b-pw-1280 .gel-8\/10\@xl {
+  .gel-8\/10\@xl {
     width: 80% !important;
   }
-  .b-pw-1280 .gel-9\/10\@xl {
+  .gel-9\/10\@xl {
     width: 90% !important;
   }
-  .b-pw-1280 .gel-1\/12\@xl {
+  .gel-1\/12\@xl {
     width: 8.33333% !important;
   }
-  .b-pw-1280 .gel-2\/12\@xl {
+  .gel-2\/12\@xl {
     width: 16.66667% !important;
   }
-  .b-pw-1280 .gel-3\/12\@xl {
+  .gel-3\/12\@xl {
     width: 25% !important;
   }
-  .b-pw-1280 .gel-4\/12\@xl {
+  .gel-4\/12\@xl {
     width: 33.33333% !important;
   }
-  .b-pw-1280 .gel-5\/12\@xl {
+  .gel-5\/12\@xl {
     width: 41.66667% !important;
   }
-  .b-pw-1280 .gel-6\/12\@xl {
+  .gel-6\/12\@xl {
     width: 50% !important;
   }
-  .b-pw-1280 .gel-7\/12\@xl {
+  .gel-7\/12\@xl {
     width: 58.33333% !important;
   }
-  .b-pw-1280 .gel-8\/12\@xl {
+  .gel-8\/12\@xl {
     width: 66.66667% !important;
   }
-  .b-pw-1280 .gel-9\/12\@xl {
+  .gel-9\/12\@xl {
     width: 75% !important;
   }
-  .b-pw-1280 .gel-10\/12\@xl {
+  .gel-10\/12\@xl {
     width: 83.33333% !important;
   }
-  .b-pw-1280 .gel-11\/12\@xl {
+  .gel-11\/12\@xl {
     width: 91.66667% !important;
   }
-  .b-pw-1280 .gel-1\/24\@xl {
+  .gel-1\/24\@xl {
     width: 4.16667% !important;
   }
-  .b-pw-1280 .gel-2\/24\@xl {
+  .gel-2\/24\@xl {
     width: 8.33333% !important;
   }
-  .b-pw-1280 .gel-3\/24\@xl {
+  .gel-3\/24\@xl {
     width: 12.5% !important;
   }
-  .b-pw-1280 .gel-4\/24\@xl {
+  .gel-4\/24\@xl {
     width: 16.66667% !important;
   }
-  .b-pw-1280 .gel-5\/24\@xl {
+  .gel-5\/24\@xl {
     width: 20.83333% !important;
   }
-  .b-pw-1280 .gel-6\/24\@xl {
+  .gel-6\/24\@xl {
     width: 25% !important;
   }
-  .b-pw-1280 .gel-7\/24\@xl {
+  .gel-7\/24\@xl {
     width: 29.16667% !important;
   }
-  .b-pw-1280 .gel-8\/24\@xl {
+  .gel-8\/24\@xl {
     width: 33.33333% !important;
   }
-  .b-pw-1280 .gel-9\/24\@xl {
+  .gel-9\/24\@xl {
     width: 37.5% !important;
   }
-  .b-pw-1280 .gel-10\/24\@xl {
+  .gel-10\/24\@xl {
     width: 41.66667% !important;
   }
-  .b-pw-1280 .gel-11\/24\@xl {
+  .gel-11\/24\@xl {
     width: 45.83333% !important;
   }
-  .b-pw-1280 .gel-12\/24\@xl {
+  .gel-12\/24\@xl {
     width: 50% !important;
   }
-  .b-pw-1280 .gel-13\/24\@xl {
+  .gel-13\/24\@xl {
     width: 54.16667% !important;
   }
-  .b-pw-1280 .gel-14\/24\@xl {
+  .gel-14\/24\@xl {
     width: 58.33333% !important;
   }
-  .b-pw-1280 .gel-15\/24\@xl {
+  .gel-15\/24\@xl {
     width: 62.5% !important;
   }
-  .b-pw-1280 .gel-16\/24\@xl {
+  .gel-16\/24\@xl {
     width: 66.66667% !important;
   }
-  .b-pw-1280 .gel-17\/24\@xl {
+  .gel-17\/24\@xl {
     width: 70.83333% !important;
   }
-  .b-pw-1280 .gel-18\/24\@xl {
+  .gel-18\/24\@xl {
     width: 75% !important;
   }
-  .b-pw-1280 .gel-19\/24\@xl {
+  .gel-19\/24\@xl {
     width: 79.16667% !important;
   }
-  .b-pw-1280 .gel-20\/24\@xl {
+  .gel-20\/24\@xl {
     width: 83.33333% !important;
   }
-  .b-pw-1280 .gel-21\/24\@xl {
+  .gel-21\/24\@xl {
     width: 87.5% !important;
   }
-  .b-pw-1280 .gel-22\/24\@xl {
+  .gel-22\/24\@xl {
     width: 91.66667% !important;
   }
-  .b-pw-1280 .gel-23\/24\@xl {
+  .gel-23\/24\@xl {
     width: 95.83333% !important;
   }
 }
@@ -1942,7 +2035,7 @@ body {
  * The `bullet` pattern is used to align an icon with some text,
  * similar to how a bullet point has the icon and the text
  *
-    <span class="gs-o-bullet [ gs-o-bullet- | gs-o-bullet+ | gs-o-bullet--reverse ]">
+    <span class="gs-o-bullet [ gs-o-bullet- | gs-o-bullet+ | gs-o-bullet--essential  | gs-o-bullet--block | gs-o-bullet--reverse ]">
         <span class="gs-o-bullet__icon gel-icon">
             <svg>
                 <use xlink:href="#gel-icon-duration"></use>
@@ -1950,25 +2043,72 @@ body {
         </span>
         <span class="gs-o-bullet__text">18:30 - 18:34</span>
     </span>
- *
+ * 
  */
 .gs-o-bullet {
   display: inline-block;
 }
 
 /**
- * Lets hide the icon from browsers that do not cut the mustard
+ * 1.
+ *  |[icon] Text here |
+ *  |wraps around     |
+ *  |below the icon   |
  *
- * 1. Scale the icon proportionally with the text
+ * 2. Scale the icon proportionally with the text
+ *
+ * 3. Essential Modifier - only essential icons are shown on core 
  */
 .gs-o-bullet__icon {
+  /* [1] */
   display: none;
-  display: inline-block;
-  width: 1em;
-  /* [1] */
   height: 1em;
-  /* [1] */
+  /* [2] */
+  width: 1em;
+  /* [2] */
   vertical-align: middle;
+  display: inline-block;
+  visibility: visible;
+}
+
+.gs-o-bullet--essential .gs-o-bullet__icon {
+  /* [3] */
+  display: inline-block;
+  visibility: visible;
+}
+
+/** 
+ * 
+ */
+/**
+ *  4. Block Modifier
+ *  |[icon] Text here does |
+ *  |       not wrap around|
+ *  |       below icon     |
+ *  This is styled to look like a traditional list, but with custom icons
+ *  The icon sits on top of the text's left margin, so it's recommended to use .gs-u-bullet+
+ *  for it to have sufficient spacing
+ *
+ *  Example usage:
+    <span class="gs-o-bullet gs-o-bullet+ gs-o-bullet--block">
+        <span class="gs-o-bullet__icon gel-icon">
+            <svg>
+                <use xlink:href="#gel-icon-duration"></use>
+            </svg>
+        </span>
+        <span class="gs-o-bullet__text">18:30 - 18:34</span>
+    </span>
+ */
+.gs-o-bullet--block.gs-o-bullet {
+  /* [4] */
+  position: relative;
+}
+
+.gs-o-bullet--block .gs-o-bullet__icon {
+  /* [4] */
+  left: 0;
+  position: absolute;
+  top: 0;
 }
 
 .gs-o-bullet__text {
@@ -1976,24 +2116,45 @@ body {
   vertical-align: middle;
 }
 
+/* SPACING */
 /**
- * If both icon and text are present we need to space them out
+ * For non-essential icons, we only want the space before text
+ * on enhanced, since the icon isn't shown on core 
  */
+/**
+     * If both icon and text are present we need to space them out
+     */
 .gs-o-bullet__icon + .gs-o-bullet__text {
   margin-left: 8px;
 }
 
 /**
- * Reduced spacing between icon and text
- */
+     * Reduced spacing between icon and text
+     */
 .gs-o-bullet\- .gs-o-bullet__icon + .gs-o-bullet__text {
   margin-left: 4px;
 }
 
 /**
- * Increased spacing between icon and text
- */
+     * Increased spacing between icon and text
+     */
 .gs-o-bullet\+ .gs-o-bullet__icon + .gs-o-bullet__text {
+  margin-left: 16px;
+}
+
+/* 
+ * For essential icons, we want spacing between the icon and text 
+ * on both core and enhanced
+ */
+.gs-o-bullet--essential .gs-o-bullet__icon + .gs-o-bullet__text {
+  margin-left: 8px;
+}
+
+.gs-o-bullet--essential .gs-o-bullet\- .gs-o-bullet__icon + .gs-o-bullet__text {
+  margin-left: 4px;
+}
+
+.gs-o-bullet--essential .gs-o-bullet\+ .gs-o-bullet__icon + .gs-o-bullet__text {
   margin-left: 16px;
 }
 
@@ -2055,26 +2216,26 @@ body {
 }
 
 .gs-o-button--primary {
-  background-color: #121212;
+  background-color: #252525;
   color: #fff;
 }
 
 .gs-o-button--primary:hover, .gs-o-button--primary:active {
-  background-color: #2c2c2c;
+  background-color: #121212;
 }
 
 .gs-o-button--secondary {
   background-color: #ededed;
-  color: #404040;
+  color: #252525;
 }
 
 .gs-o-button--secondary:hover, .gs-o-button--secondary:active {
-  background-color: #f2f2f2;
+  background-color: #e0e0e0;
 }
 
 .gs-o-button--clear {
   background-color: transparent;
-  color: #404040;
+  color: #252525;
 }
 
 .gs-o-button--clear:hover, .gs-o-button--clear:active {
@@ -2084,7 +2245,7 @@ body {
 
 .gs-o-button--white {
   background: #fff;
-  color: #404040;
+  color: #252525;
 }
 
 .gs-o-button--white:hover, .gs-o-button--white:active {
@@ -2098,7 +2259,7 @@ body {
 }
 
 .gs-o-button--my-bbc:hover {
-  background-color: #0091ff;
+  background-color: #005bc8;
 }
 
 .gs-o-button--share {
@@ -2107,7 +2268,7 @@ body {
 }
 
 .gs-o-button--share:hover {
-  background-color: #6bbd45;
+  background-color: #41823a;
 }
 
 .gs-o-button--border {
@@ -2127,105 +2288,65 @@ body {
 
 /*------------------------------------*    # FAUX BLOCK LINK
 \*------------------------------------*/
-/**
- * The `Faux Block Link` pattern allows you to make an entire block
- * a link, whilst having nested within in that block also clickable.
- *
- * The main link is absolutely positioned across the entire block, any
- * nested links have a little z-index bump to lift them on top. Nice.
- *
-    <div class="gs-o-faux-block-link">
-        <div>
-            <h1 class="gs-o-faux-block-link__target">
-                <a href="{{url}}">{{title}}</a>
-            </h1>
-            <a href="{{a-second-url}}">A nested link</a>
-        </div>
-        <a class="gs-o-faux-block-link__overlay" href="{{url}}" aria-hidden="true" tabIndex="-1">
-            Read more on {{title}}
-        </a>
-    </span>
- *
- * @link http://codepen.io/BPScott/pen/Erwan
- *
- * 1. IE fix to get hand cursor
+/*
+* The `Faux Block Link` pattern allows you to make an entire block
+* a link, whilst having links nested within in that block also clickable.
+*
+* The main link (i.e. the faux block link) is absolutely positioned across the entire
+* block, any nested links have a little z-index bump to lift them on top. Nice.
+*
+* This implementation is not compatible with IE8 and below. On these browsers
+* this falls back to being two standard anchors.
+*
+* EXAMPLE IMPLEMENTATION - http://codepen.io/anon/pen/NAwZpd
+
+<div class="gs-o-faux-block-link">
+    <a href="http://www.bbc.co.uk/news" class="gs-o-faux-block-link__overlay-link">
+      <h3>Heading</h3>
+    </a>
+    <p>This is some summary <a href="http://www.bbc.co.uk/sport">text</a>/p>
+</div>
+
+Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
+*/
+/*
+ * Fixes the issue where the faux block links work intermittently on
+ * IE9 and IE10, and ensures that all areas of the block act as a link
  */
 .gs-o-faux-block-link {
   position: relative;
 }
 
-.gs-o-faux-block-link:hover {
-  cursor: pointer;
-  /* [1] */
-}
-
-/**
- * Links/Items within the block that we want to sit on top of the overlay link
- */
 .gs-o-faux-block-link a,
 .gs-o-faux-block-link abbr[title] {
   position: relative;
   z-index: 1;
 }
 
-/**
- * Elements with the `target` class are the elements within the faux link which
- * would traditionally have the hover state.
- */
-.gs-o-faux-block-link__target a {
-  color: inherit;
+.gs-o-faux-block-link .gs-o-faux-block-link__overlay-link {
+  position: static;
 }
 
-.gs-o-faux-block-link__target:hover a,
-.gs-o-faux-block-link__target:focus a,
-.gs-o-faux-block-link--hover .gs-o-faux-block-link__target {
-  text-decoration: underline;
-  color: #255aa9;
-}
-
-.gs-o-faux-block-link__target--on-dark:hover a,
-.gs-o-faux-block-link__target--on-dark:focus a,
-.gs-o-faux-block-link--hover .gs-o-faux-block-link__target--on-dark {
-  color: #b6e1f9;
-}
-
-/**
- * Overlay link
- *
- * 1. IE Fix - To make summary text clickable
- */
-.gs-o-faux-block-link__overlay {
-  display: none;
-  visibility: hidden;
-  top: 0;
-  right: 0;
+.gs-o-faux-block-link .gs-o-faux-block-link__overlay-link:before {
   bottom: 0;
+  content: "";
   left: 0;
-  display: block;
-  visibility: visible;
   overflow: hidden;
-  text-indent: 200%;
-  white-space: nowrap;
-}
-
-.lt-ie9 .gs-o-faux-block-link__overlay {
-  background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
-  /* [1] */
-}
-
-/**
- * Increased specificity so it trumps ".faux-block-link a"
- *
- * 1. IE Fix - Elements have a solid black background in high contrast mode
- */
-.gs-o-faux-block-link__overlay.gs-o-faux-block-link__overlay {
   position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
   z-index: 0;
 }
 
-.lt-ie9 .gs-o-faux-block-link__overlay.gs-o-faux-block-link__overlay {
-  opacity: 0;
-  /* [1] */
+.ie9 .gs-o-faux-block-link .gs-o-faux-block-link__overlay-link:before {
+  background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7) repeat 0 0;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .gs-o-faux-block-link .gs-o-faux-block-link__overlay-link:before {
+    background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7) repeat 0 0;
+  }
 }
 
 /*------------------------------------*    # FLAG OBJECT
@@ -2487,10 +2608,10 @@ body {
 }
 
 .gs-o-list-ui__item {
-  padding-top: 8px;
-  padding-right: 8px;
   padding-bottom: 8px;
+  padding-top: 8px;
   padding-left: 8px;
+  padding-right: 8px;
   border-bottom-width: 1px;
 }
 
@@ -2641,6 +2762,15 @@ body {
 }
 
 /**
+ * Removes the default placeholder styles
+ * for background-color and background-image
+ */
+.gs-o-responsive-image--no-placeholder {
+  background-color: transparent;
+  background-image: none;
+}
+
+/**
  * Aspect radio modifiers
  */
 .gs-o-responsive-image--1by1 {
@@ -2715,7 +2845,7 @@ body {
  * Use to break up tables to show boundaries or breaks.
  */
 .gs-o-table__row--break .gs-o-table__cell {
-  border-bottom: 1px dashed #404040;
+  border-bottom: 1px dashed #252525;
 }
 
 /**
@@ -2770,7 +2900,7 @@ body {
 }
 
 .gs-o-table__cell--break {
-  border-top: 1px dashed #404040;
+  border-top: 1px dashed #252525;
 }
 
 .gs-o-table__link {
@@ -2828,26 +2958,32 @@ body {
  */
 .gs-u-display-none {
   display: none !important;
+  visibility: hidden !important;
 }
 
 .gs-u-display-inline {
   display: inline !important;
+  visibility: visible !important;
 }
 
 .gs-u-display-inline-block {
   display: inline-block !important;
+  visibility: visible !important;
 }
 
 .gs-u-display-block {
   display: block !important;
+  visibility: visible !important;
 }
 
 .gs-u-display-table-cell {
   display: table-cell !important;
+  visibility: visible !important;
 }
 
 .gs-u-display-table-row {
   display: table-row !important;
+  visibility: visible !important;
 }
 
 .gs-u-display-flex {
@@ -2855,167 +2991,305 @@ body {
   display: -ms-flexbox !important;
   display: -webkit-flex !important;
   display: flex !important;
+  visibility: visible !important;
 }
 
 @media (min-width: 15em) {
   .gs-u-display-none\@xs {
     display: none !important;
+    visibility: hidden !important;
   }
   .gs-u-display-inline\@xs {
     display: inline !important;
+    visibility: visible !important;
   }
   .gs-u-display-inline-block\@xs {
     display: inline-block !important;
+    visibility: visible !important;
   }
   .gs-u-display-block\@xs {
     display: block !important;
+    visibility: visible !important;
   }
   .gs-u-display-table-cell\@xs {
     display: table-cell !important;
+    visibility: visible !important;
   }
   .gs-u-display-table-row\@xs {
     display: table-row !important;
+    visibility: visible !important;
   }
   .gs-u-display-flex\@xs {
     display: -moz-box !important;
     display: -ms-flexbox !important;
     display: -webkit-flex !important;
     display: flex !important;
+    visibility: visible !important;
   }
 }
 
 @media (min-width: 25em) {
   .gs-u-display-none\@s {
     display: none !important;
+    visibility: hidden !important;
   }
   .gs-u-display-inline\@s {
     display: inline !important;
+    visibility: visible !important;
   }
   .gs-u-display-inline-block\@s {
     display: inline-block !important;
+    visibility: visible !important;
   }
   .gs-u-display-block\@s {
     display: block !important;
+    visibility: visible !important;
   }
   .gs-u-display-table-cell\@s {
     display: table-cell !important;
+    visibility: visible !important;
   }
   .gs-u-display-table-row\@s {
     display: table-row !important;
+    visibility: visible !important;
   }
   .gs-u-display-flex\@s {
     display: -moz-box !important;
     display: -ms-flexbox !important;
     display: -webkit-flex !important;
     display: flex !important;
+    visibility: visible !important;
   }
 }
 
 @media (min-width: 37.5em) {
   .gs-u-display-none\@m {
     display: none !important;
+    visibility: hidden !important;
   }
   .gs-u-display-inline\@m {
     display: inline !important;
+    visibility: visible !important;
   }
   .gs-u-display-inline-block\@m {
     display: inline-block !important;
+    visibility: visible !important;
   }
   .gs-u-display-block\@m {
     display: block !important;
+    visibility: visible !important;
   }
   .gs-u-display-table-cell\@m {
     display: table-cell !important;
+    visibility: visible !important;
   }
   .gs-u-display-table-row\@m {
     display: table-row !important;
+    visibility: visible !important;
   }
   .gs-u-display-flex\@m {
     display: -moz-box !important;
     display: -ms-flexbox !important;
     display: -webkit-flex !important;
     display: flex !important;
+    visibility: visible !important;
   }
 }
 
 @media (min-width: 56.25em) {
   .gs-u-display-none\@l {
     display: none !important;
+    visibility: hidden !important;
   }
   .gs-u-display-inline\@l {
     display: inline !important;
+    visibility: visible !important;
   }
   .gs-u-display-inline-block\@l {
     display: inline-block !important;
+    visibility: visible !important;
   }
   .gs-u-display-block\@l {
     display: block !important;
+    visibility: visible !important;
   }
   .gs-u-display-table-cell\@l {
     display: table-cell !important;
+    visibility: visible !important;
   }
   .gs-u-display-table-row\@l {
     display: table-row !important;
+    visibility: visible !important;
   }
   .gs-u-display-flex\@l {
     display: -moz-box !important;
     display: -ms-flexbox !important;
     display: -webkit-flex !important;
     display: flex !important;
+    visibility: visible !important;
   }
 }
 
 @media (min-width: 63em) {
   .gs-u-display-none\@xl {
     display: none !important;
+    visibility: hidden !important;
   }
   .gs-u-display-inline\@xl {
     display: inline !important;
+    visibility: visible !important;
   }
   .gs-u-display-inline-block\@xl {
     display: inline-block !important;
+    visibility: visible !important;
   }
   .gs-u-display-block\@xl {
     display: block !important;
+    visibility: visible !important;
   }
   .gs-u-display-table-cell\@xl {
     display: table-cell !important;
+    visibility: visible !important;
   }
   .gs-u-display-table-row\@xl {
     display: table-row !important;
+    visibility: visible !important;
   }
   .gs-u-display-flex\@xl {
     display: -moz-box !important;
     display: -ms-flexbox !important;
     display: -webkit-flex !important;
     display: flex !important;
+    visibility: visible !important;
   }
 }
 
 @media (min-width: 80em) {
-  .gs-u-display-none\@xxl {
+  .b-pw-1280 .gs-u-display-none\@xxl {
     display: none !important;
+    visibility: hidden !important;
   }
-  .gs-u-display-inline\@xxl {
+  .b-pw-1280 .gs-u-display-inline\@xxl {
     display: inline !important;
+    visibility: visible !important;
   }
-  .gs-u-display-inline-block\@xxl {
+  .b-pw-1280 .gs-u-display-inline-block\@xxl {
     display: inline-block !important;
+    visibility: visible !important;
   }
-  .gs-u-display-block\@xxl {
+  .b-pw-1280 .gs-u-display-block\@xxl {
     display: block !important;
+    visibility: visible !important;
   }
-  .gs-u-display-table-cell\@xxl {
+  .b-pw-1280 .gs-u-display-table-cell\@xxl {
     display: table-cell !important;
+    visibility: visible !important;
   }
-  .gs-u-display-table-row\@xxl {
+  .b-pw-1280 .gs-u-display-table-row\@xxl {
     display: table-row !important;
+    visibility: visible !important;
   }
-  .gs-u-display-flex\@xxl {
+  .b-pw-1280 .gs-u-display-flex\@xxl {
     display: -moz-box !important;
     display: -ms-flexbox !important;
     display: -webkit-flex !important;
     display: flex !important;
+    visibility: visible !important;
+  }
+}
+
+/*------------------------------------*    # FLOATS
+\*------------------------------------*/
+/**
+ * A utility for applying floats
+ *
+ * Can also be used using responsive prefixes
+ *
+    .gs-u-float-left
+    .gs-u-float-left@m
+ *
+ */
+.gs-u-float-left {
+  float: left !important;
+}
+
+.gs-u-float-right {
+  float: right !important;
+}
+
+.gs-u-float-none {
+  float: none !important;
+}
+
+@media (min-width: 15em) {
+  .gs-u-float-left\@xs {
+    float: left !important;
+  }
+  .gs-u-float-right\@xs {
+    float: right !important;
+  }
+  .gs-u-float-none\@xs {
+    float: none !important;
+  }
+}
+
+@media (min-width: 25em) {
+  .gs-u-float-left\@s {
+    float: left !important;
+  }
+  .gs-u-float-right\@s {
+    float: right !important;
+  }
+  .gs-u-float-none\@s {
+    float: none !important;
+  }
+}
+
+@media (min-width: 37.5em) {
+  .gs-u-float-left\@m {
+    float: left !important;
+  }
+  .gs-u-float-right\@m {
+    float: right !important;
+  }
+  .gs-u-float-none\@m {
+    float: none !important;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .gs-u-float-left\@l {
+    float: left !important;
+  }
+  .gs-u-float-right\@l {
+    float: right !important;
+  }
+  .gs-u-float-none\@l {
+    float: none !important;
+  }
+}
+
+@media (min-width: 63em) {
+  .gs-u-float-left\@xl {
+    float: left !important;
+  }
+  .gs-u-float-right\@xl {
+    float: right !important;
+  }
+  .gs-u-float-none\@xl {
+    float: none !important;
+  }
+}
+
+@media (min-width: 80em) {
+  .b-pw-1280 .gs-u-float-left\@xxl {
+    float: left !important;
+  }
+  .b-pw-1280 .gs-u-float-right\@xxl {
+    float: right !important;
+  }
+  .b-pw-1280 .gs-u-float-none\@xxl {
+    float: none !important;
   }
 }
 
@@ -3054,6 +3328,14 @@ body {
   vertical-align: bottom;
 }
 
+.gs-u-align-text-top {
+  vertical-align: text-top;
+}
+
+.gs-u-align-text-bottom {
+  vertical-align: text-bottom;
+}
+
 /*------------------------------------*    # SPACING
 \*------------------------------------*/
 /**
@@ -3074,19 +3356,19 @@ body {
  * Available spacing types:
  *
  * mt -> margin-top
- * mr -> margin-right
+ * mr -> margin-right (margin-left if $rtl is true)
  * mb -> margin-bottom
- * ml -> margin-left
+ * ml -> margin-left (margin-right if $rtl is true)
  * mv -> margin-top & margin-bottom
- * mh -> margin-right & margin-left
+ * mh -> margin-right & margin-left (flipped if $rtl is true)
  * pt -> padding-top
- * pr -> padding-right
+ * pr -> padding-right (padding-left if $rtl is true)
  * pb -> padding-bottom
- * pl -> padding-left
+ * pl -> padding-left (padding-right if $rtl is true)
  * pv -> padding-top & padding-bottom
- * ph -> padding-right & padding-left
+ * ph -> padding-right & padding-left (flipped if $rtl is true)
  *
- * Available spacing sizes:
+ * Available gel spacing unit sizes:
  *
  * 0       - 0px
  * `--`    - 2px
@@ -3095,15 +3377,23 @@ body {
  * `+`     - 16px
  * `++`    - 32px
  *
+ * Available gel alt spacing unit sizes:
+ *
+ * 'alt'   - 12px
+ * 'alt+'  - 24px
+ *
  * Optional breakpoint suffix:
  *
+ * @xs - GEL Extra Small Breakpoint (240px)
  * @s - GEL Small Breakpoint (400px)
  * @m - GEL Medium Breakpoint (600px)
  * @l - GEL Large Breakpoint (900px)
+ * @xl - GEL Extra Large Breakpoint (1008px)
+ * @xxl - GEL Extra Extra Large Breakpoint (1280px)
  *
  */
 /**
-     * Margin spacing classes
+     * Margin spacing classes (gel spacing unit)
      */
 .gs-u-m {
   margin: 8px !important;
@@ -3136,7 +3426,7 @@ body {
 }
 
 /**
-     * Tiny margin spacing classes
+     * Tiny margin spacing classes (gel spacing unit)
      */
 .gs-u-m-- {
   margin: 2px !important;
@@ -3169,7 +3459,7 @@ body {
 }
 
 /**
-     * Small margin spacing classes
+     * Small margin spacing classes (gel spacing unit)
      */
 .gs-u-m- {
   margin: 4px !important;
@@ -3202,7 +3492,7 @@ body {
 }
 
 /**
-     * Large margin spacing classes
+     * Large margin spacing classes (gel spacing unit)
      */
 .gs-u-m\+ {
   margin: 16px !important;
@@ -3235,7 +3525,7 @@ body {
 }
 
 /**
-     * Huge margin spacing classes
+     * Huge margin spacing classes (gel spacing unit)
      */
 .gs-u-m\+\+ {
   margin: 32px !important;
@@ -3265,6 +3555,72 @@ body {
 .gs-u-mv\+\+ {
   margin-top: 32px !important;
   margin-bottom: 32px !important;
+}
+
+/**
+     * Alt margin spacing classes
+     */
+.gs-u-m-alt {
+  margin: 12px !important;
+}
+
+.gs-u-mt-alt {
+  margin-top: 12px !important;
+}
+
+.gs-u-mr-alt {
+  margin-right: 12px !important;
+}
+
+.gs-u-mb-alt {
+  margin-bottom: 12px !important;
+}
+
+.gs-u-ml-alt {
+  margin-left: 12px !important;
+}
+
+.gs-u-mh-alt {
+  margin-right: 12px !important;
+  margin-left: 12px !important;
+}
+
+.gs-u-mv-alt {
+  margin-top: 12px !important;
+  margin-bottom: 12px !important;
+}
+
+/**
+     * Alt double margin spacing classes
+     */
+.gs-u-m-alt\+ {
+  margin: 24px !important;
+}
+
+.gs-u-mt-alt\+ {
+  margin-top: 24px !important;
+}
+
+.gs-u-mr-alt\+ {
+  margin-right: 24px !important;
+}
+
+.gs-u-mb-alt\+ {
+  margin-bottom: 24px !important;
+}
+
+.gs-u-ml-alt\+ {
+  margin-left: 24px !important;
+}
+
+.gs-u-mh-alt\+ {
+  margin-right: 24px !important;
+  margin-left: 24px !important;
+}
+
+.gs-u-mv-alt\+ {
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
 }
 
 /**
@@ -3301,7 +3657,7 @@ body {
 }
 
 /**
-     * Padding spacing classes
+     * Padding spacing classes (gel spacing unit)
      */
 .gs-u-p {
   padding: 8px !important;
@@ -3334,7 +3690,7 @@ body {
 }
 
 /**
-     * Tiny padding spacing classes
+     * Tiny padding spacing classes (gel spacing unit)
      */
 .gs-u-p-- {
   padding: 2px !important;
@@ -3367,7 +3723,7 @@ body {
 }
 
 /**
-     * Small padding spacing classes
+     * Small padding spacing classes (gel spacing unit)
      */
 .gs-u-p- {
   padding: 4px !important;
@@ -3400,7 +3756,7 @@ body {
 }
 
 /**
-     * Large padding spacing classes
+     * Large padding spacing classes (gel spacing unit)
      */
 .gs-u-p\+ {
   padding: 16px !important;
@@ -3433,7 +3789,7 @@ body {
 }
 
 /**
-     * Huge padding spacing classes
+     * Huge padding spacing classes (gel spacing unit)
      */
 .gs-u-p\+\+ {
   padding: 32px !important;
@@ -3463,6 +3819,72 @@ body {
 .gs-u-pv\+\+ {
   padding-top: 32px !important;
   padding-bottom: 32px !important;
+}
+
+/**
+     * Alt padding spacing classes (gel-alt-spacing-unit)
+     */
+.gs-u-p-alt {
+  padding: 12px !important;
+}
+
+.gs-u-pt-alt {
+  padding-top: 12px !important;
+}
+
+.gs-u-pr-alt {
+  padding-right: 12px !important;
+}
+
+.gs-u-pb-alt {
+  padding-bottom: 12px !important;
+}
+
+.gs-u-pl-alt {
+  padding-left: 12px !important;
+}
+
+.gs-u-ph-alt {
+  padding-right: 12px !important;
+  padding-left: 12px !important;
+}
+
+.gs-u-pv-alt {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+
+/**
+     * Alt double padding spacing classes (gel-alt-spacing-unit)
+     */
+.gs-u-p-alt\+ {
+  padding: 24px !important;
+}
+
+.gs-u-pt-alt\+ {
+  padding-top: 24px !important;
+}
+
+.gs-u-pr-alt\+ {
+  padding-right: 24px !important;
+}
+
+.gs-u-pb-alt\+ {
+  padding-bottom: 24px !important;
+}
+
+.gs-u-pl-alt\+ {
+  padding-left: 24px !important;
+}
+
+.gs-u-ph-alt\+ {
+  padding-right: 24px !important;
+  padding-left: 24px !important;
+}
+
+.gs-u-pv-alt\+ {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
 }
 
 /**
@@ -3498,9 +3920,428 @@ body {
   padding-bottom: 0 !important;
 }
 
+@media (min-width: 15em) {
+  /**
+     * Margin spacing classes (gel spacing unit)
+     */
+  .gs-u-m\@xs {
+    margin: 8px !important;
+  }
+  .gs-u-mt\@xs {
+    margin-top: 8px !important;
+  }
+  .gs-u-mr\@xs {
+    margin-right: 8px !important;
+  }
+  .gs-u-mb\@xs {
+    margin-bottom: 8px !important;
+  }
+  .gs-u-ml\@xs {
+    margin-left: 8px !important;
+  }
+  .gs-u-mh\@xs {
+    margin-right: 8px !important;
+    margin-left: 8px !important;
+  }
+  .gs-u-mv\@xs {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+  }
+  /**
+     * Tiny margin spacing classes (gel spacing unit)
+     */
+  .gs-u-m--\@xs {
+    margin: 2px !important;
+  }
+  .gs-u-mt--\@xs {
+    margin-top: 2px !important;
+  }
+  .gs-u-mr--\@xs {
+    margin-right: 2px !important;
+  }
+  .gs-u-mb--\@xs {
+    margin-bottom: 2px !important;
+  }
+  .gs-u-ml--\@xs {
+    margin-left: 2px !important;
+  }
+  .gs-u-mh--\@xs {
+    margin-right: 2px !important;
+    margin-left: 2px !important;
+  }
+  .gs-u-mv--\@xs {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+  }
+  /**
+     * Small margin spacing classes (gel spacing unit)
+     */
+  .gs-u-m-\@xs {
+    margin: 4px !important;
+  }
+  .gs-u-mt-\@xs {
+    margin-top: 4px !important;
+  }
+  .gs-u-mr-\@xs {
+    margin-right: 4px !important;
+  }
+  .gs-u-mb-\@xs {
+    margin-bottom: 4px !important;
+  }
+  .gs-u-ml-\@xs {
+    margin-left: 4px !important;
+  }
+  .gs-u-mh-\@xs {
+    margin-right: 4px !important;
+    margin-left: 4px !important;
+  }
+  .gs-u-mv-\@xs {
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+  }
+  /**
+     * Large margin spacing classes (gel spacing unit)
+     */
+  .gs-u-m\+\@xs {
+    margin: 16px !important;
+  }
+  .gs-u-mt\+\@xs {
+    margin-top: 16px !important;
+  }
+  .gs-u-mr\+\@xs {
+    margin-right: 16px !important;
+  }
+  .gs-u-mb\+\@xs {
+    margin-bottom: 16px !important;
+  }
+  .gs-u-ml\+\@xs {
+    margin-left: 16px !important;
+  }
+  .gs-u-mh\+\@xs {
+    margin-right: 16px !important;
+    margin-left: 16px !important;
+  }
+  .gs-u-mv\+\@xs {
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+  }
+  /**
+     * Huge margin spacing classes (gel spacing unit)
+     */
+  .gs-u-m\+\+\@xs {
+    margin: 32px !important;
+  }
+  .gs-u-mt\+\+\@xs {
+    margin-top: 32px !important;
+  }
+  .gs-u-mr\+\+\@xs {
+    margin-right: 32px !important;
+  }
+  .gs-u-mb\+\+\@xs {
+    margin-bottom: 32px !important;
+  }
+  .gs-u-ml\+\+\@xs {
+    margin-left: 32px !important;
+  }
+  .gs-u-mh\+\+\@xs {
+    margin-right: 32px !important;
+    margin-left: 32px !important;
+  }
+  .gs-u-mv\+\+\@xs {
+    margin-top: 32px !important;
+    margin-bottom: 32px !important;
+  }
+  /**
+     * Alt margin spacing classes
+     */
+  .gs-u-m-alt\@xs {
+    margin: 12px !important;
+  }
+  .gs-u-mt-alt\@xs {
+    margin-top: 12px !important;
+  }
+  .gs-u-mr-alt\@xs {
+    margin-right: 12px !important;
+  }
+  .gs-u-mb-alt\@xs {
+    margin-bottom: 12px !important;
+  }
+  .gs-u-ml-alt\@xs {
+    margin-left: 12px !important;
+  }
+  .gs-u-mh-alt\@xs {
+    margin-right: 12px !important;
+    margin-left: 12px !important;
+  }
+  .gs-u-mv-alt\@xs {
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+  }
+  /**
+     * Alt double margin spacing classes
+     */
+  .gs-u-m-alt\+\@xs {
+    margin: 24px !important;
+  }
+  .gs-u-mt-alt\+\@xs {
+    margin-top: 24px !important;
+  }
+  .gs-u-mr-alt\+\@xs {
+    margin-right: 24px !important;
+  }
+  .gs-u-mb-alt\+\@xs {
+    margin-bottom: 24px !important;
+  }
+  .gs-u-ml-alt\+\@xs {
+    margin-left: 24px !important;
+  }
+  .gs-u-mh-alt\+\@xs {
+    margin-right: 24px !important;
+    margin-left: 24px !important;
+  }
+  .gs-u-mv-alt\+\@xs {
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
+  }
+  /**
+     * Zero margin spacing classes
+     */
+  .gs-u-m0\@xs {
+    margin: 0 !important;
+  }
+  .gs-u-mt0\@xs {
+    margin-top: 0 !important;
+  }
+  .gs-u-mr0\@xs {
+    margin-right: 0 !important;
+  }
+  .gs-u-mb0\@xs {
+    margin-bottom: 0 !important;
+  }
+  .gs-u-ml0\@xs {
+    margin-left: 0 !important;
+  }
+  .gs-u-mh0\@xs {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  .gs-u-mv0\@xs {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  /**
+     * Padding spacing classes (gel spacing unit)
+     */
+  .gs-u-p\@xs {
+    padding: 8px !important;
+  }
+  .gs-u-pt\@xs {
+    padding-top: 8px !important;
+  }
+  .gs-u-pr\@xs {
+    padding-right: 8px !important;
+  }
+  .gs-u-pb\@xs {
+    padding-bottom: 8px !important;
+  }
+  .gs-u-pl\@xs {
+    padding-left: 8px !important;
+  }
+  .gs-u-ph\@xs {
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+  }
+  .gs-u-pv\@xs {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+  /**
+     * Tiny padding spacing classes (gel spacing unit)
+     */
+  .gs-u-p--\@xs {
+    padding: 2px !important;
+  }
+  .gs-u-pt--\@xs {
+    padding-top: 2px !important;
+  }
+  .gs-u-pr--\@xs {
+    padding-right: 2px !important;
+  }
+  .gs-u-pb--\@xs {
+    padding-bottom: 2px !important;
+  }
+  .gs-u-pl--\@xs {
+    padding-left: 2px !important;
+  }
+  .gs-u-ph--\@xs {
+    padding-right: 2px !important;
+    padding-left: 2px !important;
+  }
+  .gs-u-pv--\@xs {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+  }
+  /**
+     * Small padding spacing classes (gel spacing unit)
+     */
+  .gs-u-p-\@xs {
+    padding: 4px !important;
+  }
+  .gs-u-pt-\@xs {
+    padding-top: 4px !important;
+  }
+  .gs-u-pr-\@xs {
+    padding-right: 4px !important;
+  }
+  .gs-u-pb-\@xs {
+    padding-bottom: 4px !important;
+  }
+  .gs-u-pl-\@xs {
+    padding-left: 4px !important;
+  }
+  .gs-u-ph-\@xs {
+    padding-right: 4px !important;
+    padding-left: 4px !important;
+  }
+  .gs-u-pv-\@xs {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+  /**
+     * Large padding spacing classes (gel spacing unit)
+     */
+  .gs-u-p\+\@xs {
+    padding: 16px !important;
+  }
+  .gs-u-pt\+\@xs {
+    padding-top: 16px !important;
+  }
+  .gs-u-pr\+\@xs {
+    padding-right: 16px !important;
+  }
+  .gs-u-pb\+\@xs {
+    padding-bottom: 16px !important;
+  }
+  .gs-u-pl\+\@xs {
+    padding-left: 16px !important;
+  }
+  .gs-u-ph\+\@xs {
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+  }
+  .gs-u-pv\+\@xs {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+  /**
+     * Huge padding spacing classes (gel spacing unit)
+     */
+  .gs-u-p\+\+\@xs {
+    padding: 32px !important;
+  }
+  .gs-u-pt\+\+\@xs {
+    padding-top: 32px !important;
+  }
+  .gs-u-pr\+\+\@xs {
+    padding-right: 32px !important;
+  }
+  .gs-u-pb\+\+\@xs {
+    padding-bottom: 32px !important;
+  }
+  .gs-u-pl\+\+\@xs {
+    padding-left: 32px !important;
+  }
+  .gs-u-ph\+\+\@xs {
+    padding-right: 32px !important;
+    padding-left: 32px !important;
+  }
+  .gs-u-pv\+\+\@xs {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+  /**
+     * Alt padding spacing classes (gel-alt-spacing-unit)
+     */
+  .gs-u-p-alt\@xs {
+    padding: 12px !important;
+  }
+  .gs-u-pt-alt\@xs {
+    padding-top: 12px !important;
+  }
+  .gs-u-pr-alt\@xs {
+    padding-right: 12px !important;
+  }
+  .gs-u-pb-alt\@xs {
+    padding-bottom: 12px !important;
+  }
+  .gs-u-pl-alt\@xs {
+    padding-left: 12px !important;
+  }
+  .gs-u-ph-alt\@xs {
+    padding-right: 12px !important;
+    padding-left: 12px !important;
+  }
+  .gs-u-pv-alt\@xs {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+  /**
+     * Alt double padding spacing classes (gel-alt-spacing-unit)
+     */
+  .gs-u-p-alt\+\@xs {
+    padding: 24px !important;
+  }
+  .gs-u-pt-alt\+\@xs {
+    padding-top: 24px !important;
+  }
+  .gs-u-pr-alt\+\@xs {
+    padding-right: 24px !important;
+  }
+  .gs-u-pb-alt\+\@xs {
+    padding-bottom: 24px !important;
+  }
+  .gs-u-pl-alt\+\@xs {
+    padding-left: 24px !important;
+  }
+  .gs-u-ph-alt\+\@xs {
+    padding-right: 24px !important;
+    padding-left: 24px !important;
+  }
+  .gs-u-pv-alt\+\@xs {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+  /**
+     * Zero padding spacing classes
+     */
+  .gs-u-p0\@xs {
+    padding: 0 !important;
+  }
+  .gs-u-pt0\@xs {
+    padding-top: 0 !important;
+  }
+  .gs-u-pr0\@xs {
+    padding-right: 0 !important;
+  }
+  .gs-u-pb0\@xs {
+    padding-bottom: 0 !important;
+  }
+  .gs-u-pl0\@xs {
+    padding-left: 0 !important;
+  }
+  .gs-u-ph0\@xs {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .gs-u-pv0\@xs {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
 @media (min-width: 25em) {
   /**
-     * Margin spacing classes
+     * Margin spacing classes (gel spacing unit)
      */
   .gs-u-m\@s {
     margin: 8px !important;
@@ -3526,7 +4367,7 @@ body {
     margin-bottom: 8px !important;
   }
   /**
-     * Tiny margin spacing classes
+     * Tiny margin spacing classes (gel spacing unit)
      */
   .gs-u-m--\@s {
     margin: 2px !important;
@@ -3552,7 +4393,7 @@ body {
     margin-bottom: 2px !important;
   }
   /**
-     * Small margin spacing classes
+     * Small margin spacing classes (gel spacing unit)
      */
   .gs-u-m-\@s {
     margin: 4px !important;
@@ -3578,7 +4419,7 @@ body {
     margin-bottom: 4px !important;
   }
   /**
-     * Large margin spacing classes
+     * Large margin spacing classes (gel spacing unit)
      */
   .gs-u-m\+\@s {
     margin: 16px !important;
@@ -3604,7 +4445,7 @@ body {
     margin-bottom: 16px !important;
   }
   /**
-     * Huge margin spacing classes
+     * Huge margin spacing classes (gel spacing unit)
      */
   .gs-u-m\+\+\@s {
     margin: 32px !important;
@@ -3628,6 +4469,58 @@ body {
   .gs-u-mv\+\+\@s {
     margin-top: 32px !important;
     margin-bottom: 32px !important;
+  }
+  /**
+     * Alt margin spacing classes
+     */
+  .gs-u-m-alt\@s {
+    margin: 12px !important;
+  }
+  .gs-u-mt-alt\@s {
+    margin-top: 12px !important;
+  }
+  .gs-u-mr-alt\@s {
+    margin-right: 12px !important;
+  }
+  .gs-u-mb-alt\@s {
+    margin-bottom: 12px !important;
+  }
+  .gs-u-ml-alt\@s {
+    margin-left: 12px !important;
+  }
+  .gs-u-mh-alt\@s {
+    margin-right: 12px !important;
+    margin-left: 12px !important;
+  }
+  .gs-u-mv-alt\@s {
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+  }
+  /**
+     * Alt double margin spacing classes
+     */
+  .gs-u-m-alt\+\@s {
+    margin: 24px !important;
+  }
+  .gs-u-mt-alt\+\@s {
+    margin-top: 24px !important;
+  }
+  .gs-u-mr-alt\+\@s {
+    margin-right: 24px !important;
+  }
+  .gs-u-mb-alt\+\@s {
+    margin-bottom: 24px !important;
+  }
+  .gs-u-ml-alt\+\@s {
+    margin-left: 24px !important;
+  }
+  .gs-u-mh-alt\+\@s {
+    margin-right: 24px !important;
+    margin-left: 24px !important;
+  }
+  .gs-u-mv-alt\+\@s {
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
   }
   /**
      * Zero margin spacing classes
@@ -3656,7 +4549,7 @@ body {
     margin-bottom: 0 !important;
   }
   /**
-     * Padding spacing classes
+     * Padding spacing classes (gel spacing unit)
      */
   .gs-u-p\@s {
     padding: 8px !important;
@@ -3682,7 +4575,7 @@ body {
     padding-bottom: 8px !important;
   }
   /**
-     * Tiny padding spacing classes
+     * Tiny padding spacing classes (gel spacing unit)
      */
   .gs-u-p--\@s {
     padding: 2px !important;
@@ -3708,7 +4601,7 @@ body {
     padding-bottom: 2px !important;
   }
   /**
-     * Small padding spacing classes
+     * Small padding spacing classes (gel spacing unit)
      */
   .gs-u-p-\@s {
     padding: 4px !important;
@@ -3734,7 +4627,7 @@ body {
     padding-bottom: 4px !important;
   }
   /**
-     * Large padding spacing classes
+     * Large padding spacing classes (gel spacing unit)
      */
   .gs-u-p\+\@s {
     padding: 16px !important;
@@ -3760,7 +4653,7 @@ body {
     padding-bottom: 16px !important;
   }
   /**
-     * Huge padding spacing classes
+     * Huge padding spacing classes (gel spacing unit)
      */
   .gs-u-p\+\+\@s {
     padding: 32px !important;
@@ -3784,6 +4677,58 @@ body {
   .gs-u-pv\+\+\@s {
     padding-top: 32px !important;
     padding-bottom: 32px !important;
+  }
+  /**
+     * Alt padding spacing classes (gel-alt-spacing-unit)
+     */
+  .gs-u-p-alt\@s {
+    padding: 12px !important;
+  }
+  .gs-u-pt-alt\@s {
+    padding-top: 12px !important;
+  }
+  .gs-u-pr-alt\@s {
+    padding-right: 12px !important;
+  }
+  .gs-u-pb-alt\@s {
+    padding-bottom: 12px !important;
+  }
+  .gs-u-pl-alt\@s {
+    padding-left: 12px !important;
+  }
+  .gs-u-ph-alt\@s {
+    padding-right: 12px !important;
+    padding-left: 12px !important;
+  }
+  .gs-u-pv-alt\@s {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+  /**
+     * Alt double padding spacing classes (gel-alt-spacing-unit)
+     */
+  .gs-u-p-alt\+\@s {
+    padding: 24px !important;
+  }
+  .gs-u-pt-alt\+\@s {
+    padding-top: 24px !important;
+  }
+  .gs-u-pr-alt\+\@s {
+    padding-right: 24px !important;
+  }
+  .gs-u-pb-alt\+\@s {
+    padding-bottom: 24px !important;
+  }
+  .gs-u-pl-alt\+\@s {
+    padding-left: 24px !important;
+  }
+  .gs-u-ph-alt\+\@s {
+    padding-right: 24px !important;
+    padding-left: 24px !important;
+  }
+  .gs-u-pv-alt\+\@s {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
   }
   /**
      * Zero padding spacing classes
@@ -3815,7 +4760,7 @@ body {
 
 @media (min-width: 37.5em) {
   /**
-     * Margin spacing classes
+     * Margin spacing classes (gel spacing unit)
      */
   .gs-u-m\@m {
     margin: 8px !important;
@@ -3841,7 +4786,7 @@ body {
     margin-bottom: 8px !important;
   }
   /**
-     * Tiny margin spacing classes
+     * Tiny margin spacing classes (gel spacing unit)
      */
   .gs-u-m--\@m {
     margin: 2px !important;
@@ -3867,7 +4812,7 @@ body {
     margin-bottom: 2px !important;
   }
   /**
-     * Small margin spacing classes
+     * Small margin spacing classes (gel spacing unit)
      */
   .gs-u-m-\@m {
     margin: 4px !important;
@@ -3893,7 +4838,7 @@ body {
     margin-bottom: 4px !important;
   }
   /**
-     * Large margin spacing classes
+     * Large margin spacing classes (gel spacing unit)
      */
   .gs-u-m\+\@m {
     margin: 16px !important;
@@ -3919,7 +4864,7 @@ body {
     margin-bottom: 16px !important;
   }
   /**
-     * Huge margin spacing classes
+     * Huge margin spacing classes (gel spacing unit)
      */
   .gs-u-m\+\+\@m {
     margin: 32px !important;
@@ -3943,6 +4888,58 @@ body {
   .gs-u-mv\+\+\@m {
     margin-top: 32px !important;
     margin-bottom: 32px !important;
+  }
+  /**
+     * Alt margin spacing classes
+     */
+  .gs-u-m-alt\@m {
+    margin: 12px !important;
+  }
+  .gs-u-mt-alt\@m {
+    margin-top: 12px !important;
+  }
+  .gs-u-mr-alt\@m {
+    margin-right: 12px !important;
+  }
+  .gs-u-mb-alt\@m {
+    margin-bottom: 12px !important;
+  }
+  .gs-u-ml-alt\@m {
+    margin-left: 12px !important;
+  }
+  .gs-u-mh-alt\@m {
+    margin-right: 12px !important;
+    margin-left: 12px !important;
+  }
+  .gs-u-mv-alt\@m {
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+  }
+  /**
+     * Alt double margin spacing classes
+     */
+  .gs-u-m-alt\+\@m {
+    margin: 24px !important;
+  }
+  .gs-u-mt-alt\+\@m {
+    margin-top: 24px !important;
+  }
+  .gs-u-mr-alt\+\@m {
+    margin-right: 24px !important;
+  }
+  .gs-u-mb-alt\+\@m {
+    margin-bottom: 24px !important;
+  }
+  .gs-u-ml-alt\+\@m {
+    margin-left: 24px !important;
+  }
+  .gs-u-mh-alt\+\@m {
+    margin-right: 24px !important;
+    margin-left: 24px !important;
+  }
+  .gs-u-mv-alt\+\@m {
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
   }
   /**
      * Zero margin spacing classes
@@ -3971,7 +4968,7 @@ body {
     margin-bottom: 0 !important;
   }
   /**
-     * Padding spacing classes
+     * Padding spacing classes (gel spacing unit)
      */
   .gs-u-p\@m {
     padding: 8px !important;
@@ -3997,7 +4994,7 @@ body {
     padding-bottom: 8px !important;
   }
   /**
-     * Tiny padding spacing classes
+     * Tiny padding spacing classes (gel spacing unit)
      */
   .gs-u-p--\@m {
     padding: 2px !important;
@@ -4023,7 +5020,7 @@ body {
     padding-bottom: 2px !important;
   }
   /**
-     * Small padding spacing classes
+     * Small padding spacing classes (gel spacing unit)
      */
   .gs-u-p-\@m {
     padding: 4px !important;
@@ -4049,7 +5046,7 @@ body {
     padding-bottom: 4px !important;
   }
   /**
-     * Large padding spacing classes
+     * Large padding spacing classes (gel spacing unit)
      */
   .gs-u-p\+\@m {
     padding: 16px !important;
@@ -4075,7 +5072,7 @@ body {
     padding-bottom: 16px !important;
   }
   /**
-     * Huge padding spacing classes
+     * Huge padding spacing classes (gel spacing unit)
      */
   .gs-u-p\+\+\@m {
     padding: 32px !important;
@@ -4099,6 +5096,58 @@ body {
   .gs-u-pv\+\+\@m {
     padding-top: 32px !important;
     padding-bottom: 32px !important;
+  }
+  /**
+     * Alt padding spacing classes (gel-alt-spacing-unit)
+     */
+  .gs-u-p-alt\@m {
+    padding: 12px !important;
+  }
+  .gs-u-pt-alt\@m {
+    padding-top: 12px !important;
+  }
+  .gs-u-pr-alt\@m {
+    padding-right: 12px !important;
+  }
+  .gs-u-pb-alt\@m {
+    padding-bottom: 12px !important;
+  }
+  .gs-u-pl-alt\@m {
+    padding-left: 12px !important;
+  }
+  .gs-u-ph-alt\@m {
+    padding-right: 12px !important;
+    padding-left: 12px !important;
+  }
+  .gs-u-pv-alt\@m {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+  /**
+     * Alt double padding spacing classes (gel-alt-spacing-unit)
+     */
+  .gs-u-p-alt\+\@m {
+    padding: 24px !important;
+  }
+  .gs-u-pt-alt\+\@m {
+    padding-top: 24px !important;
+  }
+  .gs-u-pr-alt\+\@m {
+    padding-right: 24px !important;
+  }
+  .gs-u-pb-alt\+\@m {
+    padding-bottom: 24px !important;
+  }
+  .gs-u-pl-alt\+\@m {
+    padding-left: 24px !important;
+  }
+  .gs-u-ph-alt\+\@m {
+    padding-right: 24px !important;
+    padding-left: 24px !important;
+  }
+  .gs-u-pv-alt\+\@m {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
   }
   /**
      * Zero padding spacing classes
@@ -4130,7 +5179,7 @@ body {
 
 @media (min-width: 56.25em) {
   /**
-     * Margin spacing classes
+     * Margin spacing classes (gel spacing unit)
      */
   .gs-u-m\@l {
     margin: 8px !important;
@@ -4156,7 +5205,7 @@ body {
     margin-bottom: 8px !important;
   }
   /**
-     * Tiny margin spacing classes
+     * Tiny margin spacing classes (gel spacing unit)
      */
   .gs-u-m--\@l {
     margin: 2px !important;
@@ -4182,7 +5231,7 @@ body {
     margin-bottom: 2px !important;
   }
   /**
-     * Small margin spacing classes
+     * Small margin spacing classes (gel spacing unit)
      */
   .gs-u-m-\@l {
     margin: 4px !important;
@@ -4208,7 +5257,7 @@ body {
     margin-bottom: 4px !important;
   }
   /**
-     * Large margin spacing classes
+     * Large margin spacing classes (gel spacing unit)
      */
   .gs-u-m\+\@l {
     margin: 16px !important;
@@ -4234,7 +5283,7 @@ body {
     margin-bottom: 16px !important;
   }
   /**
-     * Huge margin spacing classes
+     * Huge margin spacing classes (gel spacing unit)
      */
   .gs-u-m\+\+\@l {
     margin: 32px !important;
@@ -4258,6 +5307,58 @@ body {
   .gs-u-mv\+\+\@l {
     margin-top: 32px !important;
     margin-bottom: 32px !important;
+  }
+  /**
+     * Alt margin spacing classes
+     */
+  .gs-u-m-alt\@l {
+    margin: 12px !important;
+  }
+  .gs-u-mt-alt\@l {
+    margin-top: 12px !important;
+  }
+  .gs-u-mr-alt\@l {
+    margin-right: 12px !important;
+  }
+  .gs-u-mb-alt\@l {
+    margin-bottom: 12px !important;
+  }
+  .gs-u-ml-alt\@l {
+    margin-left: 12px !important;
+  }
+  .gs-u-mh-alt\@l {
+    margin-right: 12px !important;
+    margin-left: 12px !important;
+  }
+  .gs-u-mv-alt\@l {
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+  }
+  /**
+     * Alt double margin spacing classes
+     */
+  .gs-u-m-alt\+\@l {
+    margin: 24px !important;
+  }
+  .gs-u-mt-alt\+\@l {
+    margin-top: 24px !important;
+  }
+  .gs-u-mr-alt\+\@l {
+    margin-right: 24px !important;
+  }
+  .gs-u-mb-alt\+\@l {
+    margin-bottom: 24px !important;
+  }
+  .gs-u-ml-alt\+\@l {
+    margin-left: 24px !important;
+  }
+  .gs-u-mh-alt\+\@l {
+    margin-right: 24px !important;
+    margin-left: 24px !important;
+  }
+  .gs-u-mv-alt\+\@l {
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
   }
   /**
      * Zero margin spacing classes
@@ -4286,7 +5387,7 @@ body {
     margin-bottom: 0 !important;
   }
   /**
-     * Padding spacing classes
+     * Padding spacing classes (gel spacing unit)
      */
   .gs-u-p\@l {
     padding: 8px !important;
@@ -4312,7 +5413,7 @@ body {
     padding-bottom: 8px !important;
   }
   /**
-     * Tiny padding spacing classes
+     * Tiny padding spacing classes (gel spacing unit)
      */
   .gs-u-p--\@l {
     padding: 2px !important;
@@ -4338,7 +5439,7 @@ body {
     padding-bottom: 2px !important;
   }
   /**
-     * Small padding spacing classes
+     * Small padding spacing classes (gel spacing unit)
      */
   .gs-u-p-\@l {
     padding: 4px !important;
@@ -4364,7 +5465,7 @@ body {
     padding-bottom: 4px !important;
   }
   /**
-     * Large padding spacing classes
+     * Large padding spacing classes (gel spacing unit)
      */
   .gs-u-p\+\@l {
     padding: 16px !important;
@@ -4390,7 +5491,7 @@ body {
     padding-bottom: 16px !important;
   }
   /**
-     * Huge padding spacing classes
+     * Huge padding spacing classes (gel spacing unit)
      */
   .gs-u-p\+\+\@l {
     padding: 32px !important;
@@ -4414,6 +5515,58 @@ body {
   .gs-u-pv\+\+\@l {
     padding-top: 32px !important;
     padding-bottom: 32px !important;
+  }
+  /**
+     * Alt padding spacing classes (gel-alt-spacing-unit)
+     */
+  .gs-u-p-alt\@l {
+    padding: 12px !important;
+  }
+  .gs-u-pt-alt\@l {
+    padding-top: 12px !important;
+  }
+  .gs-u-pr-alt\@l {
+    padding-right: 12px !important;
+  }
+  .gs-u-pb-alt\@l {
+    padding-bottom: 12px !important;
+  }
+  .gs-u-pl-alt\@l {
+    padding-left: 12px !important;
+  }
+  .gs-u-ph-alt\@l {
+    padding-right: 12px !important;
+    padding-left: 12px !important;
+  }
+  .gs-u-pv-alt\@l {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+  /**
+     * Alt double padding spacing classes (gel-alt-spacing-unit)
+     */
+  .gs-u-p-alt\+\@l {
+    padding: 24px !important;
+  }
+  .gs-u-pt-alt\+\@l {
+    padding-top: 24px !important;
+  }
+  .gs-u-pr-alt\+\@l {
+    padding-right: 24px !important;
+  }
+  .gs-u-pb-alt\+\@l {
+    padding-bottom: 24px !important;
+  }
+  .gs-u-pl-alt\+\@l {
+    padding-left: 24px !important;
+  }
+  .gs-u-ph-alt\+\@l {
+    padding-right: 24px !important;
+    padding-left: 24px !important;
+  }
+  .gs-u-pv-alt\+\@l {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
   }
   /**
      * Zero padding spacing classes
@@ -4443,6 +5596,846 @@ body {
   }
 }
 
+@media (min-width: 63em) {
+  /**
+     * Margin spacing classes (gel spacing unit)
+     */
+  .gs-u-m\@xl {
+    margin: 8px !important;
+  }
+  .gs-u-mt\@xl {
+    margin-top: 8px !important;
+  }
+  .gs-u-mr\@xl {
+    margin-right: 8px !important;
+  }
+  .gs-u-mb\@xl {
+    margin-bottom: 8px !important;
+  }
+  .gs-u-ml\@xl {
+    margin-left: 8px !important;
+  }
+  .gs-u-mh\@xl {
+    margin-right: 8px !important;
+    margin-left: 8px !important;
+  }
+  .gs-u-mv\@xl {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+  }
+  /**
+     * Tiny margin spacing classes (gel spacing unit)
+     */
+  .gs-u-m--\@xl {
+    margin: 2px !important;
+  }
+  .gs-u-mt--\@xl {
+    margin-top: 2px !important;
+  }
+  .gs-u-mr--\@xl {
+    margin-right: 2px !important;
+  }
+  .gs-u-mb--\@xl {
+    margin-bottom: 2px !important;
+  }
+  .gs-u-ml--\@xl {
+    margin-left: 2px !important;
+  }
+  .gs-u-mh--\@xl {
+    margin-right: 2px !important;
+    margin-left: 2px !important;
+  }
+  .gs-u-mv--\@xl {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+  }
+  /**
+     * Small margin spacing classes (gel spacing unit)
+     */
+  .gs-u-m-\@xl {
+    margin: 4px !important;
+  }
+  .gs-u-mt-\@xl {
+    margin-top: 4px !important;
+  }
+  .gs-u-mr-\@xl {
+    margin-right: 4px !important;
+  }
+  .gs-u-mb-\@xl {
+    margin-bottom: 4px !important;
+  }
+  .gs-u-ml-\@xl {
+    margin-left: 4px !important;
+  }
+  .gs-u-mh-\@xl {
+    margin-right: 4px !important;
+    margin-left: 4px !important;
+  }
+  .gs-u-mv-\@xl {
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+  }
+  /**
+     * Large margin spacing classes (gel spacing unit)
+     */
+  .gs-u-m\+\@xl {
+    margin: 16px !important;
+  }
+  .gs-u-mt\+\@xl {
+    margin-top: 16px !important;
+  }
+  .gs-u-mr\+\@xl {
+    margin-right: 16px !important;
+  }
+  .gs-u-mb\+\@xl {
+    margin-bottom: 16px !important;
+  }
+  .gs-u-ml\+\@xl {
+    margin-left: 16px !important;
+  }
+  .gs-u-mh\+\@xl {
+    margin-right: 16px !important;
+    margin-left: 16px !important;
+  }
+  .gs-u-mv\+\@xl {
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+  }
+  /**
+     * Huge margin spacing classes (gel spacing unit)
+     */
+  .gs-u-m\+\+\@xl {
+    margin: 32px !important;
+  }
+  .gs-u-mt\+\+\@xl {
+    margin-top: 32px !important;
+  }
+  .gs-u-mr\+\+\@xl {
+    margin-right: 32px !important;
+  }
+  .gs-u-mb\+\+\@xl {
+    margin-bottom: 32px !important;
+  }
+  .gs-u-ml\+\+\@xl {
+    margin-left: 32px !important;
+  }
+  .gs-u-mh\+\+\@xl {
+    margin-right: 32px !important;
+    margin-left: 32px !important;
+  }
+  .gs-u-mv\+\+\@xl {
+    margin-top: 32px !important;
+    margin-bottom: 32px !important;
+  }
+  /**
+     * Alt margin spacing classes
+     */
+  .gs-u-m-alt\@xl {
+    margin: 12px !important;
+  }
+  .gs-u-mt-alt\@xl {
+    margin-top: 12px !important;
+  }
+  .gs-u-mr-alt\@xl {
+    margin-right: 12px !important;
+  }
+  .gs-u-mb-alt\@xl {
+    margin-bottom: 12px !important;
+  }
+  .gs-u-ml-alt\@xl {
+    margin-left: 12px !important;
+  }
+  .gs-u-mh-alt\@xl {
+    margin-right: 12px !important;
+    margin-left: 12px !important;
+  }
+  .gs-u-mv-alt\@xl {
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+  }
+  /**
+     * Alt double margin spacing classes
+     */
+  .gs-u-m-alt\+\@xl {
+    margin: 24px !important;
+  }
+  .gs-u-mt-alt\+\@xl {
+    margin-top: 24px !important;
+  }
+  .gs-u-mr-alt\+\@xl {
+    margin-right: 24px !important;
+  }
+  .gs-u-mb-alt\+\@xl {
+    margin-bottom: 24px !important;
+  }
+  .gs-u-ml-alt\+\@xl {
+    margin-left: 24px !important;
+  }
+  .gs-u-mh-alt\+\@xl {
+    margin-right: 24px !important;
+    margin-left: 24px !important;
+  }
+  .gs-u-mv-alt\+\@xl {
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
+  }
+  /**
+     * Zero margin spacing classes
+     */
+  .gs-u-m0\@xl {
+    margin: 0 !important;
+  }
+  .gs-u-mt0\@xl {
+    margin-top: 0 !important;
+  }
+  .gs-u-mr0\@xl {
+    margin-right: 0 !important;
+  }
+  .gs-u-mb0\@xl {
+    margin-bottom: 0 !important;
+  }
+  .gs-u-ml0\@xl {
+    margin-left: 0 !important;
+  }
+  .gs-u-mh0\@xl {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  .gs-u-mv0\@xl {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  /**
+     * Padding spacing classes (gel spacing unit)
+     */
+  .gs-u-p\@xl {
+    padding: 8px !important;
+  }
+  .gs-u-pt\@xl {
+    padding-top: 8px !important;
+  }
+  .gs-u-pr\@xl {
+    padding-right: 8px !important;
+  }
+  .gs-u-pb\@xl {
+    padding-bottom: 8px !important;
+  }
+  .gs-u-pl\@xl {
+    padding-left: 8px !important;
+  }
+  .gs-u-ph\@xl {
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+  }
+  .gs-u-pv\@xl {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+  /**
+     * Tiny padding spacing classes (gel spacing unit)
+     */
+  .gs-u-p--\@xl {
+    padding: 2px !important;
+  }
+  .gs-u-pt--\@xl {
+    padding-top: 2px !important;
+  }
+  .gs-u-pr--\@xl {
+    padding-right: 2px !important;
+  }
+  .gs-u-pb--\@xl {
+    padding-bottom: 2px !important;
+  }
+  .gs-u-pl--\@xl {
+    padding-left: 2px !important;
+  }
+  .gs-u-ph--\@xl {
+    padding-right: 2px !important;
+    padding-left: 2px !important;
+  }
+  .gs-u-pv--\@xl {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+  }
+  /**
+     * Small padding spacing classes (gel spacing unit)
+     */
+  .gs-u-p-\@xl {
+    padding: 4px !important;
+  }
+  .gs-u-pt-\@xl {
+    padding-top: 4px !important;
+  }
+  .gs-u-pr-\@xl {
+    padding-right: 4px !important;
+  }
+  .gs-u-pb-\@xl {
+    padding-bottom: 4px !important;
+  }
+  .gs-u-pl-\@xl {
+    padding-left: 4px !important;
+  }
+  .gs-u-ph-\@xl {
+    padding-right: 4px !important;
+    padding-left: 4px !important;
+  }
+  .gs-u-pv-\@xl {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+  /**
+     * Large padding spacing classes (gel spacing unit)
+     */
+  .gs-u-p\+\@xl {
+    padding: 16px !important;
+  }
+  .gs-u-pt\+\@xl {
+    padding-top: 16px !important;
+  }
+  .gs-u-pr\+\@xl {
+    padding-right: 16px !important;
+  }
+  .gs-u-pb\+\@xl {
+    padding-bottom: 16px !important;
+  }
+  .gs-u-pl\+\@xl {
+    padding-left: 16px !important;
+  }
+  .gs-u-ph\+\@xl {
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+  }
+  .gs-u-pv\+\@xl {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+  /**
+     * Huge padding spacing classes (gel spacing unit)
+     */
+  .gs-u-p\+\+\@xl {
+    padding: 32px !important;
+  }
+  .gs-u-pt\+\+\@xl {
+    padding-top: 32px !important;
+  }
+  .gs-u-pr\+\+\@xl {
+    padding-right: 32px !important;
+  }
+  .gs-u-pb\+\+\@xl {
+    padding-bottom: 32px !important;
+  }
+  .gs-u-pl\+\+\@xl {
+    padding-left: 32px !important;
+  }
+  .gs-u-ph\+\+\@xl {
+    padding-right: 32px !important;
+    padding-left: 32px !important;
+  }
+  .gs-u-pv\+\+\@xl {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+  /**
+     * Alt padding spacing classes (gel-alt-spacing-unit)
+     */
+  .gs-u-p-alt\@xl {
+    padding: 12px !important;
+  }
+  .gs-u-pt-alt\@xl {
+    padding-top: 12px !important;
+  }
+  .gs-u-pr-alt\@xl {
+    padding-right: 12px !important;
+  }
+  .gs-u-pb-alt\@xl {
+    padding-bottom: 12px !important;
+  }
+  .gs-u-pl-alt\@xl {
+    padding-left: 12px !important;
+  }
+  .gs-u-ph-alt\@xl {
+    padding-right: 12px !important;
+    padding-left: 12px !important;
+  }
+  .gs-u-pv-alt\@xl {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+  /**
+     * Alt double padding spacing classes (gel-alt-spacing-unit)
+     */
+  .gs-u-p-alt\+\@xl {
+    padding: 24px !important;
+  }
+  .gs-u-pt-alt\+\@xl {
+    padding-top: 24px !important;
+  }
+  .gs-u-pr-alt\+\@xl {
+    padding-right: 24px !important;
+  }
+  .gs-u-pb-alt\+\@xl {
+    padding-bottom: 24px !important;
+  }
+  .gs-u-pl-alt\+\@xl {
+    padding-left: 24px !important;
+  }
+  .gs-u-ph-alt\+\@xl {
+    padding-right: 24px !important;
+    padding-left: 24px !important;
+  }
+  .gs-u-pv-alt\+\@xl {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+  /**
+     * Zero padding spacing classes
+     */
+  .gs-u-p0\@xl {
+    padding: 0 !important;
+  }
+  .gs-u-pt0\@xl {
+    padding-top: 0 !important;
+  }
+  .gs-u-pr0\@xl {
+    padding-right: 0 !important;
+  }
+  .gs-u-pb0\@xl {
+    padding-bottom: 0 !important;
+  }
+  .gs-u-pl0\@xl {
+    padding-left: 0 !important;
+  }
+  .gs-u-ph0\@xl {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .gs-u-pv0\@xl {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+@media (min-width: 80em) {
+  .b-pw-1280 {
+    /**
+     * Margin spacing classes (gel spacing unit)
+     */
+    /**
+     * Tiny margin spacing classes (gel spacing unit)
+     */
+    /**
+     * Small margin spacing classes (gel spacing unit)
+     */
+    /**
+     * Large margin spacing classes (gel spacing unit)
+     */
+    /**
+     * Huge margin spacing classes (gel spacing unit)
+     */
+    /**
+     * Alt margin spacing classes
+     */
+    /**
+     * Alt double margin spacing classes
+     */
+    /**
+     * Zero margin spacing classes
+     */
+    /**
+     * Padding spacing classes (gel spacing unit)
+     */
+    /**
+     * Tiny padding spacing classes (gel spacing unit)
+     */
+    /**
+     * Small padding spacing classes (gel spacing unit)
+     */
+    /**
+     * Large padding spacing classes (gel spacing unit)
+     */
+    /**
+     * Huge padding spacing classes (gel spacing unit)
+     */
+    /**
+     * Alt padding spacing classes (gel-alt-spacing-unit)
+     */
+    /**
+     * Alt double padding spacing classes (gel-alt-spacing-unit)
+     */
+    /**
+     * Zero padding spacing classes
+     */
+  }
+  .b-pw-1280 .gs-u-m\@xxl {
+    margin: 8px !important;
+  }
+  .b-pw-1280 .gs-u-mt\@xxl {
+    margin-top: 8px !important;
+  }
+  .b-pw-1280 .gs-u-mr\@xxl {
+    margin-right: 8px !important;
+  }
+  .b-pw-1280 .gs-u-mb\@xxl {
+    margin-bottom: 8px !important;
+  }
+  .b-pw-1280 .gs-u-ml\@xxl {
+    margin-left: 8px !important;
+  }
+  .b-pw-1280 .gs-u-mh\@xxl {
+    margin-right: 8px !important;
+    margin-left: 8px !important;
+  }
+  .b-pw-1280 .gs-u-mv\@xxl {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+  }
+  .b-pw-1280 .gs-u-m--\@xxl {
+    margin: 2px !important;
+  }
+  .b-pw-1280 .gs-u-mt--\@xxl {
+    margin-top: 2px !important;
+  }
+  .b-pw-1280 .gs-u-mr--\@xxl {
+    margin-right: 2px !important;
+  }
+  .b-pw-1280 .gs-u-mb--\@xxl {
+    margin-bottom: 2px !important;
+  }
+  .b-pw-1280 .gs-u-ml--\@xxl {
+    margin-left: 2px !important;
+  }
+  .b-pw-1280 .gs-u-mh--\@xxl {
+    margin-right: 2px !important;
+    margin-left: 2px !important;
+  }
+  .b-pw-1280 .gs-u-mv--\@xxl {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+  }
+  .b-pw-1280 .gs-u-m-\@xxl {
+    margin: 4px !important;
+  }
+  .b-pw-1280 .gs-u-mt-\@xxl {
+    margin-top: 4px !important;
+  }
+  .b-pw-1280 .gs-u-mr-\@xxl {
+    margin-right: 4px !important;
+  }
+  .b-pw-1280 .gs-u-mb-\@xxl {
+    margin-bottom: 4px !important;
+  }
+  .b-pw-1280 .gs-u-ml-\@xxl {
+    margin-left: 4px !important;
+  }
+  .b-pw-1280 .gs-u-mh-\@xxl {
+    margin-right: 4px !important;
+    margin-left: 4px !important;
+  }
+  .b-pw-1280 .gs-u-mv-\@xxl {
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+  }
+  .b-pw-1280 .gs-u-m\+\@xxl {
+    margin: 16px !important;
+  }
+  .b-pw-1280 .gs-u-mt\+\@xxl {
+    margin-top: 16px !important;
+  }
+  .b-pw-1280 .gs-u-mr\+\@xxl {
+    margin-right: 16px !important;
+  }
+  .b-pw-1280 .gs-u-mb\+\@xxl {
+    margin-bottom: 16px !important;
+  }
+  .b-pw-1280 .gs-u-ml\+\@xxl {
+    margin-left: 16px !important;
+  }
+  .b-pw-1280 .gs-u-mh\+\@xxl {
+    margin-right: 16px !important;
+    margin-left: 16px !important;
+  }
+  .b-pw-1280 .gs-u-mv\+\@xxl {
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+  }
+  .b-pw-1280 .gs-u-m\+\+\@xxl {
+    margin: 32px !important;
+  }
+  .b-pw-1280 .gs-u-mt\+\+\@xxl {
+    margin-top: 32px !important;
+  }
+  .b-pw-1280 .gs-u-mr\+\+\@xxl {
+    margin-right: 32px !important;
+  }
+  .b-pw-1280 .gs-u-mb\+\+\@xxl {
+    margin-bottom: 32px !important;
+  }
+  .b-pw-1280 .gs-u-ml\+\+\@xxl {
+    margin-left: 32px !important;
+  }
+  .b-pw-1280 .gs-u-mh\+\+\@xxl {
+    margin-right: 32px !important;
+    margin-left: 32px !important;
+  }
+  .b-pw-1280 .gs-u-mv\+\+\@xxl {
+    margin-top: 32px !important;
+    margin-bottom: 32px !important;
+  }
+  .b-pw-1280 .gs-u-m-alt\@xxl {
+    margin: 12px !important;
+  }
+  .b-pw-1280 .gs-u-mt-alt\@xxl {
+    margin-top: 12px !important;
+  }
+  .b-pw-1280 .gs-u-mr-alt\@xxl {
+    margin-right: 12px !important;
+  }
+  .b-pw-1280 .gs-u-mb-alt\@xxl {
+    margin-bottom: 12px !important;
+  }
+  .b-pw-1280 .gs-u-ml-alt\@xxl {
+    margin-left: 12px !important;
+  }
+  .b-pw-1280 .gs-u-mh-alt\@xxl {
+    margin-right: 12px !important;
+    margin-left: 12px !important;
+  }
+  .b-pw-1280 .gs-u-mv-alt\@xxl {
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+  }
+  .b-pw-1280 .gs-u-m-alt\+\@xxl {
+    margin: 24px !important;
+  }
+  .b-pw-1280 .gs-u-mt-alt\+\@xxl {
+    margin-top: 24px !important;
+  }
+  .b-pw-1280 .gs-u-mr-alt\+\@xxl {
+    margin-right: 24px !important;
+  }
+  .b-pw-1280 .gs-u-mb-alt\+\@xxl {
+    margin-bottom: 24px !important;
+  }
+  .b-pw-1280 .gs-u-ml-alt\+\@xxl {
+    margin-left: 24px !important;
+  }
+  .b-pw-1280 .gs-u-mh-alt\+\@xxl {
+    margin-right: 24px !important;
+    margin-left: 24px !important;
+  }
+  .b-pw-1280 .gs-u-mv-alt\+\@xxl {
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
+  }
+  .b-pw-1280 .gs-u-m0\@xxl {
+    margin: 0 !important;
+  }
+  .b-pw-1280 .gs-u-mt0\@xxl {
+    margin-top: 0 !important;
+  }
+  .b-pw-1280 .gs-u-mr0\@xxl {
+    margin-right: 0 !important;
+  }
+  .b-pw-1280 .gs-u-mb0\@xxl {
+    margin-bottom: 0 !important;
+  }
+  .b-pw-1280 .gs-u-ml0\@xxl {
+    margin-left: 0 !important;
+  }
+  .b-pw-1280 .gs-u-mh0\@xxl {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  .b-pw-1280 .gs-u-mv0\@xxl {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .b-pw-1280 .gs-u-p\@xxl {
+    padding: 8px !important;
+  }
+  .b-pw-1280 .gs-u-pt\@xxl {
+    padding-top: 8px !important;
+  }
+  .b-pw-1280 .gs-u-pr\@xxl {
+    padding-right: 8px !important;
+  }
+  .b-pw-1280 .gs-u-pb\@xxl {
+    padding-bottom: 8px !important;
+  }
+  .b-pw-1280 .gs-u-pl\@xxl {
+    padding-left: 8px !important;
+  }
+  .b-pw-1280 .gs-u-ph\@xxl {
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+  }
+  .b-pw-1280 .gs-u-pv\@xxl {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+  .b-pw-1280 .gs-u-p--\@xxl {
+    padding: 2px !important;
+  }
+  .b-pw-1280 .gs-u-pt--\@xxl {
+    padding-top: 2px !important;
+  }
+  .b-pw-1280 .gs-u-pr--\@xxl {
+    padding-right: 2px !important;
+  }
+  .b-pw-1280 .gs-u-pb--\@xxl {
+    padding-bottom: 2px !important;
+  }
+  .b-pw-1280 .gs-u-pl--\@xxl {
+    padding-left: 2px !important;
+  }
+  .b-pw-1280 .gs-u-ph--\@xxl {
+    padding-right: 2px !important;
+    padding-left: 2px !important;
+  }
+  .b-pw-1280 .gs-u-pv--\@xxl {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+  }
+  .b-pw-1280 .gs-u-p-\@xxl {
+    padding: 4px !important;
+  }
+  .b-pw-1280 .gs-u-pt-\@xxl {
+    padding-top: 4px !important;
+  }
+  .b-pw-1280 .gs-u-pr-\@xxl {
+    padding-right: 4px !important;
+  }
+  .b-pw-1280 .gs-u-pb-\@xxl {
+    padding-bottom: 4px !important;
+  }
+  .b-pw-1280 .gs-u-pl-\@xxl {
+    padding-left: 4px !important;
+  }
+  .b-pw-1280 .gs-u-ph-\@xxl {
+    padding-right: 4px !important;
+    padding-left: 4px !important;
+  }
+  .b-pw-1280 .gs-u-pv-\@xxl {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+  .b-pw-1280 .gs-u-p\+\@xxl {
+    padding: 16px !important;
+  }
+  .b-pw-1280 .gs-u-pt\+\@xxl {
+    padding-top: 16px !important;
+  }
+  .b-pw-1280 .gs-u-pr\+\@xxl {
+    padding-right: 16px !important;
+  }
+  .b-pw-1280 .gs-u-pb\+\@xxl {
+    padding-bottom: 16px !important;
+  }
+  .b-pw-1280 .gs-u-pl\+\@xxl {
+    padding-left: 16px !important;
+  }
+  .b-pw-1280 .gs-u-ph\+\@xxl {
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+  }
+  .b-pw-1280 .gs-u-pv\+\@xxl {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+  .b-pw-1280 .gs-u-p\+\+\@xxl {
+    padding: 32px !important;
+  }
+  .b-pw-1280 .gs-u-pt\+\+\@xxl {
+    padding-top: 32px !important;
+  }
+  .b-pw-1280 .gs-u-pr\+\+\@xxl {
+    padding-right: 32px !important;
+  }
+  .b-pw-1280 .gs-u-pb\+\+\@xxl {
+    padding-bottom: 32px !important;
+  }
+  .b-pw-1280 .gs-u-pl\+\+\@xxl {
+    padding-left: 32px !important;
+  }
+  .b-pw-1280 .gs-u-ph\+\+\@xxl {
+    padding-right: 32px !important;
+    padding-left: 32px !important;
+  }
+  .b-pw-1280 .gs-u-pv\+\+\@xxl {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+  .b-pw-1280 .gs-u-p-alt\@xxl {
+    padding: 12px !important;
+  }
+  .b-pw-1280 .gs-u-pt-alt\@xxl {
+    padding-top: 12px !important;
+  }
+  .b-pw-1280 .gs-u-pr-alt\@xxl {
+    padding-right: 12px !important;
+  }
+  .b-pw-1280 .gs-u-pb-alt\@xxl {
+    padding-bottom: 12px !important;
+  }
+  .b-pw-1280 .gs-u-pl-alt\@xxl {
+    padding-left: 12px !important;
+  }
+  .b-pw-1280 .gs-u-ph-alt\@xxl {
+    padding-right: 12px !important;
+    padding-left: 12px !important;
+  }
+  .b-pw-1280 .gs-u-pv-alt\@xxl {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+  .b-pw-1280 .gs-u-p-alt\+\@xxl {
+    padding: 24px !important;
+  }
+  .b-pw-1280 .gs-u-pt-alt\+\@xxl {
+    padding-top: 24px !important;
+  }
+  .b-pw-1280 .gs-u-pr-alt\+\@xxl {
+    padding-right: 24px !important;
+  }
+  .b-pw-1280 .gs-u-pb-alt\+\@xxl {
+    padding-bottom: 24px !important;
+  }
+  .b-pw-1280 .gs-u-pl-alt\+\@xxl {
+    padding-left: 24px !important;
+  }
+  .b-pw-1280 .gs-u-ph-alt\+\@xxl {
+    padding-right: 24px !important;
+    padding-left: 24px !important;
+  }
+  .b-pw-1280 .gs-u-pv-alt\+\@xxl {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+  .b-pw-1280 .gs-u-p0\@xxl {
+    padding: 0 !important;
+  }
+  .b-pw-1280 .gs-u-pt0\@xxl {
+    padding-top: 0 !important;
+  }
+  .b-pw-1280 .gs-u-pr0\@xxl {
+    padding-right: 0 !important;
+  }
+  .b-pw-1280 .gs-u-pb0\@xxl {
+    padding-bottom: 0 !important;
+  }
+  .b-pw-1280 .gs-u-pl0\@xxl {
+    padding-left: 0 !important;
+  }
+  .b-pw-1280 .gs-u-ph0\@xxl {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .b-pw-1280 .gs-u-pv0\@xxl {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
 /*------------------------------------*    # VISIBILITY
 \*------------------------------------*/
 /**
@@ -4454,7 +6447,7 @@ body {
 }
 
 /**
- * Make a class and placeholder of the visually hidden helper available
+ * Make a class and placeholder of the visually hidden helper available at all breakpoints
  */
 .gs-u-vh {
   position: absolute;
@@ -4465,6 +6458,84 @@ body {
   border: 0;
   overflow: hidden;
   clip: rect(0 0 0 0);
+}
+
+@media (min-width: 15em) {
+  .gs-u-vh\@xs {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+}
+
+@media (min-width: 25em) {
+  .gs-u-vh\@s {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+}
+
+@media (min-width: 37.5em) {
+  .gs-u-vh\@m {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+}
+
+@media (min-width: 56.25em) {
+  .gs-u-vh\@l {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+}
+
+@media (min-width: 63em) {
+  .gs-u-vh\@xl {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+}
+
+@media (min-width: 80em) {
+  .b-pw-1280 .gs-u-vh\@xxl {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
 }
 
 /**

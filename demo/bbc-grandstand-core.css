@@ -1,0 +1,2084 @@
+/*------------------------------------*    # GRANDSTAND
+\*------------------------------------*/
+/*------------------------------------*    # SCRIPT-SPECIFIC OVERRIDES
+\*------------------------------------*/
+/* Lines */
+/* Links */
+/* Text */
+.gel-canon {
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 32px;
+  line-height: 2rem;
+}
+
+.gel-canon-bold {
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 32px;
+  line-height: 2rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
+}
+
+.gel-trafalgar {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+}
+
+.gel-trafalgar-bold {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
+}
+
+.gel-double-pica {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+}
+
+.gel-double-pica-bold {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
+}
+
+.gel-great-primer {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 22px;
+  line-height: 1.375rem;
+}
+
+.gel-great-primer-bold {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 22px;
+  line-height: 1.375rem;
+  font-weight: bold;
+}
+
+.gel-pica {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+}
+
+.gel-pica-bold {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+  font-weight: bold;
+}
+
+.gel-long-primer {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 18px;
+  line-height: 1.125rem;
+}
+
+.gel-long-primer-bold {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 18px;
+  line-height: 1.125rem;
+  font-weight: bold;
+}
+
+.gel-brevier {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 16px;
+  line-height: 1rem;
+}
+
+.gel-brevier-bold {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 16px;
+  line-height: 1rem;
+  font-weight: bold;
+}
+
+.gel-minion {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 16px;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
+
+.gel-minion-bold {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 16px;
+  line-height: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.gel-body-copy {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+}
+
+body {
+  font-family: Helvetica, Arial, freesans, sans-serif;
+}
+
+/* autoprefixer: off */
+/**
+     * Grid containing element
+     */
+.gel-wrap {
+  max-width: 1008px;
+  margin: 0 auto;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+/**
+     * A grid row
+     */
+.gel-layout {
+  list-style: none;
+  direction: ltr;
+  text-align: left;
+}
+
+/**
+     * A single grid item
+     */
+/**
+     * Layouts with no gutters.
+     */
+.gel-layout--flush {
+  margin-left: 0;
+}
+
+.gel-layout--flush > .gel-layout__item {
+  padding-left: 0;
+}
+
+/**
+     * Reversed rendered order of layout items, e.g. items 1, 2, 3, 4 in your
+     * markup will display in order 4, 3, 2, 1 on your page
+     */
+.gel-layout--rev {
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.no-flexbox .gel-layout--rev {
+  direction: rtl;
+  text-align: left;
+}
+
+.no-flexbox .gel-layout--rev > .gel-layout__item {
+  direction: ltr;
+  text-align: left;
+}
+
+/**
+     * Align layout items to the vertical centers of each other
+     */
+.gel-layout--middle {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+}
+
+.gel-layout--middle > .gel-layout__item {
+  vertical-align: middle;
+}
+
+/**
+     * Align layout items to the vertical bottoms of each other
+     */
+.gel-layout--bottom {
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  -ms-grid-row-align: flex-end;
+  align-items: flex-end;
+}
+
+.gel-layout--bottom > .gel-layout__item {
+  vertical-align: bottom;
+}
+
+/**
+     * Make the layout items fill up from the right hand side
+     */
+.gel-layout--right {
+  text-align: right;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.gel-layout--right > .gel-layout__item {
+  text-align: left;
+}
+
+/**
+     * Make the layout items fill up from the center outward
+     */
+.gel-layout--center {
+  text-align: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.gel-layout--center > .gel-layout__item {
+  text-align: left;
+}
+
+/**
+     * Cause layout items to take up a non-explicit amount of width
+     */
+.gel-layout--auto > .gel-layout__item {
+  width: auto;
+}
+
+/**
+     * Disable the flexbox grid
+     */
+.gel-layout--no-flex,
+.gel-layout--no-flex > .gel-layout__item {
+  display: inline-block;
+}
+
+.gel-1\/1 {
+  width: 100% !important;
+}
+
+.gel-1\/2 {
+  width: 50% !important;
+}
+
+.gel-1\/3 {
+  width: 33.33333% !important;
+}
+
+.gel-2\/3 {
+  width: 66.66667% !important;
+}
+
+.gel-1\/4 {
+  width: 25% !important;
+}
+
+.gel-2\/4 {
+  width: 50% !important;
+}
+
+.gel-3\/4 {
+  width: 75% !important;
+}
+
+.gel-1\/5 {
+  width: 20% !important;
+}
+
+.gel-2\/5 {
+  width: 40% !important;
+}
+
+.gel-3\/5 {
+  width: 60% !important;
+}
+
+.gel-4\/5 {
+  width: 80% !important;
+}
+
+.gel-1\/8 {
+  width: 12.5% !important;
+}
+
+.gel-2\/8 {
+  width: 25% !important;
+}
+
+.gel-3\/8 {
+  width: 37.5% !important;
+}
+
+.gel-4\/8 {
+  width: 50% !important;
+}
+
+.gel-5\/8 {
+  width: 62.5% !important;
+}
+
+.gel-6\/8 {
+  width: 75% !important;
+}
+
+.gel-7\/8 {
+  width: 87.5% !important;
+}
+
+.gel-1\/10 {
+  width: 10% !important;
+}
+
+.gel-2\/10 {
+  width: 20% !important;
+}
+
+.gel-3\/10 {
+  width: 30% !important;
+}
+
+.gel-4\/10 {
+  width: 40% !important;
+}
+
+.gel-5\/10 {
+  width: 50% !important;
+}
+
+.gel-6\/10 {
+  width: 60% !important;
+}
+
+.gel-7\/10 {
+  width: 70% !important;
+}
+
+.gel-8\/10 {
+  width: 80% !important;
+}
+
+.gel-9\/10 {
+  width: 90% !important;
+}
+
+.gel-1\/12 {
+  width: 8.33333% !important;
+}
+
+.gel-2\/12 {
+  width: 16.66667% !important;
+}
+
+.gel-3\/12 {
+  width: 25% !important;
+}
+
+.gel-4\/12 {
+  width: 33.33333% !important;
+}
+
+.gel-5\/12 {
+  width: 41.66667% !important;
+}
+
+.gel-6\/12 {
+  width: 50% !important;
+}
+
+.gel-7\/12 {
+  width: 58.33333% !important;
+}
+
+.gel-8\/12 {
+  width: 66.66667% !important;
+}
+
+.gel-9\/12 {
+  width: 75% !important;
+}
+
+.gel-10\/12 {
+  width: 83.33333% !important;
+}
+
+.gel-11\/12 {
+  width: 91.66667% !important;
+}
+
+.gel-1\/24 {
+  width: 4.16667% !important;
+}
+
+.gel-2\/24 {
+  width: 8.33333% !important;
+}
+
+.gel-3\/24 {
+  width: 12.5% !important;
+}
+
+.gel-4\/24 {
+  width: 16.66667% !important;
+}
+
+.gel-5\/24 {
+  width: 20.83333% !important;
+}
+
+.gel-6\/24 {
+  width: 25% !important;
+}
+
+.gel-7\/24 {
+  width: 29.16667% !important;
+}
+
+.gel-8\/24 {
+  width: 33.33333% !important;
+}
+
+.gel-9\/24 {
+  width: 37.5% !important;
+}
+
+.gel-10\/24 {
+  width: 41.66667% !important;
+}
+
+.gel-11\/24 {
+  width: 45.83333% !important;
+}
+
+.gel-12\/24 {
+  width: 50% !important;
+}
+
+.gel-13\/24 {
+  width: 54.16667% !important;
+}
+
+.gel-14\/24 {
+  width: 58.33333% !important;
+}
+
+.gel-15\/24 {
+  width: 62.5% !important;
+}
+
+.gel-16\/24 {
+  width: 66.66667% !important;
+}
+
+.gel-17\/24 {
+  width: 70.83333% !important;
+}
+
+.gel-18\/24 {
+  width: 75% !important;
+}
+
+.gel-19\/24 {
+  width: 79.16667% !important;
+}
+
+.gel-20\/24 {
+  width: 83.33333% !important;
+}
+
+.gel-21\/24 {
+  width: 87.5% !important;
+}
+
+.gel-22\/24 {
+  width: 91.66667% !important;
+}
+
+.gel-23\/24 {
+  width: 95.83333% !important;
+}
+
+/*------------------------------------*    # BULLET
+\*------------------------------------*/
+/**
+ * The `bullet` pattern is used to align an icon with some text,
+ * similar to how a bullet point has the icon and the text
+ *
+    <span class="gs-o-bullet [ gs-o-bullet- | gs-o-bullet+ | gs-o-bullet--essential  | gs-o-bullet--block | gs-o-bullet--reverse ]">
+        <span class="gs-o-bullet__icon gel-icon">
+            <svg>
+                <use xlink:href="#gel-icon-duration"></use>
+            </svg>
+        </span>
+        <span class="gs-o-bullet__text">18:30 - 18:34</span>
+    </span>
+ * 
+ */
+.gs-o-bullet {
+  display: inline-block;
+}
+
+/**
+ * 1.
+ *  |[icon] Text here |
+ *  |wraps around     |
+ *  |below the icon   |
+ *
+ * 2. Scale the icon proportionally with the text
+ *
+ * 3. Essential Modifier - only essential icons are shown on core 
+ */
+.gs-o-bullet__icon {
+  /* [1] */
+  display: none;
+  height: 1em;
+  /* [2] */
+  width: 1em;
+  /* [2] */
+  vertical-align: middle;
+}
+
+.gs-o-bullet--essential .gs-o-bullet__icon {
+  /* [3] */
+  display: inline-block;
+  visibility: visible;
+}
+
+/** 
+ * 
+ */
+/**
+ *  4. Block Modifier
+ *  |[icon] Text here does |
+ *  |       not wrap around|
+ *  |       below icon     |
+ *  This is styled to look like a traditional list, but with custom icons
+ *  The icon sits on top of the text's left margin, so it's recommended to use .gs-u-bullet+
+ *  for it to have sufficient spacing
+ *
+ *  Example usage:
+    <span class="gs-o-bullet gs-o-bullet+ gs-o-bullet--block">
+        <span class="gs-o-bullet__icon gel-icon">
+            <svg>
+                <use xlink:href="#gel-icon-duration"></use>
+            </svg>
+        </span>
+        <span class="gs-o-bullet__text">18:30 - 18:34</span>
+    </span>
+ */
+.gs-o-bullet--block.gs-o-bullet {
+  /* [4] */
+  position: relative;
+}
+
+.gs-o-bullet--block .gs-o-bullet__icon {
+  /* [4] */
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.gs-o-bullet__text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* SPACING */
+/**
+ * For non-essential icons, we only want the space before text
+ * on enhanced, since the icon isn't shown on core 
+ */
+/* 
+ * For essential icons, we want spacing between the icon and text 
+ * on both core and enhanced
+ */
+.gs-o-bullet--essential .gs-o-bullet__icon + .gs-o-bullet__text {
+  margin-left: 8px;
+}
+
+.gs-o-bullet--essential .gs-o-bullet\- .gs-o-bullet__icon + .gs-o-bullet__text {
+  margin-left: 4px;
+}
+
+.gs-o-bullet--essential .gs-o-bullet\+ .gs-o-bullet__icon + .gs-o-bullet__text {
+  margin-left: 16px;
+}
+
+/**
+ * If you need the icon to sit after the text you can reverse
+ * the bullet
+ */
+.gs-o-bullet--reverse {
+  direction: rtl;
+}
+
+.gs-o-bullet--reverse .gs-o-bullet__icon {
+  margin-right: 0;
+  margin-left: 4px;
+}
+
+/*------------------------------------*    # BUTTON
+\*------------------------------------*/
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Normalize some styles.
+ * 4. Fixes odd inner spacing in IE7.
+ */
+.gs-o-button {
+  display: inline-block;
+  /* [1] */
+  vertical-align: middle;
+  /* [2] */
+  position: relative;
+  overflow: visible;
+  /* [4] */
+  margin: 0;
+  /* [3] */
+  padding: 8px;
+  text-align: center;
+  /* [3] */
+  border: 0;
+  /* [3] */
+}
+
+.gs-o-button:hover, .gs-o-button:active {
+  text-decoration: none;
+  /* [3] */
+  cursor: pointer;
+}
+
+.gs-o-button:active {
+  top: 1px;
+}
+
+.gs-o-button--big {
+  padding: 16px;
+}
+
+.gs-o-button--full {
+  display: block;
+  width: 100%;
+}
+
+.gs-o-button--primary {
+  background-color: #252525;
+  color: #fff;
+}
+
+.gs-o-button--primary:hover, .gs-o-button--primary:active {
+  background-color: #121212;
+}
+
+.gs-o-button--secondary {
+  background-color: #ededed;
+  color: #252525;
+}
+
+.gs-o-button--secondary:hover, .gs-o-button--secondary:active {
+  background-color: #e0e0e0;
+}
+
+.gs-o-button--clear {
+  background-color: transparent;
+  color: #252525;
+}
+
+.gs-o-button--clear:hover, .gs-o-button--clear:active {
+  background-color: transparent;
+  color: #121212;
+}
+
+.gs-o-button--white {
+  background: #fff;
+  color: #252525;
+}
+
+.gs-o-button--white:hover, .gs-o-button--white:active {
+  background: #fff;
+  color: #121212;
+}
+
+.gs-o-button--my-bbc {
+  background-color: #006def;
+  color: #fff;
+}
+
+.gs-o-button--my-bbc:hover {
+  background-color: #005bc8;
+}
+
+.gs-o-button--share {
+  background-color: #4a9442;
+  color: #fff;
+}
+
+.gs-o-button--share:hover {
+  background-color: #41823a;
+}
+
+.gs-o-button--border {
+  border: 1px solid #121212;
+}
+
+.gs-o-button[disabled],
+.gs-o-button--disabled {
+  opacity: .2;
+  cursor: auto;
+}
+
+.gs-o-button[disabled]:active,
+.gs-o-button--disabled:active {
+  top: 0;
+}
+
+/*------------------------------------*    # FAUX BLOCK LINK
+\*------------------------------------*/
+/*
+* The `Faux Block Link` pattern allows you to make an entire block
+* a link, whilst having links nested within in that block also clickable.
+*
+* The main link (i.e. the faux block link) is absolutely positioned across the entire
+* block, any nested links have a little z-index bump to lift them on top. Nice.
+*
+* This implementation is not compatible with IE8 and below. On these browsers
+* this falls back to being two standard anchors.
+*
+* EXAMPLE IMPLEMENTATION - http://codepen.io/anon/pen/NAwZpd
+
+<div class="gs-o-faux-block-link">
+    <a href="http://www.bbc.co.uk/news" class="gs-o-faux-block-link__overlay-link">
+      <h3>Heading</h3>
+    </a>
+    <p>This is some summary <a href="http://www.bbc.co.uk/sport">text</a>/p>
+</div>
+
+Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
+*/
+/*
+ * Fixes the issue where the faux block links work intermittently on
+ * IE9 and IE10, and ensures that all areas of the block act as a link
+ */
+.gs-o-faux-block-link {
+  position: relative;
+}
+
+.gs-o-faux-block-link a,
+.gs-o-faux-block-link abbr[title] {
+  position: relative;
+  z-index: 1;
+}
+
+.gs-o-faux-block-link .gs-o-faux-block-link__overlay-link {
+  position: static;
+}
+
+.gs-o-faux-block-link .gs-o-faux-block-link__overlay-link:before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 0;
+}
+
+/*------------------------------------*    # FLAG OBJECT
+\*------------------------------------*/
+/**
+ * The flag object is a design pattern similar to the media object, however it
+ * utilises `display: table[-cell];` to give us control over the vertical
+ * alignments of the text and image. csswizardry.com/2013/05/the-flag-object
+ *
+    <div class="gs-o-flag">
+        <div class="gs-o-flag__img">
+            <img src="..." />
+        </div>
+        <div class="gs-o-flag__body">
+            <p>Some content</p>
+        </div>
+    </div>
+ *
+ */
+/**
+ * 1. Allows us to control vertical alignments
+ * 2. Force the object to be the full width of its parent. Combined with [1],
+ *    this makes the object behave in a quasi-`display: block;` manner.
+ */
+.gs-o-flag {
+  display: table;
+  /* [1] */
+  width: 100%;
+  /* [2] */
+  table-layout: fixed;
+}
+
+/**
+ * Items within a flag object. There should only ever be one of each.
+ *
+ * 1. Default to aligning content to their middles.
+ */
+.gs-o-flag__img,
+.gs-o-flag__body {
+  display: table-cell;
+  vertical-align: middle;
+  /* [1] */
+}
+
+/**
+ * Flag images have a space between them and the body of the object.
+ */
+.gs-o-flag__img {
+  padding-right: 8px;
+}
+
+.gs-o-flag__img > img {
+  display: block;
+  max-width: none;
+}
+
+/**
+ * The container for the main content of the flag object.
+ *
+ * 1. Forces the `.flag__body` to take up all remaining space.
+ */
+.gs-o-flag__body {
+  width: 100%;
+  /* [1] */
+}
+
+.gs-o-flag__body,
+.gs-o-flag__body > :last-child {
+  margin-bottom: 0;
+}
+
+/*------------------------------------*    # ICONS
+\*------------------------------------*/
+/*------------------------------------*    # LIST-INLINE
+\*------------------------------------*/
+/**
+ * The list-inline object simply displays a list of items in one line.
+ *
+ * E.g:
+ *
+    Item 1 Item 2 Item 3 Item 4
+ *
+ */
+.gs-o-list-inline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gs-o-list-inline > li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/**
+ * Comma delimited list to semantically mark up lists of tags, etc.
+ *
+ * E.g:
+ *
+    Item 1, Item 2, Item 3, Item 4
+ *
+ * N.B. This component requires that you remove the whitespace between LIs.
+ *
+ */
+.gs-o-list-inline--delimited > li + li:before {
+  content: ',\00A0';
+}
+
+/**
+ * Solid line divided list of items
+ *
+ * Eg.
+ *
+    Item 1 | Item 2 | Item 3 | Item 4
+ *
+ * 1. Offset the margin-top applied to items
+ *
+ */
+.gs-o-list-inline--divided {
+  margin-top: -4px;
+  /* [1] */
+}
+
+.gs-o-list-inline--divided > li {
+  margin-right: 6px;
+  margin-top: 4px;
+  padding-right: 6px;
+  border-right: 1px solid #dbdbdb;
+}
+
+.gs-o-list-inline--divided > li:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: 0;
+}
+
+/**
+ * Solid line spaced list of items
+ *
+ * Eg.
+ *
+    Item 1   Item 2   Item 3   Item 4
+ *
+ * 1. Offset the margin-top applied to items
+ */
+.gs-o-list-inline--spaced {
+  margin-top: -4px;
+  /* [1] */
+}
+
+.gs-o-list-inline--spaced > li {
+  margin-right: 8px;
+  margin-top: 4px;
+}
+
+.gs-o-list-inline--spaced > li:last-child {
+  margin-right: 0;
+}
+
+/*------------------------------------*    # LIST-UI
+\*------------------------------------*/
+/**
+ * The UI list object creates blocky list items with a keyline separator out of
+ * a `ul` or `ol`.
+ */
+.gs-o-list-ui,
+.gs-o-list-ui__item {
+  border: 0 solid #dbdbdb;
+}
+
+.gs-o-list-ui {
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+  list-style: none;
+  border-top-width: 1px;
+}
+
+/**
+ * A subtle border variant of the list ui
+ */
+.gs-o-list-ui--subtle {
+  border-top-color: #ededed;
+}
+
+.gs-o-list-ui--subtle .gs-o-list-ui__item {
+  border-bottom-color: #ededed;
+}
+
+.gs-o-list-ui--top-no-border {
+  border-top-width: 0;
+}
+
+.gs-o-list-ui--bottom-no-border .gs-o-list-ui__item:last-child {
+  border-bottom-width: 0;
+}
+
+.gs-o-list-ui__item {
+  padding-bottom: 8px;
+  padding-top: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-bottom-width: 1px;
+}
+
+.gs-o-list-ui__item--flush {
+  padding: 0;
+}
+
+.gs-o-list-ui__link {
+  display: block;
+  padding: 8px 0;
+  color: #121212;
+}
+
+.gs-o-list-ui__link:hover .gs-c-media-icon,
+.gs-o-list-ui__link:focus .gs-c-media-icon {
+  background-color: #ffdf43;
+  color: #121212;
+}
+
+.gs-o-list-ui__link:hover .gs-c-media-icon--live,
+.gs-o-list-ui__link:focus .gs-c-media-icon--live {
+  background-color: #1169f6;
+  color: #fff;
+}
+
+/*------------------------------------*    # MEDIA OBJECT
+\*------------------------------------*/
+/**
+ * Nicole Sullivan's media object is often referred to as the poster child of
+ * OOCSS and a fundamental building block of most websites.
+ *
+    <div class="gs-o-media">
+        <div class="gs-o-media__img">
+            <img src="..." />
+        </div>
+        <div class="gs-o-media__body">
+            <p>Some content</p>
+        </div>
+    </div>
+ *
+ * 1. Force block incase `.media` is applied to an inline element
+ */
+.gs-o-media {
+  display: block;
+  /* [1] */
+}
+
+.gs-o-media:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.gs-o-media__img {
+  float: left;
+  margin-right: 8px;
+}
+
+.gs-o-media__img > img {
+  display: block;
+}
+
+/**
+ * 1. Remove any rogue margin-bottom of the body or last
+ *    nested element
+ */
+.gs-o-media__body {
+  display: block;
+  overflow: hidden;
+}
+
+.gs-o-media__body,
+.gs-o-media__body > :last-child {
+  margin-bottom: 0;
+  /* [1] */
+}
+
+/*------------------------------------*    # MEDIA ISLAND
+\*------------------------------------*/
+/**
+ * The media island is design to isolate media items from
+ * other elements.
+ *
+ * It also has the ability to position things on top of the images
+ * such as media icons
+ *
+    <div class="gs-o-media-island">
+        <img />
+        <div class="gs-o-media-island__icon">
+            [icon]
+        </div>
+    </div>
+ *
+ */
+.gs-o-media-island {
+  position: relative;
+}
+
+.gs-o-media-island__icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/*------------------------------------*    # RESPONSIVE IMAGE
+\*------------------------------------*/
+/**
+ * The responsive image pattern automatically reserves the space
+ * needed for an image to be inserted
+ *
+    <div class="gs-o-responsive-image [ gs-o-responsive-image--1by1 | gs-o-responsive-image--16by9 ]">
+        <img src="..." />
+    </div>
+ *
+ * 1. Setting the height to zero collapses the div so we don't
+ *    need to absolutly position the image
+ * 2. Stop images 1px difference between the reserved space
+ *    and the actual image from showing
+ */
+.gs-o-responsive-image {
+  position: relative;
+  height: 0;
+  /* [1] */
+  overflow: hidden;
+  /* [2] */
+  background-color: #f0f0f0;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODguNTQ5IiBoZWlnaHQ9IjUzLjciIHZpZXdCb3g9IjAgMCAxODguNTQ5IDUzLjciPjxnIGZpbGw9IiNCQ0JDQkMiPjxwYXRoIGQ9Ik0xNjcuNCA3LjQ4NkMxNTcuMjEgNS43NSAxNDUuNjQ0IDkuNjUgMTQxLjUxIDE5LjgyYy0yLjA5IDUuMTM2LTEuOTEgMTAuOTQ3LjY4IDE1Ljg2MiAyLjQ2NSA0LjY3NyA2LjcwNyA4LjEzOCAxMS43MiA5Ljc3NSA2LjQwNSAyLjA5MiAxMy45NCAxLjU3NSAyMC4xNjgtLjg5LjUyLS4yMDYgMy4wOTgtLjk4IDMuMDk4LTEuNTZWMzUuODZjLTcuODU1IDUuMDIyLTIwLjcxMiA3LjY5LTI3LjM0OC0uODE2LTMuMS0zLjk3My0zLjUwOC05Ljc3NC0xLjIxLTE0LjIyNSAyLjQ5LTQuODU1IDcuODQyLTcuNDIzIDEzLjEzLTcuNjEzIDUuNDUtLjE5NSAxMC4zMiAxLjc0IDE1LjAyIDQuM3YtNi42NmMwLS4xOTQuMDktLjQ5Ni0uMTA4LS41NzUtLjk0Mi0uMzc4LTEuODk2LS43My0yLjg1My0xLjA2Ni0yLjA5LS43MzUtNC4yMy0xLjMyLTYuNDA4LTEuNzJ6TTEzMS40Ni4wMTZIMTg3LjgwN2MuNjE4IDAgLjctLjE1LjcuNDYydjUyLjMxNmMwIC41MS4yMTguOTA1LS4zMjcuOTA1aC01Ni42NDZjLS4xNyAwLS4wNzMtMS4zODMtLjA3My0xLjU1NVYuMDE2ek04Ny42MiAyOS42MnYxMC41NWg2Ljg1cy4xMzYtLjAwMy4zNi0uMDEyYy4yMy0uMDEuNTU3LS4wMi45NS0uMDU1Ljc1LS4wNyAxLjcyNi0uMjA1IDIuNjc1LS41MjYuODYtLjI5IDEuNjk4LS43MjUgMi4zMzYtMS4zNjQuMjQ3LS4yNDYuNDUtLjUwMy42MTUtLjc2Mi41MzgtLjg0Ni42NzQtMS43MDUuNzAzLTIuMTkzLjAxNi0uMjEyLjAxNS0uMzM0LjAxNS0uMzM0cy4wMDMtLjA5NiAwLS4yNmMtLjAwNy0uMjAzLS4wMzItLjYtLjE0LTEuMDItLjEzLS41LS4zNy0xLjA4Mi0uODAyLTEuNjEyLS4wOC0uMS0uMTY3LS4yLS4yNjUtLjI5OC0uMTg4LS4xODgtLjM5LS4zNy0uNjE0LS41MzMtLjM3NC0uMjc2LS44MDItLjUxMy0xLjI2OC0uNzE2LS42MTUtLjI2NS0xLjMwNS0uNDY0LTIuMDYtLjYwNS0uMzktLjA3NC0uOC0uMTM1LTEuMjItLjE3My0uMjYtLjAyNi0uNTItLjA0NC0uNzktLjA2LS4yMzMtLjAxNC0uNDc4LS4wMjQtLjcyMy0uMDI0LTIuNDMgMC02LjYyLS4wMDQtNi42Mi0uMDA0ek04Ny42MiAxMy41OHYxMC4wMDJoMy4zMTZzLjIyIDAgLjUxMy0uMDA4Yy4yMjgtLjAwOC41MDItLjAyMy43NDQtLjAzNi42ODMtLjA1IDEuNjI3LS4xNDYgMi41Ny0uNDEuMTg2LS4wNTIuMzctLjExLjU1My0uMTczLjc0LS4yNjMgMS40NS0uNjQ4IDItMS4xOS40NC0uNDMyLjczLS45MTIuOTItMS4zOC4yMzYtLjU3LjMyLTEuMTIuMzU0LTEuNTA3LjAzLS4zNDcuMDMtLjU2Ny4wMy0uNTY3cy4wMDYtLjE2My0uMDEtLjQyM2MtLjAyLS40MzctLjExMi0xLjE0NS0uNDU0LTEuODI3LS4xNjctLjMyNi0uMzk1LS42NC0uNzAyLS45NDUtLjM3NC0uMzctLjgyNi0uNjUtMS4zMTMtLjg2Ni0uOTMyLS40MTMtMi0uNTc3LTIuOS0uNjM3LS4zOS0uMDI2LS43NDgtLjAzLTEuMDUtLjAzLS42OC0uMDAyLTQuNTctLjAwMi00LjU3LS4wMDJ6TTgwLjY5NCA3LjU0NHYzOC42NjJoMTQuNTU0czcuMS4xOTUgMTEuMDE3LTMuNzI0YzMuMTg4LTMuMTg4IDIuOTYtNi44OCAyLjk2LTYuODhzLjIzLTMuODUzLTIuNzI0LTYuODA3Yy0yLjUxNS0yLjUxNi01LjcyOC0zLjE4Ni01LjcyOC0zLjE4NnMxLjQ1LS42ODIgMi41NjYtMS43OTdjLjUyLS41MjMgMi4zOC0yLjIgMi4zOC02LjI3MyAwLTQuMTA0LTIuNzMtNi40NjMtMi43My02LjQ2M3MtMi45OTItMy41MzQtOS43NDYtMy41MzRIODAuNjk0ek02NS43My4wMTZoNTcuMDQ1VjUzLjdINjUuNzNWLjAxNnpNMjEuODkgMjkuNjJ2MTAuNTVoNi44NDhzLjEzOC0uMDAzLjM2LS4wMTJjLjIzMy0uMDEuNTYtLjAyLjk1NC0uMDU1Ljc0Ni0uMDcgMS43MjMtLjIwNSAyLjY3My0uNTI2Ljg2LS4yOSAxLjY5Ny0uNzI1IDIuMzM3LTEuMzY0LjI0Ni0uMjQ2LjQ1LS41MDMuNjEzLS43NjIuNTM4LS44NDYuNjczLTEuNzA1LjcwMy0yLjE5My4wMTYtLjIxMi4wMTQtLjMzNC4wMTQtLjMzNHMuMDA0LS4wOTYgMC0uMjZjLS4wMDgtLjIwMy0uMDMtLjYtLjE0LTEuMDItLjEyOC0uNS0uMzctMS4wODItLjgtMS42MTItLjA4Mi0uMS0uMTctLjItLjI2Ni0uMjk4LS4xOS0uMTg4LS4zOTMtLjM3LS42MTUtLjUzMy0uMzc0LS4yNzYtLjgwMi0uNTEzLTEuMjctLjcxNi0uNjEzLS4yNjUtMS4zMDItLjQ2NC0yLjA2LS42MDUtLjM4Ny0uMDc0LS43OTgtLjEzNS0xLjIxNy0uMTczLS4yNi0uMDI2LS41Mi0uMDQ0LS43OS0uMDYtLjIzMy0uMDE0LS40OC0uMDI0LS43MjMtLjAyNC0yLjQzIDAtNi42Mi0uMDA0LTYuNjItLjAwNHpNMjEuODkgMTMuNTh2MTAuMDAyaDMuMzE2cy4yMiAwIC41MTMtLjAwOGMuMjI4LS4wMDguNTAyLS4wMjMuNzQ1LS4wMzYuNjgzLS4wNSAxLjYyNi0uMTQ2IDIuNTctLjQxLjE4NS0uMDUyLjM3LS4xMS41NTItLjE3My43NC0uMjYzIDEuNDUtLjY0OCAyLjAwMi0xLjE5LjQzNy0uNDMyLjcyNy0uOTEyLjkyLTEuMzguMjMzLS41Ny4zMTUtMS4xMi4zNS0xLjUwNy4wMy0uMzQ3LjAzLS41NjcuMDMtLjU2N3MuMDA2LS4xNjMtLjAwOC0uNDIzYy0uMDIzLS40MzctLjExNC0xLjE0NS0uNDU3LTEuODI3LS4xNjYtLjMyNi0uMzkzLS42NC0uNy0uOTQ1LS4zNzQtLjM3LS44MjYtLjY1LTEuMzEzLS44NjYtLjkzNC0uNDEzLTIuMDAyLS41NzctMi45MDItLjYzNy0uMzktLjAyNi0uNzQ4LS4wMy0xLjA1Mi0uMDMtLjY4LS4wMDItNC41Ny0uMDAyLTQuNTctLjAwMnpNMTQuOTY0IDcuNTQ0djM4LjY2MmgxNC41NTRzNy4wOTcuMTk1IDExLjAxNi0zLjcyNGMzLjE5LTMuMTg4IDIuOTYtNi44OCAyLjk2LTYuODhzLjIzMi0zLjg1My0yLjcyMy02LjgwN2MtMi41MTUtMi41MTYtNS43MjgtMy4xODYtNS43MjgtMy4xODZzMS40NS0uNjgyIDIuNTY2LTEuNzk3Yy41Mi0uNTIzIDIuMzgtMi4yIDIuMzgtNi4yNzMgMC00LjEwNC0yLjczLTYuNDYzLTIuNzMtNi40NjNzLTIuOTktMy41MzQtOS43NDYtMy41MzRIMTQuOTY0ek0wIC4wMTZoNTcuMDQ0VjUzLjdIMFYuMDE2eiIvPjwvZz48L3N2Zz4=);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 30%;
+  /**
+     * 1. Force the image to sit on top of the placeholder
+     * 2. Force the image to fill the available space
+     *
+     * The exact combination of [1] and [2] is needed to stop the
+     * image from being 1px too short, the root cause of which is
+     * down to the browser's rendering of sub-pixels
+     */
+}
+
+.gs-o-responsive-image img {
+  position: absolute;
+  /* [1] */
+  width: 100%;
+  /* [2] */
+  height: 100%;
+  /* [2] */
+}
+
+/**
+ * Removes the default placeholder styles
+ * for background-color and background-image
+ */
+.gs-o-responsive-image--no-placeholder {
+  background-color: transparent;
+  background-image: none;
+}
+
+/**
+ * Aspect radio modifiers
+ */
+.gs-o-responsive-image--1by1 {
+  padding-bottom: 100%;
+}
+
+.gs-o-responsive-image--16by9 {
+  padding-bottom: 56.25%;
+}
+
+/*------------------------------------*    # TABLE
+\*------------------------------------*/
+/**
+ * The table object allows you to make complex tables,
+ * from football league tables to medals tables.
+ */
+.gs-o-table {
+  width: 100%;
+  border-collapse: separate;
+  margin-bottom: 16px;
+}
+
+.gs-o-table--fixed {
+  table-layout: fixed;
+}
+
+/**
+ * Add a parent div around a table with this class to allow it
+ * to be scrollable horizontally if the viewport is to small.
+ */
+.gs-o-table-container {
+  width: 100%;
+  overflow-y: auto;
+}
+
+.gs-o-table__head {
+  background: #f7f7f5;
+}
+
+.gs-o-table__head .gs-o-table__cell {
+  border-bottom: 1px solid #dbdbdb;
+}
+
+/**
+ * Adds hover state to table row if required.
+ */
+.gs-o-table__row:focus, .gs-o-table__row:hover {
+  background-color: #f7f7f5;
+}
+
+.gs-o-table__row--disabled,
+.gs-o-table__row--disabled .gs-o-table__link {
+  color: #5a5a5a;
+}
+
+.gs-o-table__row--highlighted {
+  background-color: #e5f2ff;
+}
+
+.gs-o-table__row--highlighted:focus, .gs-o-table__row--highlighted:hover {
+  background-color: #cce5ff;
+}
+
+.gs-o-table__row--highlighted .gs-o-table__cell {
+  border-bottom: 1px solid #d1e8ff;
+}
+
+/**
+ * Use to break up tables to show boundaries or breaks.
+ */
+.gs-o-table__row--break .gs-o-table__cell {
+  border-bottom: 1px dashed #252525;
+}
+
+/**
+ * 1. Force first and last cells to have increased padding
+ */
+.gs-o-table__cell {
+  border-bottom: 1px solid #ededed;
+  padding: 8px 4px;
+  text-align: center;
+}
+
+.gs-o-table__cell:first-child {
+  padding-left: 8px;
+  /* [1] */
+}
+
+.gs-o-table__cell:last-child {
+  padding-right: 8px;
+  /* [1] */
+}
+
+.gs-o-table__cell--flush {
+  padding: 0;
+}
+
+.gs-o-table__cell--no-border {
+  border-bottom: 0;
+}
+
+.gs-o-table__cell--border-right {
+  border-right: 1px solid #ededed;
+}
+
+.gs-o-table__cell--border-left {
+  border-left: 1px solid #ededed;
+}
+
+.gs-o-table__cell--left {
+  text-align: left;
+}
+
+.gs-o-table__cell--center {
+  text-align: center;
+}
+
+.gs-o-table__cell--right {
+  text-align: right;
+}
+
+.gs-o-table__cell--bold {
+  font-weight: bold;
+}
+
+.gs-o-table__cell--break {
+  border-top: 1px dashed #252525;
+}
+
+.gs-o-table__link {
+  display: block;
+  color: #121212;
+  font-weight: bold;
+}
+
+.gs-o-table__link:focus, .gs-o-table__link:hover {
+  text-decoration: underline;
+}
+
+/*------------------------------------*    # BOX SIZING
+\*------------------------------------*/
+/**
+ * Grandstand assumes you're applying box-sizing: border-box;
+ * globally, because its how box-sizing should work really.
+ *
+ * Not all teams and codebase follow this rule, as such we
+ * might this little helper to allow box-sizing correctly
+ *
+ * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+.gs-u-box-size,
+.gs-u-box-size * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*------------------------------------*    # CLEARFIX
+\*------------------------------------*/
+/**
+ * Micro clearfix
+ *
+ * @link http://bit.ly/1XaLd3M
+ * @link http://bit.ly/1NkYJja
+ */
+.gs-u-clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*------------------------------------*    # DISPLAY
+\*------------------------------------*/
+/**
+ * A utility for applying common box rendering.
+ *
+ * Can also be used using responsive prefixes
+ *
+    .gs-u-display-none
+    .gs-u-display-block@m
+ *
+ */
+.gs-u-display-none {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.gs-u-display-inline {
+  display: inline !important;
+  visibility: visible !important;
+}
+
+.gs-u-display-inline-block {
+  display: inline-block !important;
+  visibility: visible !important;
+}
+
+.gs-u-display-block {
+  display: block !important;
+  visibility: visible !important;
+}
+
+.gs-u-display-table-cell {
+  display: table-cell !important;
+  visibility: visible !important;
+}
+
+.gs-u-display-table-row {
+  display: table-row !important;
+  visibility: visible !important;
+}
+
+.gs-u-display-flex {
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: -webkit-flex !important;
+  display: flex !important;
+  visibility: visible !important;
+}
+
+/*------------------------------------*    # FLOATS
+\*------------------------------------*/
+/**
+ * A utility for applying floats
+ *
+ * Can also be used using responsive prefixes
+ *
+    .gs-u-float-left
+    .gs-u-float-left@m
+ *
+ */
+.gs-u-float-left {
+  float: left !important;
+}
+
+.gs-u-float-right {
+  float: right !important;
+}
+
+.gs-u-float-none {
+  float: none !important;
+}
+
+/*------------------------------------*    # TEXT ALIGNMENT
+\*------------------------------------*/
+/**
+ * A utility for managing the alignment of text elements
+ */
+/**
+ * Horizontal alignment
+ */
+.gs-u-align-left {
+  text-align: left;
+}
+
+.gs-u-align-center {
+  text-align: center;
+}
+
+.gs-u-align-right {
+  text-align: right;
+}
+
+/**
+ * Vertical alignment
+ */
+.gs-u-align-top {
+  vertical-align: top;
+}
+
+.gs-u-align-middle {
+  vertical-align: middle;
+}
+
+.gs-u-align-bottom {
+  vertical-align: bottom;
+}
+
+.gs-u-align-text-top {
+  vertical-align: text-top;
+}
+
+.gs-u-align-text-bottom {
+  vertical-align: text-bottom;
+}
+
+/*------------------------------------*    # SPACING
+\*------------------------------------*/
+/**
+ * Spacing (margin and padding) utility classes. These can be used to adjust layouts of components contructed
+ * entirely of other abstractions
+ *
+    <h1 class="gel-cannon-bold gs-u-mb+">My Title</h1>
+    <p class="gel-pica gs-u-mb gs-u-mb+@m">Some content</p>
+ *
+ * Applying spacing should not and does not have to be done exclusively with the classes, apply a bit of
+ * common sense thinking as to when and where you use these.
+ *
+ * These classes use the following naming structure:
+
+    .gs-u-(margin/padding)(spacing type)(spacing size)(optional breakpoint) { ... }
+
+ *
+ * Available spacing types:
+ *
+ * mt -> margin-top
+ * mr -> margin-right (margin-left if $rtl is true)
+ * mb -> margin-bottom
+ * ml -> margin-left (margin-right if $rtl is true)
+ * mv -> margin-top & margin-bottom
+ * mh -> margin-right & margin-left (flipped if $rtl is true)
+ * pt -> padding-top
+ * pr -> padding-right (padding-left if $rtl is true)
+ * pb -> padding-bottom
+ * pl -> padding-left (padding-right if $rtl is true)
+ * pv -> padding-top & padding-bottom
+ * ph -> padding-right & padding-left (flipped if $rtl is true)
+ *
+ * Available gel spacing unit sizes:
+ *
+ * 0       - 0px
+ * `--`    - 2px
+ * `-`     - 4px
+ * Default - 8px
+ * `+`     - 16px
+ * `++`    - 32px
+ *
+ * Available gel alt spacing unit sizes:
+ *
+ * 'alt'   - 12px
+ * 'alt+'  - 24px
+ *
+ * Optional breakpoint suffix:
+ *
+ * @xs - GEL Extra Small Breakpoint (240px)
+ * @s - GEL Small Breakpoint (400px)
+ * @m - GEL Medium Breakpoint (600px)
+ * @l - GEL Large Breakpoint (900px)
+ * @xl - GEL Extra Large Breakpoint (1008px)
+ * @xxl - GEL Extra Extra Large Breakpoint (1280px)
+ *
+ */
+/**
+     * Margin spacing classes (gel spacing unit)
+     */
+.gs-u-m {
+  margin: 8px !important;
+}
+
+.gs-u-mt {
+  margin-top: 8px !important;
+}
+
+.gs-u-mr {
+  margin-right: 8px !important;
+}
+
+.gs-u-mb {
+  margin-bottom: 8px !important;
+}
+
+.gs-u-ml {
+  margin-left: 8px !important;
+}
+
+.gs-u-mh {
+  margin-right: 8px !important;
+  margin-left: 8px !important;
+}
+
+.gs-u-mv {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+/**
+     * Tiny margin spacing classes (gel spacing unit)
+     */
+.gs-u-m-- {
+  margin: 2px !important;
+}
+
+.gs-u-mt-- {
+  margin-top: 2px !important;
+}
+
+.gs-u-mr-- {
+  margin-right: 2px !important;
+}
+
+.gs-u-mb-- {
+  margin-bottom: 2px !important;
+}
+
+.gs-u-ml-- {
+  margin-left: 2px !important;
+}
+
+.gs-u-mh-- {
+  margin-right: 2px !important;
+  margin-left: 2px !important;
+}
+
+.gs-u-mv-- {
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+}
+
+/**
+     * Small margin spacing classes (gel spacing unit)
+     */
+.gs-u-m- {
+  margin: 4px !important;
+}
+
+.gs-u-mt- {
+  margin-top: 4px !important;
+}
+
+.gs-u-mr- {
+  margin-right: 4px !important;
+}
+
+.gs-u-mb- {
+  margin-bottom: 4px !important;
+}
+
+.gs-u-ml- {
+  margin-left: 4px !important;
+}
+
+.gs-u-mh- {
+  margin-right: 4px !important;
+  margin-left: 4px !important;
+}
+
+.gs-u-mv- {
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+}
+
+/**
+     * Large margin spacing classes (gel spacing unit)
+     */
+.gs-u-m\+ {
+  margin: 16px !important;
+}
+
+.gs-u-mt\+ {
+  margin-top: 16px !important;
+}
+
+.gs-u-mr\+ {
+  margin-right: 16px !important;
+}
+
+.gs-u-mb\+ {
+  margin-bottom: 16px !important;
+}
+
+.gs-u-ml\+ {
+  margin-left: 16px !important;
+}
+
+.gs-u-mh\+ {
+  margin-right: 16px !important;
+  margin-left: 16px !important;
+}
+
+.gs-u-mv\+ {
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+/**
+     * Huge margin spacing classes (gel spacing unit)
+     */
+.gs-u-m\+\+ {
+  margin: 32px !important;
+}
+
+.gs-u-mt\+\+ {
+  margin-top: 32px !important;
+}
+
+.gs-u-mr\+\+ {
+  margin-right: 32px !important;
+}
+
+.gs-u-mb\+\+ {
+  margin-bottom: 32px !important;
+}
+
+.gs-u-ml\+\+ {
+  margin-left: 32px !important;
+}
+
+.gs-u-mh\+\+ {
+  margin-right: 32px !important;
+  margin-left: 32px !important;
+}
+
+.gs-u-mv\+\+ {
+  margin-top: 32px !important;
+  margin-bottom: 32px !important;
+}
+
+/**
+     * Alt margin spacing classes
+     */
+.gs-u-m-alt {
+  margin: 12px !important;
+}
+
+.gs-u-mt-alt {
+  margin-top: 12px !important;
+}
+
+.gs-u-mr-alt {
+  margin-right: 12px !important;
+}
+
+.gs-u-mb-alt {
+  margin-bottom: 12px !important;
+}
+
+.gs-u-ml-alt {
+  margin-left: 12px !important;
+}
+
+.gs-u-mh-alt {
+  margin-right: 12px !important;
+  margin-left: 12px !important;
+}
+
+.gs-u-mv-alt {
+  margin-top: 12px !important;
+  margin-bottom: 12px !important;
+}
+
+/**
+     * Alt double margin spacing classes
+     */
+.gs-u-m-alt\+ {
+  margin: 24px !important;
+}
+
+.gs-u-mt-alt\+ {
+  margin-top: 24px !important;
+}
+
+.gs-u-mr-alt\+ {
+  margin-right: 24px !important;
+}
+
+.gs-u-mb-alt\+ {
+  margin-bottom: 24px !important;
+}
+
+.gs-u-ml-alt\+ {
+  margin-left: 24px !important;
+}
+
+.gs-u-mh-alt\+ {
+  margin-right: 24px !important;
+  margin-left: 24px !important;
+}
+
+.gs-u-mv-alt\+ {
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+}
+
+/**
+     * Zero margin spacing classes
+     */
+.gs-u-m0 {
+  margin: 0 !important;
+}
+
+.gs-u-mt0 {
+  margin-top: 0 !important;
+}
+
+.gs-u-mr0 {
+  margin-right: 0 !important;
+}
+
+.gs-u-mb0 {
+  margin-bottom: 0 !important;
+}
+
+.gs-u-ml0 {
+  margin-left: 0 !important;
+}
+
+.gs-u-mh0 {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.gs-u-mv0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/**
+     * Padding spacing classes (gel spacing unit)
+     */
+.gs-u-p {
+  padding: 8px !important;
+}
+
+.gs-u-pt {
+  padding-top: 8px !important;
+}
+
+.gs-u-pr {
+  padding-right: 8px !important;
+}
+
+.gs-u-pb {
+  padding-bottom: 8px !important;
+}
+
+.gs-u-pl {
+  padding-left: 8px !important;
+}
+
+.gs-u-ph {
+  padding-right: 8px !important;
+  padding-left: 8px !important;
+}
+
+.gs-u-pv {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+/**
+     * Tiny padding spacing classes (gel spacing unit)
+     */
+.gs-u-p-- {
+  padding: 2px !important;
+}
+
+.gs-u-pt-- {
+  padding-top: 2px !important;
+}
+
+.gs-u-pr-- {
+  padding-right: 2px !important;
+}
+
+.gs-u-pb-- {
+  padding-bottom: 2px !important;
+}
+
+.gs-u-pl-- {
+  padding-left: 2px !important;
+}
+
+.gs-u-ph-- {
+  padding-right: 2px !important;
+  padding-left: 2px !important;
+}
+
+.gs-u-pv-- {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+/**
+     * Small padding spacing classes (gel spacing unit)
+     */
+.gs-u-p- {
+  padding: 4px !important;
+}
+
+.gs-u-pt- {
+  padding-top: 4px !important;
+}
+
+.gs-u-pr- {
+  padding-right: 4px !important;
+}
+
+.gs-u-pb- {
+  padding-bottom: 4px !important;
+}
+
+.gs-u-pl- {
+  padding-left: 4px !important;
+}
+
+.gs-u-ph- {
+  padding-right: 4px !important;
+  padding-left: 4px !important;
+}
+
+.gs-u-pv- {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+
+/**
+     * Large padding spacing classes (gel spacing unit)
+     */
+.gs-u-p\+ {
+  padding: 16px !important;
+}
+
+.gs-u-pt\+ {
+  padding-top: 16px !important;
+}
+
+.gs-u-pr\+ {
+  padding-right: 16px !important;
+}
+
+.gs-u-pb\+ {
+  padding-bottom: 16px !important;
+}
+
+.gs-u-pl\+ {
+  padding-left: 16px !important;
+}
+
+.gs-u-ph\+ {
+  padding-right: 16px !important;
+  padding-left: 16px !important;
+}
+
+.gs-u-pv\+ {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+/**
+     * Huge padding spacing classes (gel spacing unit)
+     */
+.gs-u-p\+\+ {
+  padding: 32px !important;
+}
+
+.gs-u-pt\+\+ {
+  padding-top: 32px !important;
+}
+
+.gs-u-pr\+\+ {
+  padding-right: 32px !important;
+}
+
+.gs-u-pb\+\+ {
+  padding-bottom: 32px !important;
+}
+
+.gs-u-pl\+\+ {
+  padding-left: 32px !important;
+}
+
+.gs-u-ph\+\+ {
+  padding-right: 32px !important;
+  padding-left: 32px !important;
+}
+
+.gs-u-pv\+\+ {
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
+
+/**
+     * Alt padding spacing classes (gel-alt-spacing-unit)
+     */
+.gs-u-p-alt {
+  padding: 12px !important;
+}
+
+.gs-u-pt-alt {
+  padding-top: 12px !important;
+}
+
+.gs-u-pr-alt {
+  padding-right: 12px !important;
+}
+
+.gs-u-pb-alt {
+  padding-bottom: 12px !important;
+}
+
+.gs-u-pl-alt {
+  padding-left: 12px !important;
+}
+
+.gs-u-ph-alt {
+  padding-right: 12px !important;
+  padding-left: 12px !important;
+}
+
+.gs-u-pv-alt {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+
+/**
+     * Alt double padding spacing classes (gel-alt-spacing-unit)
+     */
+.gs-u-p-alt\+ {
+  padding: 24px !important;
+}
+
+.gs-u-pt-alt\+ {
+  padding-top: 24px !important;
+}
+
+.gs-u-pr-alt\+ {
+  padding-right: 24px !important;
+}
+
+.gs-u-pb-alt\+ {
+  padding-bottom: 24px !important;
+}
+
+.gs-u-pl-alt\+ {
+  padding-left: 24px !important;
+}
+
+.gs-u-ph-alt\+ {
+  padding-right: 24px !important;
+  padding-left: 24px !important;
+}
+
+.gs-u-pv-alt\+ {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+
+/**
+     * Zero padding spacing classes
+     */
+.gs-u-p0 {
+  padding: 0 !important;
+}
+
+.gs-u-pt0 {
+  padding-top: 0 !important;
+}
+
+.gs-u-pr0 {
+  padding-right: 0 !important;
+}
+
+.gs-u-pb0 {
+  padding-bottom: 0 !important;
+}
+
+.gs-u-pl0 {
+  padding-left: 0 !important;
+}
+
+.gs-u-ph0 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.gs-u-pv0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/*------------------------------------*    # VISIBILITY
+\*------------------------------------*/
+/**
+ * Hide visually and from screen readers: http://bit.ly/1sfdZho
+ */
+.gs-u-hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/**
+ * Make a class and placeholder of the visually hidden helper available at all breakpoints
+ */
+.gs-u-vh {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/**
+ * Extends the .gs-u-vh class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * http://bit.ly/1sfefwH
+ */
+.gs-u-vh--focusable:active,
+.gs-u-vh--focusable:focus {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+/**
+ * Hide visually and from screen readers, but maintain layout
+ */
+.gs-u-invisible {
+  visibility: hidden;
+}

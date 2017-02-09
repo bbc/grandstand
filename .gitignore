@@ -1,5 +1,8 @@
 # Bower
 bower_components/
 
+# Node
+node_modules/
+
 # Misc
 .DS_Store
