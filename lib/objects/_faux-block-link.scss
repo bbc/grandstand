@@ -66,6 +66,48 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
     }
 }
 
+/**
+ * This class allows you to have a seperate overlay href rather than using :before
+ * Useful if you have a position relative between the link and the container div where the .gs-o-faux-block-link
+ * should overlay.
+ */
+.gs-o-faux-block-link .gs-o-faux-block-link__overlay {
+
+    display: none;
+    visibility: hidden;
+
+    @if $enhanced {
+        @include ie-background-fix;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+        visibility: visible;
+
+        overflow: hidden;
+        text-indent: 200%;
+
+        white-space: nowrap;
+    }
+}
+
+/**
+ * Increased specificity so it trumps ".faux-block-link a"
+ *
+ * 1. IE Fix - Elements have a solid black background in high contrast mode.
+ */
+.gs-o-faux-block-link__overlay.gs-o-faux-block-link__overlay {
+
+    position: absolute;
+    z-index: 0;
+
+    .lt-ie9 & {
+        opacity: 0; /* [1] */
+    }
+}
+
 // only applies to IE 10
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .gs-o-faux-block-link .gs-o-faux-block-link__overlay-link:before {
