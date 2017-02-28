@@ -53,3 +53,60 @@ $gs-float-breakpoints--1280: $gel-grid-breakpoints--1280 !default;
         }
     }
 }
+
+
+/*------------------------------------*\
+    # CLEARS
+\*------------------------------------*/
+
+/**
+ * A utility for applying clears
+ *
+ * Can also be used using responsive prefixes
+ *
+    .gs-u-clear-left
+    .gs-u-clear-left@m
+ *
+ */
+
+$gs-clear-breakpoints: $gel-grid-breakpoints !default;
+$gs-clear-breakpoints--1280: $gel-grid-breakpoints--1280 !default;
+
+ @mixin clears($suffix: null) {
+     $breakpoint-suffix: '';
+
+     @if $suffix != null {
+         $breakpoint-suffix: \@#{$suffix};
+     }
+
+     .gs-u-clear-left#{$breakpoint-suffix} {
+         clear: flip(left, right) !important;
+     }
+
+     .gs-u-clear-right#{$breakpoint-suffix} {
+         clear: flip(right, left) !important;
+     }
+
+     .gs-u-clear-both#{$breakpoint-suffix} {
+         clear: both !important;
+     }
+ }
+
+ // Output the unsuffixed version
+@include clears();
+
+@if $enhanced {
+    @each $breakpoint in $gs-clear-breakpoints {
+        @include mq($from: '#{$gel-grid-breakpoint-namespace}#{$breakpoint}') {
+            @include clears($breakpoint);
+        }
+    }
+
+    .#{$gel-grid-1280-toggle-class} {
+        @each $breakpoint in $gs-clear-breakpoints--1280 {
+            @include mq($from: '#{$gel-grid-breakpoint-namespace}#{$breakpoint}') {
+                @include clears($breakpoint);
+            }
+        }
+    }
+}
