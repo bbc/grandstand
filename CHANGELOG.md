@@ -1,5 +1,6 @@
 | Version | Description |
 |---------|-------------|
+| 4.1.3   | Add clear classes |
 | 4.1.2   | Update faux-block link to support seperate href element as well as :before. |
 | 4.1.1   | Bump z-index on faux block links to make them more robust. |
 | 4.1.0   | Updating Bullet pattern with the Essential modifier. |
