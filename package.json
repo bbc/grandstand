@@ -4,8 +4,9 @@
   "description": "The BBC Grandstand CSS Framework is used by Sport and Live components",
   "main": "_grandstand.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dist": "bower install && node-sass src/bbc-grandstand.scss dist/bbc-grandstand.min.css --output-style=compressed --sourcemap=none && node-sass src/bbc-grandstand.scss dist/bbc-grandstand.css --output-style=expanded --sourcemap=none"
+    "start": "npm install && bower install",
+    "build": "grunt build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,9 @@
   "homepage": "http://bbc.github.io/grandstand/",
   "devDependencies": {
     "bower": "^1.7.9",
-    "node-sass": "^3.7.0"
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-sass": "^2.0.0",
+    "node-sass": "^4.5.0"
   }
 }
