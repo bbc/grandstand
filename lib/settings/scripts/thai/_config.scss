@@ -3,17 +3,19 @@
     // so after talking to UX the same settings as pica were used for the new class
     $pica: (
         'group-a': (
-            'font-size': 15px,
-            'line-height': 20px
+            'font-size': 16px,
+            'line-height': 22px
         ),
         'group-b': (
-            'font-size': 16px,
-            'line-height': 26px
+            'line-height': 24px
         ),
         'group-c': (
+            'line-height': 28px
+        ),
+        'group-a': (
             'font-size': 18px,
             'line-height': 28px
-        )
+        ),
     );
     $gel-type-settings: (
         'canon': (
@@ -127,22 +129,7 @@
                 'letter-spacing': -1px
             )
         ),
-        'pica': (
-            'group-a': (
-                'font-size': 16px
-                'line-height': 22px
-            ),
-            'group-b': (
-                'line-height': 24px
-            ),
-            'group-c': (
-                'line-height': 28px
-            ),
-            'group-d': (
-                'font-size': 18px
-                'line-height': 28px
-            )
-        ),
+        'pica': $pica,
         'pica-bold': (
             'group-a': (
                 'font-weight': bold
@@ -171,8 +158,17 @@
         ),
         'brevier': (
             'group-a': (
+                'line-height': 20px
+            ),
+            'group-b': (
+                'line-height': 20px
+            ),
+            'group-c': (
+                'line-height': 20px
+            ),
+            'group-d': (
                 'font-size': 14px,
-                'line-height': 22px
+                'line-height': 20px
             )
         ),
         'brevier-bold': (
@@ -182,16 +178,21 @@
         ),
         'minion': (
             'group-a': (
-                'font-size': 12px,
-                'line-height': 16px,
+                'font-size': 14px,
+                'line-height': 20px,
                 'text-transform': uppercase
             ),
+            'group-b': (
+                'font-size': 14px
+                'line-height': 20px
+            ),
             'group-c': (
-                'font-size': 13px
+                'font-size': 14px
+                'line-height': 20px
             ),
             'group-d': (
                 'font-size': 14px,
-                'line-height': 22px
+                'line-height': 20px
             )
         ),
         'minion-bold': (
