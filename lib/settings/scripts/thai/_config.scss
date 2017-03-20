@@ -90,15 +90,16 @@
         ),
         'double-pica': (
             'group-a': (
-                'font-size': 20px,
-                'line-height': 30px
+                'line-height': 26px
+            ),
+            'group-b': (
+                'line-height': 26px
             ),
             'group-c': (
-                'font-size': 24px,
-                'line-height': 40px
+                'line-height': 32px
             ),
             'group-d': (
-                'line-height': 36px
+                'line-height': 32px
             )
         ),
         'double-pica-bold': (
@@ -109,18 +110,13 @@
         ),
         'great-primer': (
             'group-a': (
-                'font-size': 18px,
-                'line-height': 28px
-            ),
-            'group-b': (
-                'line-height': 30px
+                'line-height': 24px
             ),
             'group-c': (
-                'font-size': 20px,
-                'line-height': 34px
+                'line-height': 26px
             ),
             'group-d': (
-                'line-height': 30px
+                'line-height': 26px
             )
         ),
         'great-primer-bold': (
@@ -131,7 +127,22 @@
                 'letter-spacing': -1px
             )
         ),
-        'pica': $pica,
+        'pica': (
+            'group-a': (
+                'font-size': 16px
+                'line-height': 22px
+            ),
+            'group-b': (
+                'line-height': 24px
+            ),
+            'group-c': (
+                'line-height': 28px
+            ),
+            'group-d': (
+                'font-size': 18px
+                'line-height': 28px
+            )
+        ),
         'pica-bold': (
             'group-a': (
                 'font-weight': bold
