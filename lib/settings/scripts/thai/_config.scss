@@ -43,22 +43,46 @@
         'trafalgar': (
             'group-a': (
                 'font-size': 20px,
-                'line-height': 30px
+                'line-height': 26px
             ),
             'group-b': (
-                'font-size': 24px,
+                'font-size': 22px,
                 'line-height': 36px
             ),
             'group-c': (
-                'font-size': 36px,
+                'font-size': 32px,
                 'line-height': 52px
             ),
             'group-d': (
                 'font-size': 32px,
-                'line-height': 48px
+                'line-height': 40px
             )
         ),
         'trafalgar-bold': (
+            'group-a': (
+                'font-weight': bold,
+                'letter-spacing': -1px
+            )
+        ),
+        'double-trafalgar': (
+            'group-a': (
+                'font-size': 28px,
+                'line-height': 32px
+            ),
+            'group-b': (
+                'font-size': 30px,
+                'line-height': 36px
+            ),
+            'group-c': (
+                'font-size': 36px,
+                'line-height': 48px
+            ),
+            'group-d': (
+                'font-size': 36px,
+                'line-height': 48px
+            )
+        ),
+        'double-trafalgar-bold': (
             'group-a': (
                 'font-weight': bold,
                 'letter-spacing': -1px
