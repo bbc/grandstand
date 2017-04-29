@@ -72,8 +72,6 @@ We apply the **B**lock, **E**lement, **M**odifier naming convention when creatin
 
 **Resources**
 
--
-
 - OOCSS
 
 ### Namespaces
