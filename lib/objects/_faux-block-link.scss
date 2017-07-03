@@ -90,22 +90,23 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
         text-indent: 200%;
 
         white-space: nowrap;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
 /**
  * Increased specificity so it trumps ".faux-block-link a"
  *
- * 1. IE Fix - Elements have a solid black background in high contrast mode.
+ * 1. IE Fix - Elements have a solid black background in high contrast mode on PC without this.
  */
 .gs-o-faux-block-link__overlay.gs-o-faux-block-link__overlay {
+    opacity: 0; /* [1] */
 
     position: absolute;
     z-index: 0;
-
-    .lt-ie9 & {
-        opacity: 0; /* [1] */
-    }
 }
 
 // only applies to IE 10
