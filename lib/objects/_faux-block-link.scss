@@ -66,6 +66,13 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
     }
 }
 
+// only applies to IE 10
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .gs-o-faux-block-link .gs-o-faux-block-link__overlay-link:before {
+        @include ie-background-fix;
+    }
+}
+
 /**
  * This class allows you to have a seperate overlay href rather than using :before
  * Useful if you have a position relative between the link and the container div where the .gs-o-faux-block-link
@@ -107,11 +114,4 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
 
     position: absolute;
     z-index: 0;
-}
-
-// only applies to IE 10
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .gs-o-faux-block-link .gs-o-faux-block-link__overlay-link:before {
-        @include ie-background-fix;
-    }
 }
