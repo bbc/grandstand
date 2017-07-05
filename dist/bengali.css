@@ -6,47 +6,50 @@
 /* Links */
 /* Text */
 .gel-canon {
-  font-size: 28px;
-  font-size: 1.75rem;
-  line-height: 32px;
-  line-height: 2rem;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem;
 }
 
 @media (min-width: 20em) {
   .gel-canon {
-    font-size: 32px;
-    font-size: 2rem;
-    line-height: 36px;
-    line-height: 2.25rem;
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 28px;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5em) {
   .gel-canon {
-    font-size: 52px;
-    font-size: 3.25rem;
-    line-height: 56px;
-    line-height: 3.5rem;
-  }
-  .no-touch .gel-canon {
-    font-size: 44px;
-    font-size: 2.75rem;
-    line-height: 48px;
-    line-height: 3rem;
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 36px;
+    line-height: 2.25rem;
   }
 }
 
 .gel-canon-bold {
-  font-size: 28px;
-  font-size: 1.75rem;
-  line-height: 32px;
-  line-height: 2rem;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem;
   font-weight: bold;
   letter-spacing: -1px;
   letter-spacing: -0.0625rem;
 }
 
 @media (min-width: 20em) {
+  .gel-canon-bold {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 28px;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5em) {
   .gel-canon-bold {
     font-size: 32px;
     font-size: 2rem;
@@ -55,57 +58,40 @@
   }
 }
 
-@media (min-width: 37.5em) {
-  .gel-canon-bold {
-    font-size: 52px;
-    font-size: 3.25rem;
-    line-height: 56px;
-    line-height: 3.5rem;
+.gel-trafalgar {
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 30px;
+  line-height: 1.875rem;
+}
+
+@media (min-width: 20em) {
+  .gel-trafalgar {
+    font-size: 26px;
+    font-size: 1.625rem;
+    line-height: 36px;
+    line-height: 2.25rem;
   }
-  .no-touch .gel-canon-bold {
-    font-size: 44px;
-    font-size: 2.75rem;
+}
+
+@media (min-width: 37.5em) {
+  .gel-trafalgar {
+    font-size: 38px;
+    font-size: 2.375rem;
+    line-height: 50px;
+    line-height: 3.125rem;
+  }
+  .no-touch .gel-trafalgar {
     line-height: 48px;
     line-height: 3rem;
   }
 }
 
-.gel-trafalgar {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 24px;
-  line-height: 1.5rem;
-}
-
-@media (min-width: 20em) {
-  .gel-trafalgar {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 28px;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 37.5em) {
-  .gel-trafalgar {
-    font-size: 36px;
-    font-size: 2.25rem;
-    line-height: 40px;
-    line-height: 2.5rem;
-  }
-  .no-touch .gel-trafalgar {
-    font-size: 32px;
-    font-size: 2rem;
-    line-height: 36px;
-    line-height: 2.25rem;
-  }
-}
-
 .gel-trafalgar-bold {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 24px;
-  line-height: 1.5rem;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 30px;
+  line-height: 1.875rem;
   font-weight: bold;
   letter-spacing: -1px;
   letter-spacing: -0.0625rem;
@@ -113,120 +99,51 @@
 
 @media (min-width: 20em) {
   .gel-trafalgar-bold {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 28px;
-    line-height: 1.75rem;
+    font-size: 26px;
+    font-size: 1.625rem;
+    line-height: 36px;
+    line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5em) {
   .gel-trafalgar-bold {
-    font-size: 36px;
-    font-size: 2.25rem;
-    line-height: 40px;
-    line-height: 2.5rem;
+    font-size: 38px;
+    font-size: 2.375rem;
+    line-height: 50px;
+    line-height: 3.125rem;
   }
   .no-touch .gel-trafalgar-bold {
-    font-size: 32px;
-    font-size: 2rem;
-    line-height: 36px;
-    line-height: 2.25rem;
-  }
-}
-
-.gel-paragon {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 24px;
-  line-height: 1.5rem;
-}
-
-@media (min-width: 20em) {
-  .gel-paragon {
-    font-size: 22px;
-    font-size: 1.375rem;
-    line-height: 26px;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width: 37.5em) {
-  .gel-paragon {
-    font-size: 30px;
-    font-size: 1.875rem;
-    line-height: 34px;
-    line-height: 2.125rem;
-  }
-  .no-touch .gel-paragon {
-    font-size: 28px;
-    font-size: 1.75rem;
-    line-height: 32px;
-    line-height: 2rem;
-  }
-}
-
-.gel-paragon-bold {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 24px;
-  line-height: 1.5rem;
-  font-weight: bold;
-  letter-spacing: -1px;
-  letter-spacing: -0.0625rem;
-}
-
-@media (min-width: 20em) {
-  .gel-paragon-bold {
-    font-size: 22px;
-    font-size: 1.375rem;
-    line-height: 26px;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width: 37.5em) {
-  .gel-paragon-bold {
-    font-size: 30px;
-    font-size: 1.875rem;
-    line-height: 34px;
-    line-height: 2.125rem;
-  }
-  .no-touch .gel-paragon-bold {
-    font-size: 28px;
-    font-size: 1.75rem;
-    line-height: 32px;
-    line-height: 2rem;
+    line-height: 48px;
+    line-height: 3rem;
   }
 }
 
 .gel-double-pica {
   font-size: 20px;
   font-size: 1.25rem;
-  line-height: 24px;
-  line-height: 1.5rem;
+  line-height: 30px;
+  line-height: 1.875rem;
 }
 
 @media (min-width: 37.5em) {
   .gel-double-pica {
-    font-size: 26px;
-    font-size: 1.625rem;
-    line-height: 30px;
-    line-height: 1.875rem;
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 40px;
+    line-height: 2.5rem;
   }
   .no-touch .gel-double-pica {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 28px;
-    line-height: 1.75rem;
+    font-size: 32px;
+    font-size: 2rem;
   }
 }
 
 .gel-double-pica-bold {
   font-size: 20px;
   font-size: 1.25rem;
-  line-height: 24px;
-  line-height: 1.5rem;
+  line-height: 30px;
+  line-height: 1.875rem;
   font-weight: bold;
   letter-spacing: -1px;
   letter-spacing: -0.0625rem;
@@ -234,49 +151,58 @@
 
 @media (min-width: 37.5em) {
   .gel-double-pica-bold {
-    font-size: 26px;
-    font-size: 1.625rem;
-    line-height: 30px;
-    line-height: 1.875rem;
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 40px;
+    line-height: 2.5rem;
   }
   .no-touch .gel-double-pica-bold {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 28px;
-    line-height: 1.75rem;
+    font-size: 32px;
+    font-size: 2rem;
   }
 }
 
 .gel-great-primer {
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 22px;
-  line-height: 1.375rem;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+}
+
+@media (min-width: 20em) {
+  .gel-great-primer {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
 }
 
 @media (min-width: 37.5em) {
   .gel-great-primer {
-    font-size: 21px;
-    font-size: 1.3125rem;
-    line-height: 24px;
-    line-height: 1.5rem;
+    font-size: 26px;
+    font-size: 1.625rem;
+    line-height: 32px;
+    line-height: 2rem;
   }
   .no-touch .gel-great-primer {
-    font-size: 20px;
-    font-size: 1.25rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
 }
 
 .gel-great-primer-bold {
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 22px;
-  line-height: 1.375rem;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 26px;
+  line-height: 1.625rem;
   font-weight: bold;
 }
 
 @media (min-width: 20em) {
   .gel-great-primer-bold {
+    font-size: 18px;
+    font-size: 1.125rem;
     letter-spacing: -1px;
     letter-spacing: -0.0625rem;
   }
@@ -284,165 +210,135 @@
 
 @media (min-width: 37.5em) {
   .gel-great-primer-bold {
-    font-size: 21px;
-    font-size: 1.3125rem;
-    line-height: 24px;
-    line-height: 1.5rem;
+    font-size: 26px;
+    font-size: 1.625rem;
+    line-height: 32px;
+    line-height: 2rem;
   }
   .no-touch .gel-great-primer-bold {
-    font-size: 20px;
-    font-size: 1.25rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
 }
 
 .gel-pica {
-  font-size: 15px;
-  font-size: 0.9375rem;
-  line-height: 20px;
-  line-height: 1.25rem;
-}
-
-@media (min-width: 20em) {
-  .gel-pica {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 20px;
-    line-height: 1.25rem;
-  }
+  font-size: 17px;
+  font-size: 1.0625rem;
+  line-height: 23px;
+  line-height: 1.4375rem;
 }
 
 @media (min-width: 37.5em) {
   .gel-pica {
-    font-size: 18px;
-    font-size: 1.125rem;
-    line-height: 22px;
-    line-height: 1.375rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
   .no-touch .gel-pica {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 20px;
-    line-height: 1.25rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 28px;
+    line-height: 1.75rem;
   }
 }
 
 .gel-pica-bold {
-  font-size: 15px;
-  font-size: 0.9375rem;
-  line-height: 20px;
-  line-height: 1.25rem;
+  font-size: 17px;
+  font-size: 1.0625rem;
+  line-height: 23px;
+  line-height: 1.4375rem;
   font-weight: bold;
-}
-
-@media (min-width: 20em) {
-  .gel-pica-bold {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 20px;
-    line-height: 1.25rem;
-  }
 }
 
 @media (min-width: 37.5em) {
   .gel-pica-bold {
-    font-size: 18px;
-    font-size: 1.125rem;
-    line-height: 22px;
-    line-height: 1.375rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
   .no-touch .gel-pica-bold {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 20px;
-    line-height: 1.25rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 28px;
+    line-height: 1.75rem;
   }
 }
 
 .gel-long-primer {
-  font-size: 15px;
-  font-size: 0.9375rem;
-  line-height: 18px;
-  line-height: 1.125rem;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 23px;
+  line-height: 1.4375rem;
 }
 
 @media (min-width: 37.5em) {
   .gel-long-primer {
-    line-height: 20px;
-    line-height: 1.25rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
   .no-touch .gel-long-primer {
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 18px;
-    line-height: 1.125rem;
+    line-height: 24px;
+    line-height: 1.5rem;
   }
 }
 
 .gel-long-primer-bold {
-  font-size: 15px;
-  font-size: 0.9375rem;
-  line-height: 18px;
-  line-height: 1.125rem;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 23px;
+  line-height: 1.4375rem;
   font-weight: bold;
 }
 
 @media (min-width: 37.5em) {
   .gel-long-primer-bold {
-    line-height: 20px;
-    line-height: 1.25rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
   .no-touch .gel-long-primer-bold {
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 18px;
-    line-height: 1.125rem;
+    line-height: 24px;
+    line-height: 1.5rem;
   }
 }
 
 .gel-brevier {
   font-size: 14px;
   font-size: 0.875rem;
-  line-height: 16px;
-  line-height: 1rem;
-}
-
-@media (min-width: 20em) {
-  .gel-brevier {
-    line-height: 18px;
-    line-height: 1.125rem;
-  }
+  line-height: 20px;
+  line-height: 1.25rem;
 }
 
 @media (min-width: 37.5em) {
   .no-touch .gel-brevier {
-    font-size: 13px;
-    font-size: 0.8125rem;
-    line-height: 16px;
-    line-height: 1rem;
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 22px;
+    line-height: 1.375rem;
   }
 }
 
 .gel-brevier-bold {
   font-size: 14px;
   font-size: 0.875rem;
-  line-height: 16px;
-  line-height: 1rem;
+  line-height: 20px;
+  line-height: 1.25rem;
   font-weight: bold;
-}
-
-@media (min-width: 20em) {
-  .gel-brevier-bold {
-    line-height: 18px;
-    line-height: 1.125rem;
-  }
 }
 
 @media (min-width: 37.5em) {
   .no-touch .gel-brevier-bold {
-    font-size: 13px;
-    font-size: 0.8125rem;
-    line-height: 16px;
-    line-height: 1rem;
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 22px;
+    line-height: 1.375rem;
   }
 }
 
@@ -454,14 +350,27 @@
   text-transform: uppercase;
 }
 
+@media (min-width: 20em) {
+  .gel-minion {
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 18px;
+    line-height: 1.125rem;
+  }
+}
+
 @media (min-width: 37.5em) {
   .gel-minion {
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 20px;
+    line-height: 1.25rem;
   }
   .no-touch .gel-minion {
-    font-size: 12px;
-    font-size: 0.75rem;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 18px;
+    line-height: 1.125rem;
   }
 }
 
@@ -474,50 +383,50 @@
   font-weight: bold;
 }
 
+@media (min-width: 20em) {
+  .gel-minion-bold {
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 18px;
+    line-height: 1.125rem;
+  }
+}
+
 @media (min-width: 37.5em) {
   .gel-minion-bold {
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 20px;
+    line-height: 1.25rem;
   }
   .no-touch .gel-minion-bold {
-    font-size: 12px;
-    font-size: 0.75rem;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 18px;
+    line-height: 1.125rem;
   }
 }
 
 .gel-body-copy {
-  font-size: 15px;
-  font-size: 0.9375rem;
-  line-height: 20px;
-  line-height: 1.25rem;
-}
-
-@media (min-width: 20em) {
-  .gel-body-copy {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 22px;
-    line-height: 1.375rem;
-  }
+  font-size: 17px;
+  font-size: 1.0625rem;
+  line-height: 23px;
+  line-height: 1.4375rem;
 }
 
 @media (min-width: 37.5em) {
   .gel-body-copy {
-    font-size: 18px;
-    font-size: 1.125rem;
-    line-height: 24px;
-    line-height: 1.5rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
   .no-touch .gel-body-copy {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 22px;
-    line-height: 1.375rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 28px;
+    line-height: 1.75rem;
   }
-}
-
-body {
-  font-family: Helvetica, Arial, freesans, sans-serif;
 }
 
 /**
