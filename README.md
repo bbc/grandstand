@@ -38,8 +38,8 @@ $ bower install --save bbc-grandstand
 // your-app/main.scss
 @import 'bower_components/bbc-grandstand/grandstand';
 ```
-
-### Script support
+  
+### Script support
 
 In addition to the Latin script defaults, Grandstand includes typographic and text direction overrides for a number of other scripts, including Arabic and Chinese.
 
