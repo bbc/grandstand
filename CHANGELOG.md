@@ -1,5 +1,6 @@
 | Version | Description |
 |---------|-------------|
+| 5.0.0   | Use gs-sass-tools @ ^5.0.2 to pull in gel-grid @ ^3.0.0 |
 | 4.1.4   | IE improvements to faux block link |
 | 4.1.3   | Add clear classes |
 | 4.1.2   | Update faux-block link to support seperate href element as well as :before. |
