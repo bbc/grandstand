@@ -1,0 +1,8 @@
+// 1. Restrict the single-column core layout to 640px so that it doesn't look
+//    too stretched out on larger screens
+@if $core {
+    body {
+        max-width: 640px; // [1]
+        margin: 0 auto;
+    }
+}

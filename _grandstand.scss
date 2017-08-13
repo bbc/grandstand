@@ -7,6 +7,11 @@
 @import 'lib/settings/l10n';
 @import 'bower_components/gs-sass-tools/sass-tools';
 
+// generic
+@import 'lib/generic/normalize';
+@import 'lib/generic/reset';
+@import 'lib/generic/single-column';
+
 // objects
 @import 'lib/objects/bullet';
 @import 'lib/objects/button';
