@@ -1,0 +1,27 @@
+.gs-o-island {
+    position: relative;
+}
+
+.gs-o-island__point {
+    position: absolute;
+
+    &--tl {
+        left: 0;
+        top: 0;
+    }
+
+    &--tr {
+        right: 0;
+        top: 0;
+    }
+
+    &--bl {
+        bottom: 0;
+        left: 0;
+    }
+
+    &--br {
+        bottom: 0;
+        right: 0;
+    }
+}
