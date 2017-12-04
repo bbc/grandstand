@@ -1,5 +1,6 @@
 | Version | Description |
 |---------|-------------|
+| 5.0.5   | Update gs-sass-tools to version 5.0.5 |
 | 5.0.3   | Use latin script for amharic, tigrinya and gujarati services |
 | 5.0.2   | Add ethiopic script for use by amharic and tigrinya services |
 | 5.0.1   | Use gs-sass-tools @ ^5.0.3 to pull in sport colours changes |
