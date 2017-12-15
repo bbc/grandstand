@@ -491,14 +491,14 @@
 .gel-wrap {
   max-width: 1008px;
   margin: 0 auto;
-  padding-left: 8px;
   padding-right: 8px;
+  padding-left: 8px;
 }
 
 @media (min-width: 25em) {
   .gel-wrap {
-    padding-right: 16px;
     padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -524,15 +524,15 @@
   -webkit-flex-grow: 1;
   -ms-flex-grow: 1;
   flex-grow: 1;
-  margin-left: 0;
-  margin-right: -8px;
-  padding-left: 0;
+  margin-right: 0;
+  margin-left: -8px;
   padding-right: 0;
+  padding-left: 0;
 }
 
 @media (min-width: 37.5em) {
   .gel-layout {
-    margin-right: -16px;
+    margin-left: -16px;
   }
 }
 
@@ -542,14 +542,14 @@
 .gel-layout__item {
   width: 100%;
   display: inline-block;
-  padding-right: 8px;
+  padding-left: 8px;
   text-align: right;
   vertical-align: top;
 }
 
 @media (min-width: 37.5em) {
   .gel-layout__item {
-    padding-right: 16px;
+    padding-left: 16px;
   }
 }
 
@@ -557,11 +557,11 @@
      * Layouts with no gutters.
      */
 .gel-layout--flush {
-  margin-right: 0;
+  margin-left: 0;
 }
 
 .gel-layout--flush > .gel-layout__item {
-  padding-right: 0;
+  padding-left: 0;
 }
 
 /**
@@ -575,13 +575,13 @@
 }
 
 .no-flexbox .gel-layout--rev {
-  direction: ltr;
-  text-align: right;
+  direction: rtl;
+  text-align: left;
 }
 
 .no-flexbox .gel-layout--rev > .gel-layout__item {
-  direction: rtl;
-  text-align: right;
+  direction: ltr;
+  text-align: left;
 }
 
 /**
@@ -616,7 +616,7 @@
      * Make the layout items fill up from the right hand side
      */
 .gel-layout--right {
-  text-align: left;
+  text-align: right;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
@@ -2299,12 +2299,12 @@
 }
 
 .gs-o-button--share {
-  background-color: #0b8a0b;
+  background-color: #4a9442;
   color: #fff;
 }
 
 .gs-o-button--share:hover {
-  background-color: #097209;
+  background-color: #41823a;
 }
 
 .gs-o-button--border {
@@ -2699,13 +2699,13 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
 
 .gs-o-list-ui__link:hover .gs-c-media-icon,
 .gs-o-list-ui__link:focus .gs-c-media-icon {
-  background-color: #ffd230;
+  background-color: #ffdf43;
   color: #121212;
 }
 
 .gs-o-list-ui__link:hover .gs-c-media-icon--live,
 .gs-o-list-ui__link:focus .gs-c-media-icon--live {
-  background-color: #2866f6;
+  background-color: #1169f6;
   color: #fff;
 }
 
@@ -3548,7 +3548,6 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
  *
  * 'alt'   - 12px
  * 'alt+'  - 24px
- * 'alt++'  - 48px
  *
  * Optional breakpoint suffix:
  *
@@ -3788,39 +3787,6 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
 
 .gs-u-mv-alt\+ {
   margin-top: 24px !important;
-  margin-bottom: 24px !important;
-}
-
-/**
-     * Alt quadruple margin spacing classes
-     */
-.gs-u-m-alt\+\+ {
-  margin: 48px !important;
-}
-
-.gs-u-mt-alt\+\+ {
-  margin-top: 48px !important;
-}
-
-.gs-u-mr-alt\+\+ {
-  margin-left: 48px !important;
-}
-
-.gs-u-mb-alt\+\+ {
-  margin-bottom: 48px !important;
-}
-
-.gs-u-ml-alt\+\+ {
-  margin-right: 48px !important;
-}
-
-.gs-u-mh-alt\+\+ {
-  margin-left: 48px !important;
-  margin-right: 24px !important;
-}
-
-.gs-u-mv-alt\+\+ {
-  margin-top: 48px !important;
   margin-bottom: 24px !important;
 }
 
@@ -4089,39 +4055,6 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
 }
 
 /**
-     * Alt quadruple padding spacing classes (gel-alt-spacing-unit)
-     */
-.gs-u-p-alt\+\+ {
-  padding: 48px !important;
-}
-
-.gs-u-pt-alt\+\+ {
-  padding-top: 48px !important;
-}
-
-.gs-u-pr-alt\+\+ {
-  padding-left: 48px !important;
-}
-
-.gs-u-pb-alt\+\+ {
-  padding-bottom: 48px !important;
-}
-
-.gs-u-pl-alt\+\+ {
-  padding-right: 48px !important;
-}
-
-.gs-u-ph-alt\+\+ {
-  padding-left: 48px !important;
-  padding-right: 24px !important;
-}
-
-.gs-u-pv-alt\+\+ {
-  padding-top: 48px !important;
-  padding-bottom: 24px !important;
-}
-
-/**
      * Zero padding spacing classes
      */
 .gs-u-p0 {
@@ -4338,32 +4271,6 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
     margin-bottom: 24px !important;
   }
   /**
-     * Alt quadruple margin spacing classes
-     */
-  .gs-u-m-alt\+\+\@xs {
-    margin: 48px !important;
-  }
-  .gs-u-mt-alt\+\+\@xs {
-    margin-top: 48px !important;
-  }
-  .gs-u-mr-alt\+\+\@xs {
-    margin-left: 48px !important;
-  }
-  .gs-u-mb-alt\+\+\@xs {
-    margin-bottom: 48px !important;
-  }
-  .gs-u-ml-alt\+\+\@xs {
-    margin-right: 48px !important;
-  }
-  .gs-u-mh-alt\+\+\@xs {
-    margin-left: 48px !important;
-    margin-right: 24px !important;
-  }
-  .gs-u-mv-alt\+\+\@xs {
-    margin-top: 48px !important;
-    margin-bottom: 24px !important;
-  }
-  /**
      * Zero margin spacing classes
      */
   .gs-u-m0\@xs {
@@ -4569,32 +4476,6 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
   .gs-u-pv-alt\+\@xs {
     padding-top: 24px !important;
-    padding-bottom: 24px !important;
-  }
-  /**
-     * Alt quadruple padding spacing classes (gel-alt-spacing-unit)
-     */
-  .gs-u-p-alt\+\+\@xs {
-    padding: 48px !important;
-  }
-  .gs-u-pt-alt\+\+\@xs {
-    padding-top: 48px !important;
-  }
-  .gs-u-pr-alt\+\+\@xs {
-    padding-left: 48px !important;
-  }
-  .gs-u-pb-alt\+\+\@xs {
-    padding-bottom: 48px !important;
-  }
-  .gs-u-pl-alt\+\+\@xs {
-    padding-right: 48px !important;
-  }
-  .gs-u-ph-alt\+\+\@xs {
-    padding-left: 48px !important;
-    padding-right: 24px !important;
-  }
-  .gs-u-pv-alt\+\+\@xs {
-    padding-top: 48px !important;
     padding-bottom: 24px !important;
   }
   /**
@@ -4809,32 +4690,6 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
     margin-bottom: 24px !important;
   }
   /**
-     * Alt quadruple margin spacing classes
-     */
-  .gs-u-m-alt\+\+\@s {
-    margin: 48px !important;
-  }
-  .gs-u-mt-alt\+\+\@s {
-    margin-top: 48px !important;
-  }
-  .gs-u-mr-alt\+\+\@s {
-    margin-left: 48px !important;
-  }
-  .gs-u-mb-alt\+\+\@s {
-    margin-bottom: 48px !important;
-  }
-  .gs-u-ml-alt\+\+\@s {
-    margin-right: 48px !important;
-  }
-  .gs-u-mh-alt\+\+\@s {
-    margin-left: 48px !important;
-    margin-right: 24px !important;
-  }
-  .gs-u-mv-alt\+\+\@s {
-    margin-top: 48px !important;
-    margin-bottom: 24px !important;
-  }
-  /**
      * Zero margin spacing classes
      */
   .gs-u-m0\@s {
@@ -5040,32 +4895,6 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
   .gs-u-pv-alt\+\@s {
     padding-top: 24px !important;
-    padding-bottom: 24px !important;
-  }
-  /**
-     * Alt quadruple padding spacing classes (gel-alt-spacing-unit)
-     */
-  .gs-u-p-alt\+\+\@s {
-    padding: 48px !important;
-  }
-  .gs-u-pt-alt\+\+\@s {
-    padding-top: 48px !important;
-  }
-  .gs-u-pr-alt\+\+\@s {
-    padding-left: 48px !important;
-  }
-  .gs-u-pb-alt\+\+\@s {
-    padding-bottom: 48px !important;
-  }
-  .gs-u-pl-alt\+\+\@s {
-    padding-right: 48px !important;
-  }
-  .gs-u-ph-alt\+\+\@s {
-    padding-left: 48px !important;
-    padding-right: 24px !important;
-  }
-  .gs-u-pv-alt\+\+\@s {
-    padding-top: 48px !important;
     padding-bottom: 24px !important;
   }
   /**
@@ -5280,32 +5109,6 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
     margin-bottom: 24px !important;
   }
   /**
-     * Alt quadruple margin spacing classes
-     */
-  .gs-u-m-alt\+\+\@m {
-    margin: 48px !important;
-  }
-  .gs-u-mt-alt\+\+\@m {
-    margin-top: 48px !important;
-  }
-  .gs-u-mr-alt\+\+\@m {
-    margin-left: 48px !important;
-  }
-  .gs-u-mb-alt\+\+\@m {
-    margin-bottom: 48px !important;
-  }
-  .gs-u-ml-alt\+\+\@m {
-    margin-right: 48px !important;
-  }
-  .gs-u-mh-alt\+\+\@m {
-    margin-left: 48px !important;
-    margin-right: 24px !important;
-  }
-  .gs-u-mv-alt\+\+\@m {
-    margin-top: 48px !important;
-    margin-bottom: 24px !important;
-  }
-  /**
      * Zero margin spacing classes
      */
   .gs-u-m0\@m {
@@ -5511,32 +5314,6 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
   .gs-u-pv-alt\+\@m {
     padding-top: 24px !important;
-    padding-bottom: 24px !important;
-  }
-  /**
-     * Alt quadruple padding spacing classes (gel-alt-spacing-unit)
-     */
-  .gs-u-p-alt\+\+\@m {
-    padding: 48px !important;
-  }
-  .gs-u-pt-alt\+\+\@m {
-    padding-top: 48px !important;
-  }
-  .gs-u-pr-alt\+\+\@m {
-    padding-left: 48px !important;
-  }
-  .gs-u-pb-alt\+\+\@m {
-    padding-bottom: 48px !important;
-  }
-  .gs-u-pl-alt\+\+\@m {
-    padding-right: 48px !important;
-  }
-  .gs-u-ph-alt\+\+\@m {
-    padding-left: 48px !important;
-    padding-right: 24px !important;
-  }
-  .gs-u-pv-alt\+\+\@m {
-    padding-top: 48px !important;
     padding-bottom: 24px !important;
   }
   /**
@@ -5751,32 +5528,6 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
     margin-bottom: 24px !important;
   }
   /**
-     * Alt quadruple margin spacing classes
-     */
-  .gs-u-m-alt\+\+\@l {
-    margin: 48px !important;
-  }
-  .gs-u-mt-alt\+\+\@l {
-    margin-top: 48px !important;
-  }
-  .gs-u-mr-alt\+\+\@l {
-    margin-left: 48px !important;
-  }
-  .gs-u-mb-alt\+\+\@l {
-    margin-bottom: 48px !important;
-  }
-  .gs-u-ml-alt\+\+\@l {
-    margin-right: 48px !important;
-  }
-  .gs-u-mh-alt\+\+\@l {
-    margin-left: 48px !important;
-    margin-right: 24px !important;
-  }
-  .gs-u-mv-alt\+\+\@l {
-    margin-top: 48px !important;
-    margin-bottom: 24px !important;
-  }
-  /**
      * Zero margin spacing classes
      */
   .gs-u-m0\@l {
@@ -5982,32 +5733,6 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
   .gs-u-pv-alt\+\@l {
     padding-top: 24px !important;
-    padding-bottom: 24px !important;
-  }
-  /**
-     * Alt quadruple padding spacing classes (gel-alt-spacing-unit)
-     */
-  .gs-u-p-alt\+\+\@l {
-    padding: 48px !important;
-  }
-  .gs-u-pt-alt\+\+\@l {
-    padding-top: 48px !important;
-  }
-  .gs-u-pr-alt\+\+\@l {
-    padding-left: 48px !important;
-  }
-  .gs-u-pb-alt\+\+\@l {
-    padding-bottom: 48px !important;
-  }
-  .gs-u-pl-alt\+\+\@l {
-    padding-right: 48px !important;
-  }
-  .gs-u-ph-alt\+\+\@l {
-    padding-left: 48px !important;
-    padding-right: 24px !important;
-  }
-  .gs-u-pv-alt\+\+\@l {
-    padding-top: 48px !important;
     padding-bottom: 24px !important;
   }
   /**
@@ -6222,32 +5947,6 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
     margin-bottom: 24px !important;
   }
   /**
-     * Alt quadruple margin spacing classes
-     */
-  .gs-u-m-alt\+\+\@xl {
-    margin: 48px !important;
-  }
-  .gs-u-mt-alt\+\+\@xl {
-    margin-top: 48px !important;
-  }
-  .gs-u-mr-alt\+\+\@xl {
-    margin-left: 48px !important;
-  }
-  .gs-u-mb-alt\+\+\@xl {
-    margin-bottom: 48px !important;
-  }
-  .gs-u-ml-alt\+\+\@xl {
-    margin-right: 48px !important;
-  }
-  .gs-u-mh-alt\+\+\@xl {
-    margin-left: 48px !important;
-    margin-right: 24px !important;
-  }
-  .gs-u-mv-alt\+\+\@xl {
-    margin-top: 48px !important;
-    margin-bottom: 24px !important;
-  }
-  /**
      * Zero margin spacing classes
      */
   .gs-u-m0\@xl {
@@ -6456,32 +6155,6 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
     padding-bottom: 24px !important;
   }
   /**
-     * Alt quadruple padding spacing classes (gel-alt-spacing-unit)
-     */
-  .gs-u-p-alt\+\+\@xl {
-    padding: 48px !important;
-  }
-  .gs-u-pt-alt\+\+\@xl {
-    padding-top: 48px !important;
-  }
-  .gs-u-pr-alt\+\+\@xl {
-    padding-left: 48px !important;
-  }
-  .gs-u-pb-alt\+\+\@xl {
-    padding-bottom: 48px !important;
-  }
-  .gs-u-pl-alt\+\+\@xl {
-    padding-right: 48px !important;
-  }
-  .gs-u-ph-alt\+\+\@xl {
-    padding-left: 48px !important;
-    padding-right: 24px !important;
-  }
-  .gs-u-pv-alt\+\+\@xl {
-    padding-top: 48px !important;
-    padding-bottom: 24px !important;
-  }
-  /**
      * Zero padding spacing classes
      */
   .gs-u-p0\@xl {
@@ -6533,9 +6206,6 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
      * Alt double margin spacing classes
      */
     /**
-     * Alt quadruple margin spacing classes
-     */
-    /**
      * Zero margin spacing classes
      */
     /**
@@ -6558,9 +6228,6 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
      */
     /**
      * Alt double padding spacing classes (gel-alt-spacing-unit)
-     */
-    /**
-     * Alt quadruple padding spacing classes (gel-alt-spacing-unit)
      */
     /**
      * Zero padding spacing classes
@@ -6725,29 +6392,6 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
   .b-pw-1280 .gs-u-mv-alt\+\@xxl {
     margin-top: 24px !important;
-    margin-bottom: 24px !important;
-  }
-  .b-pw-1280 .gs-u-m-alt\+\+\@xxl {
-    margin: 48px !important;
-  }
-  .b-pw-1280 .gs-u-mt-alt\+\+\@xxl {
-    margin-top: 48px !important;
-  }
-  .b-pw-1280 .gs-u-mr-alt\+\+\@xxl {
-    margin-left: 48px !important;
-  }
-  .b-pw-1280 .gs-u-mb-alt\+\+\@xxl {
-    margin-bottom: 48px !important;
-  }
-  .b-pw-1280 .gs-u-ml-alt\+\+\@xxl {
-    margin-right: 48px !important;
-  }
-  .b-pw-1280 .gs-u-mh-alt\+\+\@xxl {
-    margin-left: 48px !important;
-    margin-right: 24px !important;
-  }
-  .b-pw-1280 .gs-u-mv-alt\+\+\@xxl {
-    margin-top: 48px !important;
     margin-bottom: 24px !important;
   }
   .b-pw-1280 .gs-u-m0\@xxl {
@@ -6932,29 +6576,6 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
   .b-pw-1280 .gs-u-pv-alt\+\@xxl {
     padding-top: 24px !important;
-    padding-bottom: 24px !important;
-  }
-  .b-pw-1280 .gs-u-p-alt\+\+\@xxl {
-    padding: 48px !important;
-  }
-  .b-pw-1280 .gs-u-pt-alt\+\+\@xxl {
-    padding-top: 48px !important;
-  }
-  .b-pw-1280 .gs-u-pr-alt\+\+\@xxl {
-    padding-left: 48px !important;
-  }
-  .b-pw-1280 .gs-u-pb-alt\+\+\@xxl {
-    padding-bottom: 48px !important;
-  }
-  .b-pw-1280 .gs-u-pl-alt\+\+\@xxl {
-    padding-right: 48px !important;
-  }
-  .b-pw-1280 .gs-u-ph-alt\+\+\@xxl {
-    padding-left: 48px !important;
-    padding-right: 24px !important;
-  }
-  .b-pw-1280 .gs-u-pv-alt\+\+\@xxl {
-    padding-top: 48px !important;
     padding-bottom: 24px !important;
   }
   .b-pw-1280 .gs-u-p0\@xxl {
