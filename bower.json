@@ -4,7 +4,7 @@
   "authors": [
     "Shaun Bent <shaun.bent@bbc.co.uk>"
   ],
-  "description": "The BBC Grandstand CSS Framework is used by Sport, Live and News components",
+  "description": "The BBC Grandstand CSS Framework is used by Sport, Live, News and Radio components",
   "main": "_grandstand.scss",
   "license": "MIT",
   "ignore": [
@@ -17,5 +17,5 @@
   "dependencies": {
     "gs-sass-tools": "git@github.com:bbc/gs-sass-tools.git#^5.0.5"
   },
-  "version": "5.0.4"
+  "version": "5.1.0"
 }
