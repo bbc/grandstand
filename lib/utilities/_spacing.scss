@@ -160,7 +160,7 @@ $gs-spacing-breakpoints--1280: $gel-grid-breakpoints--1280 !default;
     .gs-u-mv-alt\+#{$breakpoint-suffix}      { margin-top:       double($gel-alt-spacing-unit) !important; margin-bottom:    double($gel-alt-spacing-unit) !important; }
 
     /**
-     * Alt triple margin spacing classes
+     * Alt quadruple margin spacing classes
      */
     .gs-u-m-alt\+\+#{$breakpoint-suffix}       { margin:           quadruple($gel-alt-spacing-unit) !important; }
     .gs-u-mt-alt\+\+#{$breakpoint-suffix}      { margin-top:       quadruple($gel-alt-spacing-unit) !important; }
@@ -259,7 +259,7 @@ $gs-spacing-breakpoints--1280: $gel-grid-breakpoints--1280 !default;
     .gs-u-pv-alt\+#{$breakpoint-suffix}  { padding-top:       double($gel-alt-spacing-unit) !important; padding-bottom:    double($gel-alt-spacing-unit) !important; }
 
     /**
-     * Alt triple padding spacing classes (gel-alt-spacing-unit)
+     * Alt quadruple padding spacing classes (gel-alt-spacing-unit)
      */
     .gs-u-p-alt\+\+#{$breakpoint-suffix}   { padding:           quadruple($gel-alt-spacing-unit) !important; }
     .gs-u-pt-alt\+\+#{$breakpoint-suffix}  { padding-top:       quadruple($gel-alt-spacing-unit) !important; }
