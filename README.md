@@ -28,17 +28,17 @@ This library is built and maintained by the BBC Sport team and used by various c
 
 ## Installation
 
-Grandstand can be installed using Bower:
+Grandstand can be installed using NPM / Yarn:
 
 ```bash
-$ bower install --save bbc-grandstand
+$ npm install --save bbc-grandstand
 ```
 
 ```sass
 // your-app/main.scss
-@import 'bower_components/bbc-grandstand/grandstand';
+@import 'node_modules/bbc-grandstand/grandstand';
 ```
-  
+
 ### Script support
 
 In addition to the Latin script defaults, Grandstand includes typographic and text direction overrides for a number of other scripts, including Arabic and Chinese.

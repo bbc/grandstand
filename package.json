@@ -1,6 +1,6 @@
 {
   "name": "bbc-grandstand",
-  "version": "5.0.4",
+  "version": "6.0.0",
   "description": "The BBC Grandstand CSS Framework is used by Sport and Live components",
   "main": "_grandstand.scss",
   "scripts": {
@@ -19,10 +19,10 @@
   },
   "homepage": "http://bbc.github.io/grandstand/",
   "devDependencies": {
-    "bower": "^1.7.9",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-sass": "^2.0.0",
+    "gs-sass-tools": "^6.0.0",
     "node-sass": "^4.5.0"
   }
 }

@@ -1,5 +1,4 @@
-# Bower
-bower_components/
+# NPM
 node_modules/
 
 # Misc
