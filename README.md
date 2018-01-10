@@ -31,12 +31,12 @@ This library is built and maintained by the BBC Sport team and used by various c
 Grandstand can be installed using NPM / Yarn:
 
 ```bash
-$ npm install --save bbc-grandstand
+$ npm install --save @bbc/grandstand
 ```
 
 ```sass
 // your-app/main.scss
-@import 'node_modules/bbc-grandstand/grandstand';
+@import 'node_modules/@bbc/grandstand/grandstand';
 ```
 
 ### Script support
