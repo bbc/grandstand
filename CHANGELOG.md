@@ -1,5 +1,6 @@
 | Version | Description |
 |---------|-------------|
+| 5.1.0   | Add alt++ to spacing utility |
 | 5.0.4   | Update gs-sass-tools to version 5.0.5 |
 | 5.0.3   | Use latin script for amharic, tigrinya and gujarati services |
 | 5.0.2   | Add ethiopic script for use by amharic and tigrinya services |
