@@ -167,8 +167,8 @@ $gs-spacing-breakpoints--1280: $gel-grid-breakpoints--1280 !default;
     .gs-u-mr-alt\+\+#{$breakpoint-suffix}      { #{$margin-right}: quadruple($gel-alt-spacing-unit) !important; }
     .gs-u-mb-alt\+\+#{$breakpoint-suffix}      { margin-bottom:    quadruple($gel-alt-spacing-unit) !important; }
     .gs-u-ml-alt\+\+#{$breakpoint-suffix}      { #{$margin-left}:  quadruple($gel-alt-spacing-unit) !important; }
-    .gs-u-mh-alt\+\+#{$breakpoint-suffix}      { #{$margin-right}: quadruple($gel-alt-spacing-unit) !important; #{$margin-left}:  double($gel-alt-spacing-unit) !important; }
-    .gs-u-mv-alt\+\+#{$breakpoint-suffix}      { margin-top:       quadruple($gel-alt-spacing-unit) !important; margin-bottom:    double($gel-alt-spacing-unit) !important; }
+    .gs-u-mh-alt\+\+#{$breakpoint-suffix}      { #{$margin-right}: quadruple($gel-alt-spacing-unit) !important; #{$margin-left}:  quadruple($gel-alt-spacing-unit) !important; }
+    .gs-u-mv-alt\+\+#{$breakpoint-suffix}      { margin-top:       quadruple($gel-alt-spacing-unit) !important; margin-bottom:    quadruple($gel-alt-spacing-unit) !important; }
 
     /**
      * Zero margin spacing classes
@@ -266,8 +266,8 @@ $gs-spacing-breakpoints--1280: $gel-grid-breakpoints--1280 !default;
     .gs-u-pr-alt\+\+#{$breakpoint-suffix}  { #{$padding-right}: quadruple($gel-alt-spacing-unit) !important; }
     .gs-u-pb-alt\+\+#{$breakpoint-suffix}  { padding-bottom:    quadruple($gel-alt-spacing-unit) !important; }
     .gs-u-pl-alt\+\+#{$breakpoint-suffix}  { #{$padding-left}:  quadruple($gel-alt-spacing-unit) !important; }
-    .gs-u-ph-alt\+\+#{$breakpoint-suffix}  { #{$padding-right}: quadruple($gel-alt-spacing-unit) !important; #{$padding-left}:  double($gel-alt-spacing-unit) !important; }
-    .gs-u-pv-alt\+\+#{$breakpoint-suffix}  { padding-top:       quadruple($gel-alt-spacing-unit) !important; padding-bottom:    double($gel-alt-spacing-unit) !important; }
+    .gs-u-ph-alt\+\+#{$breakpoint-suffix}  { #{$padding-right}: quadruple($gel-alt-spacing-unit) !important; #{$padding-left}:  quadruple($gel-alt-spacing-unit) !important; }
+    .gs-u-pv-alt\+\+#{$breakpoint-suffix}  { padding-top:       quadruple($gel-alt-spacing-unit) !important; padding-bottom:    quadruple($gel-alt-spacing-unit) !important; }
 
     /**
      * Zero padding spacing classes
