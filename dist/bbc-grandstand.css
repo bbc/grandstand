@@ -3852,12 +3852,12 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
 
 .gs-u-mh-alt\+\+ {
   margin-right: 48px !important;
-  margin-left: 24px !important;
+  margin-left: 48px !important;
 }
 
 .gs-u-mv-alt\+\+ {
   margin-top: 48px !important;
-  margin-bottom: 24px !important;
+  margin-bottom: 48px !important;
 }
 
 /**
@@ -4149,12 +4149,12 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
 
 .gs-u-ph-alt\+\+ {
   padding-right: 48px !important;
-  padding-left: 24px !important;
+  padding-left: 48px !important;
 }
 
 .gs-u-pv-alt\+\+ {
   padding-top: 48px !important;
-  padding-bottom: 24px !important;
+  padding-bottom: 48px !important;
 }
 
 /**
@@ -4393,11 +4393,11 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
   .gs-u-mh-alt\+\+\@xs {
     margin-right: 48px !important;
-    margin-left: 24px !important;
+    margin-left: 48px !important;
   }
   .gs-u-mv-alt\+\+\@xs {
     margin-top: 48px !important;
-    margin-bottom: 24px !important;
+    margin-bottom: 48px !important;
   }
   /**
      * Zero margin spacing classes
@@ -4627,11 +4627,11 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
   .gs-u-ph-alt\+\+\@xs {
     padding-right: 48px !important;
-    padding-left: 24px !important;
+    padding-left: 48px !important;
   }
   .gs-u-pv-alt\+\+\@xs {
     padding-top: 48px !important;
-    padding-bottom: 24px !important;
+    padding-bottom: 48px !important;
   }
   /**
      * Zero padding spacing classes
@@ -4864,11 +4864,11 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
   .gs-u-mh-alt\+\+\@s {
     margin-right: 48px !important;
-    margin-left: 24px !important;
+    margin-left: 48px !important;
   }
   .gs-u-mv-alt\+\+\@s {
     margin-top: 48px !important;
-    margin-bottom: 24px !important;
+    margin-bottom: 48px !important;
   }
   /**
      * Zero margin spacing classes
@@ -5098,11 +5098,11 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
   .gs-u-ph-alt\+\+\@s {
     padding-right: 48px !important;
-    padding-left: 24px !important;
+    padding-left: 48px !important;
   }
   .gs-u-pv-alt\+\+\@s {
     padding-top: 48px !important;
-    padding-bottom: 24px !important;
+    padding-bottom: 48px !important;
   }
   /**
      * Zero padding spacing classes
@@ -5335,11 +5335,11 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
   .gs-u-mh-alt\+\+\@m {
     margin-right: 48px !important;
-    margin-left: 24px !important;
+    margin-left: 48px !important;
   }
   .gs-u-mv-alt\+\+\@m {
     margin-top: 48px !important;
-    margin-bottom: 24px !important;
+    margin-bottom: 48px !important;
   }
   /**
      * Zero margin spacing classes
@@ -5569,11 +5569,11 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
   .gs-u-ph-alt\+\+\@m {
     padding-right: 48px !important;
-    padding-left: 24px !important;
+    padding-left: 48px !important;
   }
   .gs-u-pv-alt\+\+\@m {
     padding-top: 48px !important;
-    padding-bottom: 24px !important;
+    padding-bottom: 48px !important;
   }
   /**
      * Zero padding spacing classes
@@ -5806,11 +5806,11 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
   .gs-u-mh-alt\+\+\@l {
     margin-right: 48px !important;
-    margin-left: 24px !important;
+    margin-left: 48px !important;
   }
   .gs-u-mv-alt\+\+\@l {
     margin-top: 48px !important;
-    margin-bottom: 24px !important;
+    margin-bottom: 48px !important;
   }
   /**
      * Zero margin spacing classes
@@ -6040,11 +6040,11 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
   .gs-u-ph-alt\+\+\@l {
     padding-right: 48px !important;
-    padding-left: 24px !important;
+    padding-left: 48px !important;
   }
   .gs-u-pv-alt\+\+\@l {
     padding-top: 48px !important;
-    padding-bottom: 24px !important;
+    padding-bottom: 48px !important;
   }
   /**
      * Zero padding spacing classes
@@ -6277,11 +6277,11 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
   .gs-u-mh-alt\+\+\@xl {
     margin-right: 48px !important;
-    margin-left: 24px !important;
+    margin-left: 48px !important;
   }
   .gs-u-mv-alt\+\+\@xl {
     margin-top: 48px !important;
-    margin-bottom: 24px !important;
+    margin-bottom: 48px !important;
   }
   /**
      * Zero margin spacing classes
@@ -6511,11 +6511,11 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
   .gs-u-ph-alt\+\+\@xl {
     padding-right: 48px !important;
-    padding-left: 24px !important;
+    padding-left: 48px !important;
   }
   .gs-u-pv-alt\+\+\@xl {
     padding-top: 48px !important;
-    padding-bottom: 24px !important;
+    padding-bottom: 48px !important;
   }
   /**
      * Zero padding spacing classes
@@ -6780,11 +6780,11 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
   .b-pw-1280 .gs-u-mh-alt\+\+\@xxl {
     margin-right: 48px !important;
-    margin-left: 24px !important;
+    margin-left: 48px !important;
   }
   .b-pw-1280 .gs-u-mv-alt\+\+\@xxl {
     margin-top: 48px !important;
-    margin-bottom: 24px !important;
+    margin-bottom: 48px !important;
   }
   .b-pw-1280 .gs-u-m0\@xxl {
     margin: 0 !important;
@@ -6987,11 +6987,11 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
   .b-pw-1280 .gs-u-ph-alt\+\+\@xxl {
     padding-right: 48px !important;
-    padding-left: 24px !important;
+    padding-left: 48px !important;
   }
   .b-pw-1280 .gs-u-pv-alt\+\+\@xxl {
     padding-top: 48px !important;
-    padding-bottom: 24px !important;
+    padding-bottom: 48px !important;
   }
   .b-pw-1280 .gs-u-p0\@xxl {
     padding: 0 !important;
