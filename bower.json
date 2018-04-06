@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "gs-sass-tools": "git@github.com:bbc/gs-sass-tools.git#^5.0.5"
+    "gs-sass-tools": "git@github.com:bbc/gs-sass-tools.git#^5.0.8"
   },
-  "version": "5.1.0"
+  "version": "5.1.1"
 }
