@@ -1,6 +1,5 @@
 | Version | Description |
 |---------|-------------|
-| 5.1.1   | Use gs-sass-tools @ ^5.0.8 to pull in social colour changes |
 | 5.1.0   | Add alt++ to spacing utility |
 | 5.0.4   | Update gs-sass-tools to version 5.0.5 |
 | 5.0.3   | Use latin script for amharic, tigrinya and gujarati services |
