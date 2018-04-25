@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    # ANIMATION
+\*------------------------------------*/
+
+/**
+ * Reduce Motion
+ *
+ * @link https://css-tricks.com/introduction-reduced-motion-media-query/
+ */
+ .gs-u-reduce-motion {
+    @media screen and (prefers-reduced-motion: reduce) {
+        display: none;
+    }
+}
