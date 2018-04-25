@@ -9,6 +9,6 @@
  */
  .gs-u-reduce-motion {
     @media screen and (prefers-reduced-motion: reduce) {
-        display: none;
+        animation: none;
     }
 }
