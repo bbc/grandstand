@@ -2,13 +2,19 @@
     # ANIMATION
 \*------------------------------------*/
 
+@mixin reduceMotion {
+    @media screen and (prefers-reduced-motion: reduce) {
+        @content;
+    }
+}
+
 /**
  * Reduce Motion
  *
  * @link https://css-tricks.com/introduction-reduced-motion-media-query/
  */
  .gs-u-reduce-motion {
-    @media screen and (prefers-reduced-motion: reduce) {
+    @include reduceMotion {
         animation: none;
     }
 }
