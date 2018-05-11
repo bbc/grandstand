@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    # ISLAND
+\*------------------------------------*/
+
+/**
+ * The island will isolate items to be positioned absolutely
+ * and can be positioned to any corner using the modifiers.
+ *
+ *  <div class="gs-o-island">
+ *      <div class="gs-o-island__point">
+ *          [this is absolute positioned to the top left]
+ *      </div>
+ *  </div>
+ *
+ */
+ .gs-o-island {
+    position: relative;
+}
+
+.gs-o-island__point {
+    position: absolute;
+
+    &--tr {
+        right: 0;
+        top: 0;
+    }
+
+    &--bl {
+        bottom: 0;
+        left: 0;
+    }
+
+    &--br {
+        bottom: 0;
+        right: 0;
+    }
+}
