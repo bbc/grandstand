@@ -1,6 +1,8 @@
-/*------------------------------------*    # GRANDSTAND
+/*------------------------------------*\
+    # GRANDSTAND
 \*------------------------------------*/
-/*------------------------------------*    # SCRIPT-SPECIFIC OVERRIDES
+/*------------------------------------*\
+    # SCRIPT-SPECIFIC OVERRIDES
 \*------------------------------------*/
 /* Lines */
 /* Links */
@@ -2018,7 +2020,8 @@
   }
 }
 
-/*------------------------------------*    # BULLET
+/*------------------------------------*\
+    # BULLET
 \*------------------------------------*/
 /**
  * The `bullet` pattern is used to align an icon with some text,
@@ -2158,7 +2161,8 @@
   margin-left: 4px;
 }
 
-/*------------------------------------*    # BUTTON
+/*------------------------------------*\
+    # BUTTON
 \*------------------------------------*/
 /**
  * 1. Allow us to style box model properties.
@@ -2273,7 +2277,8 @@
   top: 0;
 }
 
-/*------------------------------------*    # FAUX BLOCK LINK
+/*------------------------------------*\
+    # FAUX BLOCK LINK
 \*------------------------------------*/
 /*
 * The `Faux Block Link` pattern allows you to make an entire block
@@ -2372,7 +2377,8 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   z-index: 0;
 }
 
-/*------------------------------------*    # FLAG OBJECT
+/*------------------------------------*\
+    # FLAG OBJECT
 \*------------------------------------*/
 /**
  * The flag object is a design pattern similar to the media object, however it
@@ -2441,7 +2447,8 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   margin-bottom: 0;
 }
 
-/*------------------------------------*    # ICONS
+/*------------------------------------*\
+    # ICONS
 \*------------------------------------*/
 /**
      * 1. Inherit the width and height from the parent element, without
@@ -2506,7 +2513,8 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
 }
 
-/*------------------------------------*    # LIST-INLINE
+/*------------------------------------*\
+    # LIST-INLINE
 \*------------------------------------*/
 /**
  * The list-inline object simply displays a list of items in one line.
@@ -2592,7 +2600,8 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   margin-right: 0;
 }
 
-/*------------------------------------*    # LIST-UI
+/*------------------------------------*\
+    # LIST-UI
 \*------------------------------------*/
 /**
  * The UI list object creates blocky list items with a keyline separator out of
@@ -2660,7 +2669,8 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   color: #fff;
 }
 
-/*------------------------------------*    # MEDIA OBJECT
+/*------------------------------------*\
+    # MEDIA OBJECT
 \*------------------------------------*/
 /**
  * Nicole Sullivan's media object is often referred to as the poster child of
@@ -2712,7 +2722,8 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   /* [1] */
 }
 
-/*------------------------------------*    # MEDIA ISLAND
+/*------------------------------------*\
+    # MEDIA ISLAND
 \*------------------------------------*/
 /**
  * The media island is design to isolate media items from
@@ -2739,7 +2750,8 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   left: 0;
 }
 
-/*------------------------------------*    # RESPONSIVE IMAGE
+/*------------------------------------*\
+    # RESPONSIVE IMAGE
 \*------------------------------------*/
 /**
  * The responsive image pattern automatically reserves the space
@@ -2804,7 +2816,8 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   padding-bottom: 56.25%;
 }
 
-/*------------------------------------*    # TABLE
+/*------------------------------------*\
+    # TABLE
 \*------------------------------------*/
 /**
  * The table object allows you to make complex tables,
@@ -2936,7 +2949,28 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   text-decoration: underline;
 }
 
-/*------------------------------------*    # BOX SIZING
+/*------------------------------------*\
+    # ANIMATION
+\*------------------------------------*/
+/**
+ * Reduce Motion mixin
+ *
+ * Allow for custom usage within consumer codebases
+ * Usage: .example { @include reduceMotion {display:none;} }
+ */
+/**
+ * Reduce Motion
+ *
+ * @link https://css-tricks.com/introduction-reduced-motion-media-query/
+ */
+@media screen and (prefers-reduced-motion: reduce) {
+  .gs-u-reduce-motion {
+    animation: none;
+  }
+}
+
+/*------------------------------------*\
+    # BOX SIZING
 \*------------------------------------*/
 /**
  * Grandstand assumes you're applying box-sizing: border-box;
@@ -2954,7 +2988,8 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   box-sizing: border-box;
 }
 
-/*------------------------------------*    # CLEARFIX
+/*------------------------------------*\
+    # CLEARFIX
 \*------------------------------------*/
 /**
  * Micro clearfix
@@ -2968,7 +3003,8 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   clear: both;
 }
 
-/*------------------------------------*    # DISPLAY
+/*------------------------------------*\
+    # DISPLAY
 \*------------------------------------*/
 /**
  * A utility for applying common box rendering.
@@ -3221,7 +3257,8 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
 }
 
-/*------------------------------------*    # FLOATS
+/*------------------------------------*\
+    # FLOATS
 \*------------------------------------*/
 /**
  * A utility for applying floats
@@ -3316,7 +3353,8 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
 }
 
-/*------------------------------------*    # CLEARS
+/*------------------------------------*\
+    # CLEARS
 \*------------------------------------*/
 /**
  * A utility for applying clears
@@ -3411,7 +3449,8 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
 }
 
-/*------------------------------------*    # TEXT ALIGNMENT
+/*------------------------------------*\
+    # TEXT ALIGNMENT
 \*------------------------------------*/
 /**
  * A utility for managing the alignment of text elements
@@ -3454,7 +3493,8 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   vertical-align: text-bottom;
 }
 
-/*------------------------------------*    # SPACING
+/*------------------------------------*\
+    # SPACING
 \*------------------------------------*/
 /**
  * Spacing (margin and padding) utility classes. These can be used to adjust layouts of components contructed
@@ -6933,7 +6973,8 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
   }
 }
 
-/*------------------------------------*    # VISIBILITY
+/*------------------------------------*\
+    # VISIBILITY
 \*------------------------------------*/
 /**
  * Hide visually and from screen readers: http://bit.ly/1sfdZho

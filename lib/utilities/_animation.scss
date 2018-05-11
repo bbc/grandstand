@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    # ANIMATION
+\*------------------------------------*/
+
+/**
+ * Reduce Motion mixin
+ *
+ * Allow for custom usage within consumer codebases
+ * Usage: .example { @include reduceMotion {display:none;} }
+ */
+@mixin reduceMotion {
+    @media screen and (prefers-reduced-motion: reduce) {
+        @content;
+    }
+}
+
+/**
+ * Reduce Motion
+ *
+ * @link https://css-tricks.com/introduction-reduced-motion-media-query/
+ */
+ .gs-u-reduce-motion {
+    @include reduceMotion {
+        animation: none;
+    }
+}
