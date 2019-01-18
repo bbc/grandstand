@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    # LINK
+\*------------------------------------*/
+
+/**
+ * Commonly used link styles
+ */
+ 
+.gs-o-link {
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
