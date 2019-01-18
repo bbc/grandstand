@@ -2477,6 +2477,20 @@ Our implementation is based on http://codepen.io/IschaGast/pen/Qjxpxo
 }
 
 /*------------------------------------*\
+    # LINK
+\*------------------------------------*/
+/**
+ * Commonly used link styles
+ */
+.gs-o-link {
+  text-decoration: none;
+}
+
+.gs-o-link:hover, .gs-o-link:focus {
+  text-decoration: underline;
+}
+
+/*------------------------------------*\
     # LIST-INLINE
 \*------------------------------------*/
 /**
