@@ -1,5 +1,6 @@
 | Version | Description |
 |---------|-------------|
+| 5.3.1   | Update arabic fonts for Reith Qalam |
 | 5.3.0   | Add link object and commonly used link class |
 | 5.2.1   | Add helper for reduced motion |
 | 5.1.1   | Use gs-sass-tools @ ^5.0.8 to pull in social colour changes |

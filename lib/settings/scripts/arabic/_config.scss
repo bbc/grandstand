@@ -4,11 +4,11 @@
     // so after talking to UX the same settings as pica were used for the new class
     $pica: (
         'group-a': (
-            'font-size': 16px,
-            'line-height': 26px
+            'font-size': 15px,
+            'line-height': 24px
         ),
         'group-b': (
-            'font-size': 18px,
+            'font-size': 16px,
             'line-height': 24px
         ),
         'group-c': (
@@ -16,23 +16,27 @@
             'line-height': 26px
         ),
         'group-d': (
-            'font-size': 18px,
-            'line-height': 22px
+            'font-size': 16px,
+            'line-height': 24px
         )
     );
     $gel-type-settings: (
         'canon': (
             'group-a': (
-                'font-size': 20px,
-                'line-height': 24px
+                'font-size': 24px,
+                'line-height': 32px
             ),
             'group-b': (
-                'font-size': 24px,
-                'line-height': 28px
+                'font-size': 28px,
+                'line-height': 38px
             ),
             'group-c': (
                 'font-size': 32px,
                 'line-height': 36px
+            ),
+            'group-d': (
+                'font-size': 40px,
+                'line-height': 54px
             )
         ),
         'canon-bold': (
@@ -47,14 +51,16 @@
                 'line-height': 28px
             ),
             'group-b': (
-                'font-size': 24px
+                'font-size': 24px,
+                'line-height': 34px
             ),
             'group-c': (
                 'font-size': 32px,
                 'line-height': 40px
             ),
             'group-d': (
-                'line-height': 38px
+                'font-size': 32px,
+                'line-height': 42px
             )
         ),
         'trafalgar-bold': (
@@ -65,10 +71,11 @@
         ),
         'double-pica': (
             'group-a': (
-                'font-size': 24px,
-                'line-height': 32px
+                'font-size': 20px,
+                'line-height': 28px
             ),
             'group-b': (
+                'font-size': 20px,
                 'line-height': 28px
             ),
             'group-c': (
@@ -77,7 +84,7 @@
             ),
             'group-d': (
                 'font-size': 24px,
-                'line-height': 28px
+                'line-height': 32px
             )
         ),
         'double-pica-bold': (
@@ -92,15 +99,16 @@
                 'line-height': 26px
             ),
             'group-b': (
-                'font-size': 20px,
-                'line-height': 24px
+                'font-size': 18px,
+                'line-height': 26px
             ),
             'group-c': (
                 'font-size': 22px,
                 'line-height': 26px
             ),
             'group-d': (
-                'font-size': 20px
+                'font-size': 20px,
+                'line-height': 28px
             )
         ),
         'great-primer-bold': (
@@ -119,11 +127,11 @@
         ),
         'long-primer': (
             'group-a': (
-                'font-size': 17px,
-                'line-height': 24px
+                'font-size': 15px,
+                'line-height': 22px
             ),
             'group-b': (
-                'font-size': 16px,
+                'font-size': 15px,
                 'line-height': 22px
             ),
             'group-c': (
@@ -131,8 +139,8 @@
                 'line-height': 24px
             ),
             'group-d': (
-                'font-size': 16px,
-                'line-height': 21px
+                'font-size': 14px,
+                'line-height': 22px
             )
         ),
         'long-primer-bold': (
@@ -142,15 +150,16 @@
         ),
         'brevier': (
             'group-a': (
-                'font-size': 16px,
-                'line-height': 18px
+                'font-size': 14px,
+                'line-height': 20px
             ),
             'group-b': (
+                'font-size': 14px,
                 'line-height': 20px
             ),
             'group-d': (
-                'font-size': 15px,
-                'line-height': 19px
+                'font-size': 13px,
+                'line-height': 20px
             )
         ),
         'brevier-bold': (
@@ -161,15 +170,18 @@
         'minion': (
             'group-a': (
                 'font-size': 12px,
-                'line-height': 16px,
-                'text-transform': uppercase
+                'line-height': 18px
+            ),
+            'group-b': (
+                'font-size': 12px,
+                'line-height': 18px
             ),
             'group-c': (
                 'font-size': 13px
             ),
             'group-d': (
-                'font-size': 15px,
-                'line-height': 19px
+                'font-size': 12px,
+                'line-height': 18px
             )
         ),
         'minion-bold': (
