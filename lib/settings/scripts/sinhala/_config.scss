@@ -1,169 +1,169 @@
-@if $script == 'sinhala' {
-    // the gel-body-copy class used on live pages was undefined for world-service sites (non-latin script)
-    // so after talking to UX the same settings as pica were used for the new class
-    $pica: (
-        'group-a': (
-            'font-size': 15px,
-            'line-height': 20px
-        ),
-        'group-b': (
-            'font-size': 16px,
-            'line-height': 22px
-        ),
-        'group-c': (
-            'font-size': 18px,
-            'line-height': 24px
-        ),
-        'group-d': (
-            'font-size': 20px,
-            'line-height': 22px
-        )
-    );
-    $gel-type-settings: (
-        'canon': (
-            'group-a': (
-                'font-size': 20px,
-                'line-height': 24px
-            ),
-            'group-b': (
-                'font-size': 24px,
-                'line-height': 28px
-            ),
-            'group-c': (
-                'font-size': 32px,
-                'line-height': 36px
-            )
-        ),
-        'canon-bold': (
-            'group-a': (
-                'font-weight': bold,
-                'letter-spacing': -1px
-            )
-        ),
-        'trafalgar': (
-            'group-a': (
-                'font-size': 20px,
-                'line-height': 24px
-            ),
-            'group-b': (
-                'font-size': 24px,
-                'line-height': 28px
-            ),
-            'group-c': (
-                'font-size': 36px,
-                'line-height': 40px
-            ),
-            'group-d': (
-                'font-size': 42px,
-                'line-height': 46px
-            )
-        ),
-        'trafalgar-bold': (
-            'group-a': (
-                'font-weight': bold,
-                'letter-spacing': -1px
-            )
-        ),
-        'double-pica': (
-            'group-a': (
-                'font-size': 20px,
-                'line-height': 24px
-            ),
-            'group-c': (
-                'font-size': 24px,
-                'line-height': 28px
-            ),
-            'group-d': (
-                'font-size': 30px,
-                'line-height': 30px
-            )
-        ),
-        'double-pica-bold': (
-            'group-a': (
-                'font-weight': bold,
-                'letter-spacing': -1px
-            )
-        ),
-        'great-primer': (
-            'group-a': (
-                'font-size': 18px,
-                'line-height': 22px
-            ),
-            'group-c': (
-                'font-size': 20px,
-                'line-height': 24px
-            ),
-            'group-d': (
-                'font-size': 24px
-            )
-        ),
-        'great-primer-bold': (
-            'group-a': (
-                'font-weight': bold
-            ),
-            'group-b': (
-                'letter-spacing': -1px
-            )
-        ),
-        'pica': $pica,
-        'pica-bold': (
-            'group-a': (
-                'font-weight': bold
-            )
-        ),
-        'long-primer': (
-            'group-a': (
-                'font-size': 15px,
-                'line-height': 18px
-            ),
-            'group-c': (
-                'line-height': 20px
-            ),
-            'group-d': (
-                'font-size': 16px
-            )
-        ),
-        'long-primer-bold': (
-            'group-a': (
-                'font-weight': bold
-            )
-        ),
-        'brevier': (
-            'group-a': (
-                'font-size': 14px,
-                'line-height': 16px
-            ),
-            'group-b': (
-                'line-height': 18px
-            ),
-            'group-d': (
-                'line-height': 14px
-            )
-        ),
-        'brevier-bold': (
-            'group-a': (
-                'font-weight': bold
-            )
-        ),
-        'minion': (
-            'group-a': (
-                'font-size': 12px,
-                'line-height': 16px,
-                'text-transform': uppercase
-            ),
-            'group-c': (
-                'font-size': 13px
-            ),
-            'group-d': (
-                'font-size': 14px,
-                'line-height': 14px
-            )
-        ),
-        'minion-bold': (
-            'group-a': (
-                'font-weight': bold
-            )
-        ),
-        'body-copy': $pica
-    ) !global;
+@if $script == "sinhala" {
+  // the gel-body-copy class used on live pages was undefined for world-service sites (non-latin script)
+  // so after talking to UX the same settings as pica were used for the new class
+  $pica: (
+    "group-a": (
+      "font-size": 17px,
+      "line-height": 28px,
+    ),
+    "group-b": (
+      "font-size": 17px,
+      "line-height": 24px,
+    ),
+    "group-c": (
+      "font-size": 18px,
+      "line-height": 24px,
+    ),
+    "group-d": (
+      "font-size": 17px,
+      "line-height": 24px,
+    ),
+  );
+  $gel-type-settings: (
+    "canon": (
+      "group-a": (
+        "font-size": 25px,
+        "line-height": 32px,
+      ),
+      "group-b": (
+        "font-size": 31px,
+        "line-height": 40px,
+      ),
+      "group-c": (
+        "font-size": 32px,
+        "line-height": 36px,
+      ),
+    ),
+    "canon-bold": (
+      "group-a": (
+        "font-weight": bold,
+        "letter-spacing": -1px,
+      ),
+    ),
+    "trafalgar": (
+      "group-a": (
+        "font-size": 20px,
+        "line-height": 24px,
+      ),
+      "group-b": (
+        "font-size": 27px,
+        "line-height": 36px,
+      ),
+      "group-c": (
+        "font-size": 36px,
+        "line-height": 40px,
+      ),
+      "group-d": (
+        "font-size": 32px,
+        "line-height": 44px,
+      ),
+    ),
+    "trafalgar-bold": (
+      "group-a": (
+        "font-weight": bold,
+        "letter-spacing": -1px,
+      ),
+    ),
+    "double-pica": (
+      "group-a": (
+        "font-size": 18px,
+        "line-height": 22px,
+      ),
+      "group-c": (
+        "font-size": 24px,
+        "line-height": 28px,
+      ),
+      "group-d": (
+        "font-size": 24px,
+        "line-height": 34px,
+      ),
+    ),
+    "double-pica-bold": (
+      "group-a": (
+        "font-weight": bold,
+        "letter-spacing": -1px,
+      ),
+    ),
+    "great-primer": (
+      "group-a": (
+        "font-size": 18px,
+        "line-height": 22px,
+      ),
+      "group-c": (
+        "font-size": 20px,
+        "line-height": 24px,
+      ),
+      "group-d": (
+        "font-size": 19px,
+      ),
+    ),
+    "great-primer-bold": (
+      "group-a": (
+        "font-weight": bold,
+      ),
+      "group-b": (
+        "letter-spacing": -1px,
+      ),
+    ),
+    "pica": $pica,
+    "pica-bold": (
+      "group-a": (
+        "font-weight": bold,
+      ),
+    ),
+    "long-primer": (
+      "group-a": (
+        "font-size": 15px,
+        "line-height": 22px,
+      ),
+      "group-c": (
+        "line-height": 20px,
+      ),
+      "group-d": (
+        "font-size": 15px,
+      ),
+    ),
+    "long-primer-bold": (
+      "group-a": (
+        "font-weight": bold,
+      ),
+    ),
+    "brevier": (
+      "group-a": (
+        "font-size": 14px,
+        "line-height": 22px,
+      ),
+      "group-b": (
+        "line-height": 22px,
+      ),
+      "group-d": (
+        "line-height": 22px,
+      ),
+    ),
+    "brevier-bold": (
+      "group-a": (
+        "font-weight": bold,
+      ),
+    ),
+    "minion": (
+      "group-a": (
+        "font-size": 13px,
+        "line-height": 22px,
+        "text-transform": uppercase,
+      ),
+      "group-c": (
+        "font-size": 13px,
+      ),
+      "group-d": (
+        "font-size": 13px,
+        "line-height": 22px,
+      ),
+    ),
+    "minion-bold": (
+      "group-a": (
+        "font-weight": bold,
+      ),
+    ),
+    "body-copy": $pica,
+  ) !global;
 }
