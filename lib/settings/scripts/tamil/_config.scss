@@ -1,14 +1,14 @@
 @if $script == "tamil" {
   // the gel-body-copy class used on live pages was undefined for world-service sites (non-latin script)
-  // so after talking to UX the same settings as pica were used for the new class f
+  // so after talking to UX the same settings as pica were used for the new class
   $pica: (
     "group-a": (
-      "font-size": 14px,
-      "line-height": 21px,
+      "font-size": 12px,
+      "line-height": 20px,
     ),
     "group-b": (
-      "font-size": 13px,
-      "line-height": 20px,
+      "font-size": 14px,
+      "line-height": 22px,
     ),
     "group-c": (
       "font-size": 14px,
@@ -18,12 +18,12 @@
   $gel-type-settings: (
     "canon": (
       "group-a": (
-        "font-size": 20px,
-        "line-height": 24px,
+        "font-size": 22px,
+        "line-height": 30px,
       ),
       "group-b": (
-        "font-size": 24px,
-        "line-height": 28px,
+        "font-size": 26px,
+        "line-height": 36px,
       ),
       "group-c": (
         "font-size": 32px,
@@ -38,16 +38,16 @@
     ),
     "trafalgar": (
       "group-a": (
-        "font-size": 18px,
-        "line-height": 26px,
+        "font-size": 16px,
+        "line-height": 24px,
       ),
       "group-c": (
         "font-size": 26px,
         "line-height": 34px,
       ),
       "group-d": (
-        "font-size": 22px,
-        "line-height": 30px,
+        "font-size": 28px,
+        "line-height": 38px,
       ),
     ),
     "trafalgar-bold": (
@@ -58,8 +58,8 @@
     ),
     "double-pica": (
       "group-a": (
-        "font-size": 16px,
-        "line-height": 24px,
+        "font-size": 14px,
+        "line-height": 22px,
       ),
     ),
     "double-pica-bold": (
@@ -70,12 +70,12 @@
     ),
     "great-primer": (
       "group-a": (
-        "font-size": 14px,
-        "line-height": 21px,
+        "font-size": 13px,
+        "line-height": 22px,
       ),
       "group-b": (
-        "font-size": 13px,
-        "line-height": 20px,
+        "font-size": 14px,
+        "line-height": 24px,
       ),
       "group-c": (
         "font-size": 14px,
